@@ -94,6 +94,12 @@ header .sub { color: var(--ink-2); font-size: 13px; }
 .pl tr.total td { font-weight: 600; border-bottom: 1px solid var(--line); border-top: 1px solid var(--ink-3); }
 .pl tr.sec td { padding-top: 14px; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); border-bottom: none; }
 .pl .tag { margin-left: 6px; }
+.payer { display: inline-block; font-size: 10.5px; font-weight: 500; padding: 0 6px; border-radius: 999px; background: var(--chip); color: var(--ink-2); margin-left: 6px; white-space: nowrap; vertical-align: 1px; }
+.payer.none { background: var(--warn-bg); color: var(--warn-ink); }
+.payers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 14px; }
+.payers div { display: grid; gap: 2px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; }
+.payers b { font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.payers span { font-size: 12px; color: var(--ink-2); }
 
 .scroll { overflow-x: auto; }
 table.data { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 760px; }
@@ -174,6 +180,12 @@ td.pos { color: var(--good); }
       <table class="pl" id="pl"></table>
     </section>
   </div>
+
+  <section class="panel">
+    <div class="panel-head"><h2>Who paid the costs</h2><span class="muted" id="payRange" style="font-size:12px"></span></div>
+    <div class="payers" id="payers"></div>
+    <div class="scroll"><table class="data" id="payMonthly"></table></div>
+  </section>
 
   <div class="grid2">
     <section class="panel">
@@ -288,6 +300,23 @@ $("ranges").addEventListener("click", (e) => {
   render();
 });
 
+const PAYERS = cfg.payers || {};
+const payerOf = (k) => PAYERS[k] || null;
+const tag = (k) => payerOf(k) ? `<span class="payer">${payerOf(k)}</span>` : `<span class="payer none">Not assigned</span>`;
+const COSTS = [["meta", "Meta ad spend", (t) => t.spend], ["cogs", "Product cost (COGS)", (t) => t.cogs],
+  ["shipping", "Shipping cost (labels)", (t) => t.label_cost], ["shopify_opex", "Shopify plan & apps", (t) => t.shopifyOpex],
+  ["other", "Other OPEX", (t) => t.other]];
+function byPayer(t) {
+  const out = {};
+  for (const [k, , f] of COSTS) {
+    const v = f(t); if (!v) continue;
+    const who = payerOf(k) || "Not assigned";
+    (out[who] = out[who] || { total: 0, items: [] }).total += v;
+    out[who].items.push([k, v]);
+  }
+  return out;
+}
+
 function renderHero(t, rs) {
   const h = $("hero");
   h.textContent = usd(t.contribution);
@@ -296,11 +325,11 @@ function renderHero(t, rs) {
   const line = (l, v, cls = "") => `<div class="${cls}"><span>${l}</span><span class="num">${v}</span></div>`;
   $("formula").innerHTML =
     line("Cash from Shopify (est. payouts + other gateways)", usd2(t.cashIn)) +
-    line("− Meta ad spend", usd2(-t.spend)) +
-    line("− Product cost (COGS)", usd2(-t.cogs)) +
-    line("− Shipping cost (labels)", usd2(-t.label_cost)) +
-    line("− Shopify plan & apps", usd2(-t.shopifyOpex)) +
-    (t.other ? line("− Other OPEX", usd2(-t.other)) : "") +
+    line("− Meta ad spend" + tag("meta"), usd2(-t.spend)) +
+    line("− Product cost (COGS)" + tag("cogs"), usd2(-t.cogs)) +
+    line("− Shipping cost (labels)" + tag("shipping"), usd2(-t.label_cost)) +
+    line("− Shopify plan & apps" + tag("shopify_opex"), usd2(-t.shopifyOpex)) +
+    (t.other ? line("− Other OPEX" + tag("other"), usd2(-t.other)) : "") +
     line("Contribution", usd2(t.contribution), "rule");
 }
 
@@ -336,12 +365,12 @@ function renderPL(t, rs) {
     r("Net payouts (est.)", t.payout, "total") +
     (t.collected_other ? r("Other gateways, net of refunds", t.collected_other - t.refunds_other, "sub") : "") +
     r("Spend", null, "sec") +
-    r("Meta ads", -t.spend, "sub") +
-    r("Product cost (COGS)", -t.cogs, "sub") +
-    r("Shipping cost (labels)", -t.label_cost, "sub") +
-    r("Shopify plan", -t.plan, "sub") +
-    r("Shopify apps", -t.apps, "sub") +
-    (t.other ? r("Other OPEX", -t.other, "sub") : "") +
+    r("Meta ads" + tag("meta"), -t.spend, "sub") +
+    r("Product cost (COGS)" + tag("cogs"), -t.cogs, "sub") +
+    r("Shipping cost (labels)" + tag("shipping"), -t.label_cost, "sub") +
+    r("Shopify plan" + tag("shopify_opex"), -t.plan, "sub") +
+    r("Shopify apps" + tag("shopify_opex"), -t.apps, "sub") +
+    (t.other ? r("Other OPEX" + tag("other"), -t.other, "sub") : "") +
     r("Contribution", t.contribution, "total");
 }
 
@@ -527,6 +556,21 @@ function exclNote() {
   return `<p><b>Faire wholesale is left out.</b> Its ${x.orders} orders (${usd2(x.gross)} gross, ${usd2(x.net)} net sales, ${x.units.toLocaleString()} units) are removed from sales, orders, product cost and payouts. Faire orders ship on Faire's prepaid labels, so none of their shipping is in the label cost.</p>`;
 }
 
+function renderPayers(t, rs) {
+  $("payRange").textContent = `${fmtDay(rs[0].date)} – ${fmtDay(rs[rs.length - 1].date)}`;
+  const names = { meta: "Meta ads", cogs: "product cost", shipping: "shipping labels", shopify_opex: "Shopify plan & apps", other: "other OPEX" };
+  const bp = byPayer(t), all = Object.values(bp).reduce((a, x) => a + x.total, 0);
+  $("payers").innerHTML = Object.entries(bp).sort((a, b) => b[1].total - a[1].total).map(([who, x]) =>
+    `<div><span class="${who === "Not assigned" ? "pill" : ""}" style="width:fit-content">${who}</span><b>${usd(x.total)}</b><span>${(all ? x.total / all * 100 : 0).toFixed(0)}% of costs · ${x.items.map(([k, v]) => `${names[k]} ${usd(v)}`).join(" + ")}</span></div>`).join("");
+  const whos = [...new Set(COSTS.map(([k]) => payerOf(k) || "Not assigned"))];
+  let body = "", tot = {};
+  for (const m of months) {
+    const mt = sum(D.daily.filter((d) => d.date.startsWith(m))), b = byPayer(mt);
+    body += `<tr><td>${MONTHS[+m.slice(5) - 1]}</td>${whos.map((w) => { const v = (b[w] || { total: 0 }).total; tot[w] = (tot[w] || 0) + v; return `<td>${usd(v)}</td>`; }).join("")}</tr>`;
+  }
+  $("payMonthly").innerHTML = `<thead><tr><th>Month</th>${whos.map((w) => `<th>${w}</th>`).join("")}</tr></thead><tbody>${body}</tbody><tfoot><tr><td>Total</td>${whos.map((w) => `<td>${usd(tot[w] || 0)}</td>`).join("")}</tr></tfoot>`;
+}
+
 function renderNotes() {
   const s = D.order_stats, gw = Object.entries(s.gateways || {}).map(([k, v]) => `${k.replace(/_/g, " ")} ${usd(v)}`).join(", ");
   const m = D.meta_account_totals;
@@ -544,7 +588,7 @@ function renderNotes() {
 function render(full = true) {
   const rs = rows(), t = sum(rs);
   $("sub").textContent = `Shopify (excl. Faire wholesale) + Meta since ${fmtDay(D.start)}, ${D.start.slice(0, 4)} · synced ${D.generated}`;
-  renderRanges(); renderHero(t, rs); renderTiles(t); renderPL(t, rs); renderWeekly(rs); renderShipping(t, rs); renderMonthly();
+  renderRanges(); renderHero(t, rs); renderTiles(t); renderPL(t, rs); renderPayers(t, rs); renderWeekly(rs); renderShipping(t, rs); renderMonthly();
   if (full) { renderCamps(); renderShipBreakdown(); renderCogs(); renderInputs(); renderNotes(); }
 }
 render();

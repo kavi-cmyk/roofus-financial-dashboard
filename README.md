@@ -10,6 +10,8 @@ One page that shows Roofus's money since **May 14, 2026**, leaving out Faire who
 - Product cost (COGS): units sold × landed cost per unit from the Roofus master sheet
 - **Contribution** = cash from Shopify − product cost − Meta spend − shipping labels − Shopify OPEX
 
+Each cost is tagged with the company that pays it (`payers` in `config.json`): Meta ads by Care & Bloom, product cost and shipping by Petra Brands. A "Who paid the costs" panel totals them per company and month.
+
 Filter by the whole period, the last 30 days, or a single month. The page also has a monthly table and MER (net sales ÷ Meta spend).
 
 ## Layout
