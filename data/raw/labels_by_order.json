@@ -1,0 +1,6077 @@
+{
+ "source": "ShopifyQL FROM shipping_labels GROUP BY order_name, one query per label-purchase month",
+ "rows": [
+  {
+   "order_name": "#1075",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1076",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.07
+  },
+  {
+   "order_name": "#1077",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1078",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1079",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.99
+  },
+  {
+   "order_name": "#1080",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.53
+  },
+  {
+   "order_name": "#1081",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1082",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1083",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1084",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.19
+  },
+  {
+   "order_name": "#1085",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.26
+  },
+  {
+   "order_name": "#1086",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1087",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.07
+  },
+  {
+   "order_name": "#1088",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.83
+  },
+  {
+   "order_name": "#1089",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.36
+  },
+  {
+   "order_name": "#1090",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.52
+  },
+  {
+   "order_name": "#1091",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1092",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1093",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.07
+  },
+  {
+   "order_name": "#1094",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1095",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#1096",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 5.7
+  },
+  {
+   "order_name": "#1097",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1098",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1100",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1101",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1102",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1103",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 11.67
+  },
+  {
+   "order_name": "#1104",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1105",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.83
+  },
+  {
+   "order_name": "#1106",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1107",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1108",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1109",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1112",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1113",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1114",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1116",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1117",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1118",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1119",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1120",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#1121",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.36
+  },
+  {
+   "order_name": "#1122",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1123",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1124",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1126",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.74
+  },
+  {
+   "order_name": "#1127",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1128",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.0
+  },
+  {
+   "order_name": "#1129",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 11.67
+  },
+  {
+   "order_name": "#1130",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.0
+  },
+  {
+   "order_name": "#1131",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1132",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1133",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1134",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.98
+  },
+  {
+   "order_name": "#1135",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1136",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 5.73
+  },
+  {
+   "order_name": "#1137",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.0
+  },
+  {
+   "order_name": "#1138",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1139",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.0
+  },
+  {
+   "order_name": "#1140",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1141",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1142",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1143",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.53
+  },
+  {
+   "order_name": "#1144",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1145",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.0
+  },
+  {
+   "order_name": "#1146",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1147",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1148",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1149",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.41
+  },
+  {
+   "order_name": "#1150",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1151",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.0
+  },
+  {
+   "order_name": "#1152",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.41
+  },
+  {
+   "order_name": "#1153",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "order_name": "#1154",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1155",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1156",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1157",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.0
+  },
+  {
+   "order_name": "#1158",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1159",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.13
+  },
+  {
+   "order_name": "#1160",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1161",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1162",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.68
+  },
+  {
+   "order_name": "#1163",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.0
+  },
+  {
+   "order_name": "#1164",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.36
+  },
+  {
+   "order_name": "#1165",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1166",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1168",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1169",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1170",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1172",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 134.94
+  },
+  {
+   "order_name": "#1173",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1174",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1175",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1176",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.99
+  },
+  {
+   "order_name": "#1177",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.35
+  },
+  {
+   "order_name": "#1178",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1179",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1180",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1181",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1182",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1183",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1184",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.53
+  },
+  {
+   "order_name": "#1185",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1186",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1187",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1188",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.53
+  },
+  {
+   "order_name": "#1189",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.0
+  },
+  {
+   "order_name": "#1190",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1191",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1192",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1193",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1194",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1195",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 12.2
+  },
+  {
+   "order_name": "#1196",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 11.16
+  },
+  {
+   "order_name": "#1197",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#1198",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1199",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1200",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1201",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1202",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1203",
+   "label_month": "2026-05",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1205",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1206",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1207",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1208",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.35
+  },
+  {
+   "order_name": "#1209",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1210",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 7.31
+  },
+  {
+   "order_name": "#1211",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1212",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1213",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1214",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.8
+  },
+  {
+   "order_name": "#1215",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1225",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "order_name": "#1227",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1229",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1230",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 8.98
+  },
+  {
+   "order_name": "#1231",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1232",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1233",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.57
+  },
+  {
+   "order_name": "#1236",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#1239",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 14.67
+  },
+  {
+   "order_name": "#1240",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1242",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.73
+  },
+  {
+   "order_name": "#1243",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1244",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1245",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1246",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1247",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.89
+  },
+  {
+   "order_name": "#1249",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 14.17
+  },
+  {
+   "order_name": "#1250",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1251",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.36
+  },
+  {
+   "order_name": "#1252",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1253",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1254",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#1255",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1256",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.07
+  },
+  {
+   "order_name": "#1257",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1258",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1259",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1260",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 7.95
+  },
+  {
+   "order_name": "#1261",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1262",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.07
+  },
+  {
+   "order_name": "#1263",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1264",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1266",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.07
+  },
+  {
+   "order_name": "#1267",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.21
+  },
+  {
+   "order_name": "#1268",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.07
+  },
+  {
+   "order_name": "#1269",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 7.95
+  },
+  {
+   "order_name": "#1270",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1271",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1272",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.89
+  },
+  {
+   "order_name": "#1273",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.07
+  },
+  {
+   "order_name": "#1274",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.07
+  },
+  {
+   "order_name": "#1275",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.7
+  },
+  {
+   "order_name": "#1280",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1281",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 10.96
+  },
+  {
+   "order_name": "#1282",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1283",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1284",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.73
+  },
+  {
+   "order_name": "#1285",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 7.95
+  },
+  {
+   "order_name": "#1286",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1287",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1288",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.36
+  },
+  {
+   "order_name": "#1289",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1290",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1291",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1292",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#1293",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1294",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.94
+  },
+  {
+   "order_name": "#1295",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1296",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1298",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1299",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 8.18
+  },
+  {
+   "order_name": "#1302",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1303",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1304",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.7
+  },
+  {
+   "order_name": "#1305",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.35
+  },
+  {
+   "order_name": "#1306",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1307",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1308",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "order_name": "#1309",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1310",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1311",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1312",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1313",
+   "label_month": "2026-06",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1314",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1315",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1316",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1317",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1318",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1319",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1320",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.7
+  },
+  {
+   "order_name": "#1321",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1324",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1325",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1326",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1327",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.13
+  },
+  {
+   "order_name": "#1328",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1329",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1330",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.8
+  },
+  {
+   "order_name": "#1331",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1332",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.17
+  },
+  {
+   "order_name": "#1333",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1334",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1335",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1336",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.17
+  },
+  {
+   "order_name": "#1337",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.7
+  },
+  {
+   "order_name": "#1338",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.17
+  },
+  {
+   "order_name": "#1339",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1340",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.95
+  },
+  {
+   "order_name": "#1341",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.95
+  },
+  {
+   "order_name": "#1342",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.7
+  },
+  {
+   "order_name": "#1343",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1344",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1345",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.17
+  },
+  {
+   "order_name": "#1346",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1348",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1349",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1350",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1351",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 14.94
+  },
+  {
+   "order_name": "#1352",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.84
+  },
+  {
+   "order_name": "#1353",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.17
+  },
+  {
+   "order_name": "#1354",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.53
+  },
+  {
+   "order_name": "#1355",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1356",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1357",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1358",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1359",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1360",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1361",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 16.85
+  },
+  {
+   "order_name": "#1362",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1364",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1365",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.8
+  },
+  {
+   "order_name": "#1366",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1367",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1368",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1369",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1370",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.83
+  },
+  {
+   "order_name": "#1371",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1372",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1373",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1374",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1375",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1376",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1377",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1380",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1381",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1382",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1383",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1384",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1385",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1386",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1387",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1388",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1389",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1390",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.13
+  },
+  {
+   "order_name": "#1391",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.95
+  },
+  {
+   "order_name": "#1392",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1393",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1394",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1395",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1396",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1397",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1398",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1399",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.25
+  },
+  {
+   "order_name": "#1400",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1401",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1402",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1403",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 20.64
+  },
+  {
+   "order_name": "#1404",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1405",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.58
+  },
+  {
+   "order_name": "#1406",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.14
+  },
+  {
+   "order_name": "#1407",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1408",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.57
+  },
+  {
+   "order_name": "#1409",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1410",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.95
+  },
+  {
+   "order_name": "#1412",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.48
+  },
+  {
+   "order_name": "#1413",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1414",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1415",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1416",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1417",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.84
+  },
+  {
+   "order_name": "#1418",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1419",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.13
+  },
+  {
+   "order_name": "#1420",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.34
+  },
+  {
+   "order_name": "#1421",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 17.12
+  },
+  {
+   "order_name": "#1423",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 18.05
+  },
+  {
+   "order_name": "#1424",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1425",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.53
+  },
+  {
+   "order_name": "#1426",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1427",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.17
+  },
+  {
+   "order_name": "#1428",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1429",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1431",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1432",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1433",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1434",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1436",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1437",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1438",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1439",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1440",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1441",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1442",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1444",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1445",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.53
+  },
+  {
+   "order_name": "#1446",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1447",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1448",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1449",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1450",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1451",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1452",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1453",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1454",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.37
+  },
+  {
+   "order_name": "#1455",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.58
+  },
+  {
+   "order_name": "#1456",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1457",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1458",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.53
+  },
+  {
+   "order_name": "#1459",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1460",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1461",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1462",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1463",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1464",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#1465",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1466",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1468",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1469",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1470",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1471",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1472",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1473",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1474",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1475",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1476",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 5.89
+  },
+  {
+   "order_name": "#1477",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.27
+  },
+  {
+   "order_name": "#1478",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1479",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1480",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#1481",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1482",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1483",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 11.02
+  },
+  {
+   "order_name": "#1484",
+   "label_month": "2026-07",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1485",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1486",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1487",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.1
+  },
+  {
+   "order_name": "#1488",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1489",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1490",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 11.27
+  },
+  {
+   "order_name": "#1491",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1492",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.35
+  },
+  {
+   "order_name": "#1493",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.48
+  },
+  {
+   "order_name": "#1494",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1495",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1496",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1497",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1498",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1499",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1500",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1501",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1502",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1503",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.07
+  },
+  {
+   "order_name": "#1504",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1505",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.13
+  },
+  {
+   "order_name": "#1506",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 25.1
+  },
+  {
+   "order_name": "#1507",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1508",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1509",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1510",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1511",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#1512",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1513",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.35
+  },
+  {
+   "order_name": "#1514",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1515",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1516",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1517",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1518",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1519",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1520",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1521",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1522",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 13.27
+  },
+  {
+   "order_name": "#1523",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1524",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1525",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 13.27
+  },
+  {
+   "order_name": "#1526",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1527",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1528",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 11.84
+  },
+  {
+   "order_name": "#1529",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 11.05
+  },
+  {
+   "order_name": "#1530",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1531",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1532",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1533",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.13
+  },
+  {
+   "order_name": "#1534",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1535",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1536",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1537",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1538",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1539",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "order_name": "#1540",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#1541",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1542",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1543",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1544",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1545",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1546",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.35
+  },
+  {
+   "order_name": "#1547",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1548",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1549",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1550",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1551",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.21
+  },
+  {
+   "order_name": "#1552",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1553",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1554",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1555",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1557",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1558",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1559",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1560",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1561",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1562",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1565",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1566",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1567",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1568",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1569",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1570",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1571",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1572",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.68
+  },
+  {
+   "order_name": "#1573",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1574",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "order_name": "#1575",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1576",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.21
+  },
+  {
+   "order_name": "#1577",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1578",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1580",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1581",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1582",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1583",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1584",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1585",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1586",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1587",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1588",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1589",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1590",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1591",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.24
+  },
+  {
+   "order_name": "#1592",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1593",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1594",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 28.7
+  },
+  {
+   "order_name": "#1595",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1596",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.8
+  },
+  {
+   "order_name": "#1597",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.97
+  },
+  {
+   "order_name": "#1598",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1599",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.35
+  },
+  {
+   "order_name": "#1600",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1601",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.8
+  },
+  {
+   "order_name": "#1602",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1603",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1604",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1605",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1606",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#1607",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1608",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1609",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1610",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.13
+  },
+  {
+   "order_name": "#1611",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.68
+  },
+  {
+   "order_name": "#1612",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1613",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1614",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.4
+  },
+  {
+   "order_name": "#1615",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1616",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.37
+  },
+  {
+   "order_name": "#1618",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1619",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 11.84
+  },
+  {
+   "order_name": "#1620",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.13
+  },
+  {
+   "order_name": "#1621",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1622",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1623",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.53
+  },
+  {
+   "order_name": "#1624",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.35
+  },
+  {
+   "order_name": "#1625",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1626",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1627",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1628",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1629",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1630",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.69
+  },
+  {
+   "order_name": "#1631",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.35
+  },
+  {
+   "order_name": "#1632",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 11.02
+  },
+  {
+   "order_name": "#1633",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1634",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 19.19
+  },
+  {
+   "order_name": "#1635",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1636",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.8
+  },
+  {
+   "order_name": "#1637",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.13
+  },
+  {
+   "order_name": "#1638",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1639",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1640",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1641",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1642",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1643",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1644",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.37
+  },
+  {
+   "order_name": "#1645",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.96
+  },
+  {
+   "order_name": "#1646",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.22
+  },
+  {
+   "order_name": "#1647",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1648",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.37
+  },
+  {
+   "order_name": "#1649",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1650",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "order_name": "#1651",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1652",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1653",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1654",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1655",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 11.02
+  },
+  {
+   "order_name": "#1656",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1657",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.35
+  },
+  {
+   "order_name": "#1658",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1659",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1660",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1661",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1662",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1663",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.43
+  },
+  {
+   "order_name": "#1664",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1665",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1666",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1667",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 11.84
+  },
+  {
+   "order_name": "#1668",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1669",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1670",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1671",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 13.27
+  },
+  {
+   "order_name": "#1672",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.07
+  },
+  {
+   "order_name": "#1673",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.17
+  },
+  {
+   "order_name": "#1674",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.8
+  },
+  {
+   "order_name": "#1675",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1676",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "order_name": "#1677",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1678",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#1679",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1680",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.93
+  },
+  {
+   "order_name": "#1681",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1682",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.17
+  },
+  {
+   "order_name": "#1683",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.17
+  },
+  {
+   "order_name": "#1684",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.53
+  },
+  {
+   "order_name": "#1685",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1686",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1687",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.99
+  },
+  {
+   "order_name": "#1688",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1689",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1690",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1691",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1692",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1693",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1694",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1695",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1696",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1697",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1698",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "order_name": "#1699",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1700",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1701",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1702",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1703",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1704",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1705",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1706",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1707",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1708",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1709",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1710",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.8
+  },
+  {
+   "order_name": "#1711",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1712",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1713",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1714",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1715",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1716",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1717",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1718",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1719",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1721",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1722",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1723",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1724",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1725",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1726",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1727",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1728",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1729",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1730",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1731",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1732",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1733",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.96
+  },
+  {
+   "order_name": "#1734",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1735",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1736",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1737",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1739",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1740",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1741",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1742",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1743",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1744",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1745",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1746",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1747",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1748",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1750",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1751",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1752",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.96
+  },
+  {
+   "order_name": "#1753",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1754",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1755",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1756",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1757",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1758",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1759",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1760",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1761",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1762",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1763",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1765",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1766",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1767",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1768",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1769",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.48
+  },
+  {
+   "order_name": "#1770",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1771",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1772",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1773",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#1774",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1775",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.14
+  },
+  {
+   "order_name": "#1776",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1777",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1778",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1779",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#1780",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1781",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1782",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#1783",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#1784",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1785",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1786",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1787",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1788",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1789",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.1
+  },
+  {
+   "order_name": "#1790",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 7.9
+  },
+  {
+   "order_name": "#1791",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1792",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.8
+  },
+  {
+   "order_name": "#1793",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.93
+  },
+  {
+   "order_name": "#1794",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.02
+  },
+  {
+   "order_name": "#1795",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1796",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1797",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1798",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1799",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 6.95
+  },
+  {
+   "order_name": "#1800",
+   "label_month": "2026-08",
+   "labels": 1,
+   "cost": 5.93
+  },
+  {
+   "order_name": "#1766",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#1793",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.93
+  },
+  {
+   "order_name": "#1800",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.93
+  },
+  {
+   "order_name": "#1801",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.93
+  },
+  {
+   "order_name": "#1803",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.75
+  },
+  {
+   "order_name": "#1804",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.17
+  },
+  {
+   "order_name": "#1805",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1806",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1807",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1808",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1809",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1810",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1811",
+   "label_month": "2026-09",
+   "labels": 2,
+   "cost": 16.95
+  },
+  {
+   "order_name": "#1812",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1813",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1814",
+   "label_month": "2026-09",
+   "labels": 2,
+   "cost": 14.04
+  },
+  {
+   "order_name": "#1815",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1816",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1817",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1818",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1819",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1820",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1821",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1822",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1823",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.58
+  },
+  {
+   "order_name": "#1824",
+   "label_month": "2026-09",
+   "labels": 2,
+   "cost": 16.13
+  },
+  {
+   "order_name": "#1825",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.99
+  },
+  {
+   "order_name": "#1826",
+   "label_month": "2026-09",
+   "labels": 2,
+   "cost": 15.8
+  },
+  {
+   "order_name": "#1827",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#1828",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.76
+  },
+  {
+   "order_name": "#1829",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.17
+  },
+  {
+   "order_name": "#1830",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.19
+  },
+  {
+   "order_name": "#1831",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#1832",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1833",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#1834",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#1835",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.14
+  },
+  {
+   "order_name": "#1836",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.07
+  },
+  {
+   "order_name": "#1837",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1838",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1839",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#1840",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.05
+  },
+  {
+   "order_name": "#1841",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1842",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 13.27
+  },
+  {
+   "order_name": "#1843",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1844",
+   "label_month": "2026-09",
+   "labels": 2,
+   "cost": 16.44
+  },
+  {
+   "order_name": "#1845",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.99
+  },
+  {
+   "order_name": "#1846",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.76
+  },
+  {
+   "order_name": "#1847",
+   "label_month": "2026-09",
+   "labels": 2,
+   "cost": 16.44
+  },
+  {
+   "order_name": "#1848",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.48
+  },
+  {
+   "order_name": "#1849",
+   "label_month": "2026-09",
+   "labels": 2,
+   "cost": 11.8
+  },
+  {
+   "order_name": "#1850",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#1851",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.35
+  },
+  {
+   "order_name": "#1852",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1853",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1854",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.7
+  },
+  {
+   "order_name": "#1855",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.96
+  },
+  {
+   "order_name": "#1856",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.19
+  },
+  {
+   "order_name": "#1857",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.7
+  },
+  {
+   "order_name": "#1859",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 17.07
+  },
+  {
+   "order_name": "#1860",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1861",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.99
+  },
+  {
+   "order_name": "#1862",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1863",
+   "label_month": "2026-09",
+   "labels": 2,
+   "cost": 17.52
+  },
+  {
+   "order_name": "#1864",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1865",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1866",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1867",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1868",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#1869",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1870",
+   "label_month": "2026-09",
+   "labels": 2,
+   "cost": 15.92
+  },
+  {
+   "order_name": "#1871",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.7
+  },
+  {
+   "order_name": "#1872",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.19
+  },
+  {
+   "order_name": "#1873",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.1
+  },
+  {
+   "order_name": "#1874",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1875",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.5
+  },
+  {
+   "order_name": "#1876",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#1877",
+   "label_month": "2026-09",
+   "labels": 2,
+   "cost": 13.38
+  },
+  {
+   "order_name": "#1878",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.1
+  },
+  {
+   "order_name": "#1880",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1881",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 40.39
+  },
+  {
+   "order_name": "#1887",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#1888",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "order_name": "#1889",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.79
+  },
+  {
+   "order_name": "#1890",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1891",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.78
+  },
+  {
+   "order_name": "#1892",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1893",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#1897",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1898",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#1899",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1902",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1904",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#1907",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.45
+  },
+  {
+   "order_name": "#1908",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1909",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.19
+  },
+  {
+   "order_name": "#1911",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1919",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1928",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1938",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#1940",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 13.27
+  },
+  {
+   "order_name": "#1942",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1951",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1954",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.99
+  },
+  {
+   "order_name": "#1963",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.99
+  },
+  {
+   "order_name": "#1970",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1971",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 13.27
+  },
+  {
+   "order_name": "#1974",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#1981",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1988",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.66
+  },
+  {
+   "order_name": "#1989",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.96
+  },
+  {
+   "order_name": "#1991",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.1
+  },
+  {
+   "order_name": "#1992",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1993",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#1994",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1995",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1996",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.26
+  },
+  {
+   "order_name": "#1997",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#1998",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#1999",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.26
+  },
+  {
+   "order_name": "#2000",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.93
+  },
+  {
+   "order_name": "#2001",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2002",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2003",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2004",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#2005",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2006",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2007",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2008",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2009",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2010",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.18
+  },
+  {
+   "order_name": "#2011",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.26
+  },
+  {
+   "order_name": "#2012",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.59
+  },
+  {
+   "order_name": "#2013",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2014",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2015",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2016",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#2017",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2018",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.26
+  },
+  {
+   "order_name": "#2019",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#2020",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2021",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2022",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2023",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.98
+  },
+  {
+   "order_name": "#2024",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2025",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.73
+  },
+  {
+   "order_name": "#2026",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#2027",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2028",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2029",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2030",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2031",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2032",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2033",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2034",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2035",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2036",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2037",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2038",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2039",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2040",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.66
+  },
+  {
+   "order_name": "#2041",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.76
+  },
+  {
+   "order_name": "#2042",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.73
+  },
+  {
+   "order_name": "#2043",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2044",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2045",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.5
+  },
+  {
+   "order_name": "#2046",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2047",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.8
+  },
+  {
+   "order_name": "#2048",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2049",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.99
+  },
+  {
+   "order_name": "#2050",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.04
+  },
+  {
+   "order_name": "#2051",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.99
+  },
+  {
+   "order_name": "#2052",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2053",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.1
+  },
+  {
+   "order_name": "#2054",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#2055",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2056",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.86
+  },
+  {
+   "order_name": "#2057",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2058",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2059",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2060",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "order_name": "#2061",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.83
+  },
+  {
+   "order_name": "#2062",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2063",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2064",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2065",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2066",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2067",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2068",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2070",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.99
+  },
+  {
+   "order_name": "#2071",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2072",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.8
+  },
+  {
+   "order_name": "#2073",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.5
+  },
+  {
+   "order_name": "#2074",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2075",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.17
+  },
+  {
+   "order_name": "#2076",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#2077",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#2078",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.05
+  },
+  {
+   "order_name": "#2079",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.25
+  },
+  {
+   "order_name": "#2080",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.54
+  },
+  {
+   "order_name": "#2081",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2082",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#2083",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2084",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2085",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.17
+  },
+  {
+   "order_name": "#2086",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.07
+  },
+  {
+   "order_name": "#2087",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.83
+  },
+  {
+   "order_name": "#2088",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2089",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2090",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#2091",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2092",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2093",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#2094",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2095",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2096",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.98
+  },
+  {
+   "order_name": "#2097",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.78
+  },
+  {
+   "order_name": "#2098",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2099",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2100",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.34
+  },
+  {
+   "order_name": "#2101",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.73
+  },
+  {
+   "order_name": "#2102",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2103",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.4
+  },
+  {
+   "order_name": "#2104",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.72
+  },
+  {
+   "order_name": "#2105",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2106",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2107",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.17
+  },
+  {
+   "order_name": "#2108",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.02
+  },
+  {
+   "order_name": "#2109",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2110",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.19
+  },
+  {
+   "order_name": "#2111",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2112",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2113",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.21
+  },
+  {
+   "order_name": "#2114",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2115",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2116",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2117",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2118",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.93
+  },
+  {
+   "order_name": "#2119",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2120",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.98
+  },
+  {
+   "order_name": "#2121",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.82
+  },
+  {
+   "order_name": "#2122",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#2123",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.03
+  },
+  {
+   "order_name": "#2124",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.63
+  },
+  {
+   "order_name": "#2125",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.5
+  },
+  {
+   "order_name": "#2126",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.87
+  },
+  {
+   "order_name": "#2127",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2128",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2129",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2130",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2131",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2132",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2133",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#2134",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2135",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2136",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2137",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.63
+  },
+  {
+   "order_name": "#2138",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.73
+  },
+  {
+   "order_name": "#2139",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2140",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#2141",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2142",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.87
+  },
+  {
+   "order_name": "#2143",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.49
+  },
+  {
+   "order_name": "#2144",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2145",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2146",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2147",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2148",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2149",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2150",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2151",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2152",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#2153",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2154",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2155",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.03
+  },
+  {
+   "order_name": "#2156",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.79
+  },
+  {
+   "order_name": "#2157",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#2158",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2159",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.9
+  },
+  {
+   "order_name": "#2160",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.93
+  },
+  {
+   "order_name": "#2161",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.94
+  },
+  {
+   "order_name": "#2162",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2163",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2164",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.03
+  },
+  {
+   "order_name": "#2165",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2166",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.27
+  },
+  {
+   "order_name": "#2167",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2168",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.13
+  },
+  {
+   "order_name": "#2169",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.21
+  },
+  {
+   "order_name": "#2170",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 12.63
+  },
+  {
+   "order_name": "#2171",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2172",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2173",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.51
+  },
+  {
+   "order_name": "#2174",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.52
+  },
+  {
+   "order_name": "#2175",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.9
+  },
+  {
+   "order_name": "#2176",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2177",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2178",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#2179",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.46
+  },
+  {
+   "order_name": "#2180",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2181",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2182",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2183",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.19
+  },
+  {
+   "order_name": "#2184",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.5
+  },
+  {
+   "order_name": "#2185",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.69
+  },
+  {
+   "order_name": "#2186",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2187",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.98
+  },
+  {
+   "order_name": "#2188",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.19
+  },
+  {
+   "order_name": "#2189",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.63
+  },
+  {
+   "order_name": "#2190",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2191",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.26
+  },
+  {
+   "order_name": "#2192",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.98
+  },
+  {
+   "order_name": "#2193",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.76
+  },
+  {
+   "order_name": "#2194",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.7
+  },
+  {
+   "order_name": "#2195",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.02
+  },
+  {
+   "order_name": "#2196",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2197",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2198",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2199",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2200",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.34
+  },
+  {
+   "order_name": "#2201",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.19
+  },
+  {
+   "order_name": "#2202",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2203",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2204",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2205",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2206",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.94
+  },
+  {
+   "order_name": "#2207",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.59
+  },
+  {
+   "order_name": "#2208",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2209",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.05
+  },
+  {
+   "order_name": "#2210",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 11.68
+  },
+  {
+   "order_name": "#2211",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2212",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 9.33
+  },
+  {
+   "order_name": "#2213",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 10.73
+  },
+  {
+   "order_name": "#2214",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.96
+  },
+  {
+   "order_name": "#2215",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.76
+  },
+  {
+   "order_name": "#2216",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "order_name": "#2217",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 8.27
+  },
+  {
+   "order_name": "#2218",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 6.56
+  },
+  {
+   "order_name": "#2219",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 7.76
+  },
+  {
+   "order_name": "#2220",
+   "label_month": "2026-09",
+   "labels": 1,
+   "cost": 5.9
+  }
+ ]
+}

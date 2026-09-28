@@ -450,7 +450,7 @@ function renderShipBreakdown() {
     if (rest.length) html += row(`${rest.length} other packages`, { labels: rest.reduce((a, x) => a + x.labels, 0), cost: rest.reduce((a, x) => a + x.cost, 0) });
     el.innerHTML = html;
   };
-  list($("shipSvc"), D.label_services || [], (x) => `${x.carrier} ${x.service.replace(/^UPS®?\s*/, "")}`);
+  list($("shipSvc"), D.label_services || [], (x) => `${x.carrier} ${x.service.replace(new RegExp("^" + x.carrier + "®?\\s*"), "")}`);
   list($("shipPkg"), D.label_packages || [], (x) => x.package);
 }
 
