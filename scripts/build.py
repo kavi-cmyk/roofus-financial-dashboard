@@ -99,21 +99,66 @@ def labels_by_order_date(start, label_daily):
     return days, info
 
 
-def product_costs(start, rules):
+def faire_costs(start, cogs_cfg, linked_titles):
+    """COGS per day for Faire items that aren't linked to a Shopify product (blank title in ShopifyQL).
+
+    Costed by SKU from the master sheet; cancelled orders and FAIRE-DISCOUNT lines are skipped."""
+    fcfg = cogs_cfg.get("faire") or {}
+    orders = load(fcfg.get("orders_file", "raw/faire_orders.json"))
+    if not orders:
+        return {}, None
+    sku_cost = {}
+    sheet = DATA / fcfg.get("sku_costs_file", "product_costs.csv")
+    if sheet.exists():
+        import csv
+        for r in csv.DictReader(sheet.open()):
+            if r["landed_cogs"]:
+                sku_cost[r["sku"]] = float(r["landed_cogs"])
+    sku_cost.update(fcfg.get("extra_sku_costs", {}))
+    days = defaultdict(float)
+    info = {"units": 0, "cogs": 0.0, "uncosted_units": 0, "uncosted_skus": {}, "cancelled_units": 0}
+    for o in orders["orders"]:
+        if o["date"] < start:
+            continue
+        for title, sku, qty in o["lines"]:
+            if sku == "FAIRE-DISCOUNT" or title in linked_titles:
+                continue
+            if o["cancelled"]:
+                info["cancelled_units"] += qty
+                continue
+            if sku in sku_cost:
+                days[o["date"]] += qty * sku_cost[sku]
+                info["units"] += qty
+                info["cogs"] += qty * sku_cost[sku]
+            else:
+                info["uncosted_units"] += qty
+                info["uncosted_skus"][sku] = info["uncosted_skus"].get(sku, 0) + qty
+    info["cogs"] = round(info["cogs"], 2)
+    return days, info
+
+
+def product_costs(start, cogs_cfg):
     """Per-day COGS from units ordered x unit cost, plus a per-product summary."""
     data = load("raw/units_by_product_daily.json")
     if not data:
-        return {}, []
-    compiled = [(re.compile(r["match"]), r) for r in rules]
+        return {}, [], None
+    compiled = [(re.compile(r["match"]), r) for r in cogs_cfg.get("rules", [])]
+    linked_titles = {r["product"] for r in data["rows"] if r["product"]}
+    faire_day, faire_info = faire_costs(start, cogs_cfg, linked_titles)
     days = defaultdict(lambda: {"cogs": 0.0, "uncosted_sales": 0.0})
     products = {}
     for row in data["rows"]:
         if row["date"] < start:
             continue
+        d = days[row["date"]]
+        if not row["product"] and faire_info is not None:
+            p = products.setdefault("", {"product": "Faire wholesale items (costed by SKU)", "group": "faire",
+                                         "unit_cost": None, "qty": 0, "net_sales": 0.0})
+            p["net_sales"] += row["net_sales"]
+            continue
         name = row["product"] or "Wholesale / no product (Faire)"
         rule = next((r for rx, r in compiled if rx.search(row["product"])), None)
         cost = rule["cost"] if rule else None
-        d = days[row["date"]]
         if cost is not None:
             d["cogs"] += row["qty"] * cost
         else:
@@ -122,10 +167,18 @@ def product_costs(start, rules):
                                        "unit_cost": cost, "qty": 0, "net_sales": 0.0})
         p["qty"] += row["qty"]
         p["net_sales"] += row["net_sales"]
-    summary = sorted(({**p, "net_sales": round(p["net_sales"], 2),
-                       "cogs": round(p["qty"] * p["unit_cost"], 2) if p["unit_cost"] is not None else None}
-                      for p in products.values()), key=lambda p: -p["net_sales"])
-    return days, summary
+    for day, v in faire_day.items():
+        days[day]["cogs"] += v
+    summary = []
+    for p in products.values():
+        if p["group"] == "faire":
+            p = {**p, "qty": faire_info["units"], "cogs": faire_info["cogs"],
+                 "unit_cost": round(faire_info["cogs"] / faire_info["units"], 2) if faire_info["units"] else None}
+        else:
+            p = {**p, "cogs": round(p["qty"] * p["unit_cost"], 2) if p["unit_cost"] is not None else None}
+        summary.append({**p, "net_sales": round(p["net_sales"], 2)})
+    summary.sort(key=lambda p: -p["net_sales"])
+    return days, summary, faire_info
 
 
 def order_rollup(start):
@@ -177,7 +230,7 @@ def main():
     labels = load("shopify_labels.json", {"daily": [], "by_service": [], "by_package": []})
     label_day, label_info = labels_by_order_date(start, labels["daily"])
     cash, stats = order_rollup(start)
-    cogs_day, cogs_products = product_costs(start, cfg.get("cogs", {}).get("rules", []))
+    cogs_day, cogs_products, faire_info = product_costs(start, cfg.get("cogs", {}))
 
     spend = {r["date"]: r["spend"] for r in meta["daily"]}
     days = sorted({r["date"] for r in sales["daily"]} | set(spend) | set(cash) | set(label_day))
@@ -224,6 +277,7 @@ def main():
         "label_services": labels["by_service"],
         "label_packages": labels["by_package"],
         "cogs_products": cogs_products,
+        "faire_cogs": faire_info,
         "label_info": {**label_info,
                        "purchased_in_window": {"labels": sum(r["labels"] for r in labels["daily"]),
                                                "cost": round(sum(r["cost"] for r in labels["daily"]), 2)}},

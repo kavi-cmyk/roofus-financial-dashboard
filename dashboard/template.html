@@ -512,13 +512,23 @@ function renderCogs() {
   const costed = ps.filter((p) => p.unit_cost !== null), open = ps.filter((p) => p.unit_cost === null);
   const row = (p) => {
     const m = p.cogs !== null && p.net_sales > 0 ? ((p.net_sales - p.cogs) / p.net_sales * 100).toFixed(0) + "%" : "–";
-    return `<tr><td>${p.product}</td><td>${p.qty.toLocaleString()}</td><td>${p.unit_cost === null ? '<span class="pill">No cost</span>' : usd2(p.unit_cost)}</td><td>${p.cogs === null ? "–" : usd(p.cogs)}</td><td>${usd(p.net_sales)}</td><td>${m}</td></tr>`;
+    const uc = p.unit_cost === null ? '<span class="pill">No cost</span>' : (p.group === "faire" ? "avg " : "") + usd2(p.unit_cost);
+    return `<tr><td>${p.product}</td><td>${p.qty.toLocaleString()}</td><td>${uc}</td><td>${p.cogs === null ? "–" : usd(p.cogs)}</td><td>${usd(p.net_sales)}</td><td>${m}</td></tr>`;
   };
   const sumC = costed.reduce((a, p) => a + p.cogs, 0), sumS = costed.reduce((a, p) => a + p.net_sales, 0);
   const openS = open.reduce((a, p) => a + p.net_sales, 0);
   $("cogsTable").innerHTML = `<thead><tr><th>Product</th><th>Units</th><th>Unit cost</th><th>Product cost</th><th>Net sales</th><th>Margin</th></tr></thead>
     <tbody>${costed.map(row).join("")}${open.length ? `<tr><td colspan="6" class="muted" style="font-family:var(--sans);padding-top:14px">No unit cost given yet (${usd(openS)} net sales)</td></tr>` + open.map(row).join("") : ""}</tbody>
     <tfoot><tr><td>Costed products</td><td></td><td></td><td>${usd(sumC)}</td><td>${usd(sumS)}</td><td>${sumS ? ((sumS - sumC) / sumS * 100).toFixed(0) + "%" : "–"}</td></tr></tfoot>`;
+}
+
+function fairNote() {
+  const f = D.faire_cogs; if (!f) return "";
+  let t = `: ${f.units} units, ${usd2(f.cogs)}`;
+  if (f.cancelled_units) t += `; ${f.cancelled_units} units on a cancelled order left out`;
+  const un = Object.entries(f.uncosted_skus || {});
+  if (un.length) t += `; no cost for ${un.map(([k, v]) => `${k} (${v} units)`).join(", ")}`;
+  return t;
 }
 
 function renderNotes() {
@@ -530,7 +540,7 @@ function renderNotes() {
     <p><b>Meta ad spend:</b> Meta Marketing API, ad account “Roofus” (act_${cfg.meta_ad_account_id}), daily spend in USD. ${m ? `Account total for the window: ${usd2(m.spend)}, ${m.impressions.toLocaleString()} impressions, ${m.clicks.toLocaleString()} clicks.` : ""}</p>
     <p><b>Shipping cost:</b> ${shipNote()}</p>
     <p><b>Shopify OPEX:</b> your plan and app fees per month, pro-rated by day. </p>
-    <p><b>Product cost (COGS):</b> units ordered per product (ShopifyQL <span class="num">quantity_ordered</span>) × your cost per bundle: Buy 1 Get 1 $2.52 (2 canisters), Buy 2 Get 2 $6.23 (4 canisters + poop bags), Buy 3 Get 3 $9.57 (6 canisters + poop bags + paw cleanser), single canister $1.26, Paw Cleanser add-on $0.82. Gift line items (Mystery Gift, Free Paw Cleanser) count $0 because the bundle already includes them. Returned units still count, since refunded items usually aren't restocked. Products without a cost, including Faire wholesale, count as $0 and are listed in the product cost table. <b>Contribution</b> doesn't include 3PL, packaging or inventory write-offs.</p>
+    <p><b>Product cost (COGS):</b> landed cost per unit (product + freight) from the Roofus master sheet, times units ordered per product (ShopifyQL <span class="num">quantity_ordered</span>). Dental bundles carry their full cost: Buy 1 Get 1 $2.52, Buy 2 Get 2 $6.23 (4 canisters + poop bags), Buy 3 Get 3 $9.57 (6 canisters + poop bags + paw cleanser). Gift line items count $0 because the bundle already includes them. Faire items that aren't linked to a Shopify product are costed by SKU from the Faire orders${fairNote()}. Returned units still count, since refunded items usually aren't restocked. <b>Contribution</b> doesn't include 3PL, packaging or inventory write-offs.</p>
     <p class="muted">Data synced ${D.generated}. Taxes are $0 for this store.</p>`;
 }
 

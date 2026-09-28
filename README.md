@@ -7,7 +7,7 @@ One page that shows Roofus's money since **May 14, 2026**:
 - Meta ad spend (daily and by campaign) for ad account `Roofus` (act_1210215467866079)
 - Shopify cost as OPEX (plan and apps, pro-rated per day)
 - Shopify Shipping label cost per day, by carrier/service and by package
-- Product cost (COGS): units sold × unit cost from `config.json`
+- Product cost (COGS): units sold × landed cost per unit from the Roofus master sheet
 - **Contribution** = cash from Shopify − product cost − Meta spend − shipping labels − Shopify OPEX
 
 Filter by the whole period, the last 30 days, or a single month. The page also has a monthly table and MER (net sales ÷ Meta spend).
@@ -16,7 +16,9 @@ Filter by the whole period, the last 30 days, or a single month. The page also h
 
 ```
 data/
-  config.json               start date, Shopify plan fee, apps, product unit costs
+  config.json               start date, Shopify plan fee, apps, product cost rules
+  product_costs.csv         landed COGS per SKU, from the Roofus master sheet
+  raw/faire_orders.json     Faire orders with SKUs (for items not linked to a Shopify product)
   shopify_sales_daily.json  ShopifyQL daily sales
   raw/orders.jsonl          every order with its payment transactions and fees
   meta_daily.json           Meta spend per day
@@ -50,11 +52,11 @@ Create the Shopify token under **Settings → Apps → Develop apps**. Orders ol
 | Meta ad spend | Meta Marketing API insights, `time_increment=1` |
 | Shopify plan and apps | Entered in `config.json` or on the page. Grow plan: $105/mo billed monthly, $79/mo billed annually |
 | Shipping labels | Shopify Analytics (`FROM shipping_labels`), matched to orders and counted on the order date |
-| Product cost (COGS) | Units ordered per product per day (`FROM sales ... quantity_ordered`) × `cogs.rules` in `config.json`. Bundles carry their full cost: Buy 1 Get 1 $2.52, Buy 2 Get 2 $6.23 (4 canisters + poop bags), Buy 3 Get 3 $9.57 (6 canisters + poop bags + paw cleanser). Gift line items count $0 |
+| Product cost (COGS) | Units ordered per product per day (`FROM sales ... quantity_ordered`) × `cogs.rules` in `config.json`, which use landed cost from `product_costs.csv`. Dental bundles: Buy 1 Get 1 $2.52, Buy 2 Get 2 $6.23, Buy 3 Get 3 $9.57, gifts included (gift line items count $0). Faire items without a Shopify product are costed by SKU from `raw/faire_orders.json` |
 
 Values typed into the page's "Costs you enter" panel are saved in that browser only. To change the default for everyone, edit `data/config.json` and rebuild.
 
-Contribution doesn't include 3PL, packaging or inventory write-offs. Products without a rule in `cogs.rules` (ear/eye wipes, shampoo, paw care, pet wipes, Faire wholesale) count as $0 cost until you add one.
+Contribution doesn't include 3PL, packaging or inventory write-offs. When a new product starts selling, add a rule to `cogs.rules`; until then it shows as "No cost" on the page.
 
 ## Deploy on Vercel
 

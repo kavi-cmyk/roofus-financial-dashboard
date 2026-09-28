@@ -42,6 +42,12 @@ def http_json(url, body=None, headers=None, retries=4):
 
 
 # ---------------------------------------------------------------- Shopify
+def local_date(iso):
+    from zoneinfo import ZoneInfo
+    ts = dt.datetime.fromisoformat(iso.replace("Z", "+00:00"))
+    return ts.astimezone(ZoneInfo("America/Los_Angeles")).date().isoformat()
+
+
 def shopify(query, variables=None):
     store, token = os.environ["SHOPIFY_STORE"], os.environ["SHOPIFY_ADMIN_TOKEN"]
     res = http_json(f"https://{store}/admin/api/{SHOPIFY_API}/graphql.json",
@@ -74,6 +80,27 @@ def sync_sales(start, until):
     (DATA / "shopify_sales_daily.json").write_text(json.dumps(
         {"source": "ShopifyQL: " + ql, "pulled_at": str(dt.date.today()), "daily": daily}, indent=1))
     print(f"shopify sales: {len(daily)} days")
+
+
+FAIRE_Q = """query($after:String,$q:String!){ orders(first:100, after:$after, query:$q) {
+  nodes { name createdAt cancelledAt lineItems(first:100){ nodes { title sku quantity } } }
+  pageInfo{ hasNextPage endCursor } } }"""
+
+
+def sync_faire(start):
+    """Faire wholesale orders with SKUs, used to cost line items not linked to a Shopify product."""
+    orders, after = [], None
+    while True:
+        page = shopify(FAIRE_Q, {"after": after, "q": f"created_at:>={start} source_name:faire"})["orders"]
+        for o in page["nodes"]:
+            orders.append({"name": o["name"], "date": local_date(o["createdAt"]), "cancelled": bool(o["cancelledAt"]),
+                           "lines": [[li["title"], li["sku"] or "", li["quantity"]] for li in o["lineItems"]["nodes"]]})
+        if not page["pageInfo"]["hasNextPage"]:
+            break
+        after = page["pageInfo"]["endCursor"]
+    (DATA / "raw" / "faire_orders.json").write_text(json.dumps(
+        {"source": "Shopify Admin GraphQL: Faire orders with line items", "orders": orders}, indent=1, ensure_ascii=False))
+    print(f"faire orders: {len(orders)}")
 
 
 def sync_units(start, until):
@@ -235,6 +262,7 @@ def main():
     sync_sales(start, args.until)
     sync_labels(start, args.until)
     sync_units(start, args.until)
+    sync_faire(start)
     sync_orders(start)
     sync_payouts(start)
     sync_meta(os.environ.get("META_AD_ACCOUNT_ID", cfg["meta_ad_account_id"]), start, args.until)

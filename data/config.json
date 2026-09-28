@@ -17,7 +17,7 @@
     "shopify_apps_monthly": "Recurring app charges from Settings > Billing. Not exposed by the Admin API, so enter manually."
   },
   "cogs": {
-    "note": "Cost per unit sold, matched to Shopify product titles (regex, first match wins). Bundles carry their full cost, gifts included: Buy 1 Get 1 = 2 canisters ($2.52); Buy 2 Get 2 = 4 canisters + poop bags ($5.04 + $1.19); Buy 3 Get 3 = 6 canisters + poop bags + paw cleanser ($7.56 + $1.19 + $0.82). The gift line items (Mystery Gift, Free Paw Cleanser) are $0 so they aren't counted twice.",
+    "note": "Landed cost per unit (product + freight to USA) from the Roofus master sheet (data/product_costs.csv), matched to Shopify product titles (regex, first match wins). Bundles carry their full cost, gifts included: Buy 1 Get 1 = 2 canisters ($2.52); Buy 2 Get 2 = 4 canisters + poop bags ($5.04 + $1.19); Buy 3 Get 3 = 6 canisters + poop bags + paw cleanser ($7.56 + $1.19 + $0.82). Gift line items are $0 so they aren't counted twice. Faire wholesale items that aren't linked to a Shopify product are costed by SKU from data/raw/faire_orders.json.",
     "rules": [
       {
         "match": "^Dental Finger Wipes.*6 Canisters",
@@ -45,9 +45,59 @@
         "label": "Subscription 2-pack: 2 canisters"
       },
       {
-        "match": "^Dental Finger Wipes.*60 Dual Sided Wipes",
+        "match": "^Dental Finger Wipes - Minty Fresh",
         "cost": 1.26,
-        "label": "Single canister"
+        "label": "ROO-DW-MF-60"
+      },
+      {
+        "match": "^Dental Finger Wipes - (Peanut Butter|Unscented)",
+        "cost": 1.25,
+        "label": "ROO-DW-PB-60 / ROO-DW-FF-60"
+      },
+      {
+        "match": "^Soothing Ear Wipes.*4 Canisters",
+        "cost": 7.87,
+        "label": "Ear Buy 2 Get 2: 4 x ROO-EAR-FF-100 + poop bags"
+      },
+      {
+        "match": "^Soothing Ear Wipes.*2 Canisters",
+        "cost": 3.34,
+        "label": "Ear Buy 1 Get 1: 2 x ROO-EAR-FF-100"
+      },
+      {
+        "match": "^Soothing Ear Wipes",
+        "cost": 1.67,
+        "label": "ROO-EAR-FF-100"
+      },
+      {
+        "match": "^Pet Eye Wipes",
+        "cost": 1.11,
+        "label": "ROO-EYE-FF-100"
+      },
+      {
+        "match": "^Paw Care Cream",
+        "cost": 1.39,
+        "label": "ROO-BA-FF-1PK (paw balm)"
+      },
+      {
+        "match": "^Pet Shampoo",
+        "cost": 2.24,
+        "label": "ROO-SH-*-1PK"
+      },
+      {
+        "match": "^Pet Wipes - Coconut Kisses",
+        "cost": 3.09,
+        "label": "ROO-ZW-CK-200PK-RTL"
+      },
+      {
+        "match": "^Pet Wipes - (Snuggle Sesh|Zesty Zoomies)",
+        "cost": 3.1,
+        "label": "ROO-ZW-SS/ZZ-200PK-RTL"
+      },
+      {
+        "match": "^Pet Wipes - Unscented",
+        "cost": 3.07,
+        "label": "ROO-ZW-FF-200PK-RTL"
       },
       {
         "match": "^Roofus Mystery Gift",
@@ -62,8 +112,19 @@
       {
         "match": "^Paw Cleanser",
         "cost": 0.82,
-        "label": "Paw Cleanser 150ml add-on"
+        "label": "ROO-PC-FF-1PK"
       }
-    ]
+    ],
+    "faire": {
+      "orders_file": "raw/faire_orders.json",
+      "sku_costs_file": "product_costs.csv",
+      "extra_sku_costs": {
+        "ROO-BUN-BSB-02": 4.03
+      },
+      "notes": {
+        "ROO-BUN-BSB-02": "Variety Pack (Dental, Ear & Eye): assumed 1 each of ROO-DW-60 ($1.25), ROO-EAR-FF-100 ($1.67), ROO-EYE-FF-100 ($1.11). Not in the master sheet.",
+        "ROO-BUN-UNS-01": "Fragrance-Free Essentials Set: contents unknown, not in the master sheet, left uncosted."
+      }
+    }
   }
 }

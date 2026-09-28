@@ -1,0 +1,72 @@
+sku,name,category,status,product_cogs,ship_cost,landed_cogs
+ROO-SH-ZZ-1PK,Shampoo | Zesty Zoomies | 1PK,Shampoo,Produced,2.01,0.23,2.24
+ROO-SH-ZZ-1PK-RTL,Shampoo | Zesty Zoomies | 1PK | Retail,Shampoo,Produced,2.01,0.23,2.24
+ROO-SH-CK-1PK,Shampoo | Coconut Kisses | 1PK,Shampoo,Produced,2.01,0.23,2.24
+ROO-SH-CK-1PK-RTL,Shampoo | Coconut Kisses | 1PK | Retail,Shampoo,Produced,2.01,0.23,2.24
+ROO-SH-SS-1PK,Shampoo | Snuggle Sesh | 1PK,Shampoo,Produced,2.01,0.23,2.24
+ROO-SH-SS-1PK-RTL,Shampoo | Snuggle Sesh | 1PK | Retail,Shampoo,Produced,2.01,0.23,2.24
+ROO-BA-FF-1PK,Paw Balm | Fragrance Free | 1pk,Paw Balm,Produced,1.25,0.14,1.39
+ROO-BA-FF-1PK-RTL,Paw Balm | Fragrance Free | 1pk | Retail,Paw Balm,Produced,1.25,0.14,1.39
+ROO-ZW-SS-75PK,Zoomie Wipes | Snuggle Sesh | 75PK,Pet Wipes TUBE,,0.0,0.35,0.35
+ROO-ZW-ZZ-75PK,Zoomie Wipes | Zesty Zoomies | 75PK,Pet Wipes TUBE,Not Produced,0.0,0.35,0.35
+ROO-ZW-CK-75PK,Zoomie Wipes | Coconut Kisses | 75PK,Pet Wipes TUBE,Not Produced,0.0,0.35,0.35
+ROO-ZW-FF-75PK,Zoomie Wipes | Fragrance Free |75PK,Pet Wipes TUBE,Not Produced,0.0,0.35,0.35
+ROO-ZW-ZZ-200PK-RTL,Zoomie Wipes | Zesty Zoomies | 200PK | Retail,Pet Wipes TUBE,Produced,2.1,1.0,3.1
+ROO-ZW-SS-200PK-RTL,Zoomie Wipes | Snuggle Sesh | 200PK | Retail,Pet Wipes TUBE,Produced,2.1,1.0,3.1
+ROO-ZW-CK-200PK-RTL,Zoomie Wipes | Coconut Kisses | 200PK | Retail,Pet Wipes TUBE,Produced,2.09,1.0,3.09
+ROO-ZW-FF-200PK-RTL,Zoomie Wipes | Fragrance Free | 200PK | Retail,Pet Wipes TUBE,Produced,2.07,1.0,3.07
+ROO-ZW-ZZ-200PK-N-RTL,Zoomie Wipes | Zesty Zoomies | 200PK | Retail,Pet Wipes TUBE,Produced,1.56,0.9,2.46
+ROO-ZW-SS-200PK-N-RTL,Zoomie Wipes | Snuggle Sesh | 200PK | Retail,Pet Wipes TUBE,Produced,1.56,0.9,2.46
+ROO-ZW-CK-200PK-N-RTL,Zoomie Wipes | Coconut Kisses | 200PK | Retail,Pet Wipes TUBE,Produced,1.56,0.9,2.46
+ROO-ZW-FF-200PK-N-RTL,Zoomie Wipes | Fragrance Free | 200PK | Retail,Pet Wipes TUBE,Produced,1.56,0.9,2.46
+ROO-DW-FF-60,Dental Wipes | Fragrance Free | 60pk,Dental Wipes,Produced,1.05,0.2,1.25
+ROO-DW-FF-60-RTL,Dental Wipes | Fragrance Free | 60pk | Retail,Dental Wipes,Produced,1.05,0.2,1.25
+ROO-DW-MF-60,Dental Wipes | Mint | 60pk,Dental Wipes,Produced,1.06,0.2,1.26
+ROO-DW-MF-60-RTL,Dental Wipes | Mint | 60pk | Retail,Dental Wipes,Produced,1.06,0.2,1.26
+ROO-DW-PB-60,Dental Wipes | Peanut Butter | 60pk,Dental Wipes,Produced,1.05,0.2,1.25
+ROO-DW-PB-60-RTL,Dental Wipes | Peanut Butter | 60pk | Retail,Dental Wipes,Produced,1.05,0.2,1.25
+ROO-EAR-FF-100,Ear Wipes | Fragrance Free | 100PK,Ear Wipes,Produced,1.42,0.25,1.67
+ROO-EAR-FF-100-RTL,Ear Wipes | Fragrance Free | 100PK | Retail,Ear Wipes,Produced,1.42,0.25,1.67
+ROO-EYE-FF-100,Eye Wipes | Fragrance Free | 100PK,Eye Wipes,Produced,0.91,0.2,1.11
+ROO-EYE-FF-100-RTL,Eye Wipes | Fragrance Free | 100PK | Retail,Eye Wipes,Produced,0.91,0.2,1.11
+ROO-PGW-FF-8,Pet Glove Wipes | Fragrance Free | 8PK,Pet Glove Wipes,Not Produced,1.14,0.0,1.14
+ROO-PGW-SS-8,Pet Glove Wipes | Snuggle Sesh | 8PK,Pet Glove Wipes,Not Produced,1.14,0.0,1.14
+ROO-PGW-ZZ-8,Pet Glove Wipes | Zesty Zoomies | 8PK,Pet Glove Wipes,Not Produced,1.14,0.0,1.14
+ROO-PGW-CK-8,Pet Glove Wipes | Coconut Kisses | 8PK,Pet Glove Wipes,Not Produced,1.14,0.0,1.14
+ROO-PGW-FF-24,Pet Glove Wipes | Fragrance Free | 24PK,Pet Glove Wipes,Not Produced,3.08,0.0,3.08
+ROO-PGW-SS-24,Pet Glove Wipes | Snuggle Sesh | 24PK,Pet Glove Wipes,Not Produced,3.08,0.0,3.08
+ROO-PGW-ZZ-24,Pet Glove Wipes | Zesty Zoomies | 24PK,Pet Glove Wipes,Not Produced,3.08,0.0,3.08
+ROO-PGW-CK-24,Pet Glove Wipes | Coconut Kisses | 24PK,Pet Glove Wipes,Not Produced,3.07,0.0,3.07
+ROO-PC-FF-1PK,Paw Cleanser | Fragrance Free | 1PK,Paw Cleanser,Produced,0.68,0.14,0.82
+ROO-PC-FF-1PK-RTL,Paw Cleanser | Fragrance Free | 1PK | Retail,Paw Cleanser,Produced,0.68,0.14,0.82
+ROO-AIS-UNS-1PK,Probiotic Anti Itch Spray |Unscented | 1PK,Anti Itch Spray,Not Produced,1.33,0.0,1.33
+ROO-DS-FP-1PK-RTL,Probiotic Deodorizer Spray | Fresh Pup| 1PK | Retail,Deodorizer Spray,In Production,1.33,0.0,1.33
+ROO-DS-DW-1PK,Probiotic Deodorizer Spray | Driftwood| 1PK,Deodorizer Spray,Not Produced,1.33,0.0,1.33
+ROO-DS-UNS-1PK,Probiotic Deodorizer Spray | Unscented| 1PK,Deodorizer Spray,Not Produced,1.33,0.0,1.33
+ROO-DS-LV-1PK,Probiotic Deodorizer Spray | Lavender| 1PK,Deodorizer Spray,Not Produced,1.39,0.0,1.39
+ROO-DTS-LV-1PK,Probiotic Detangler Spray |Lavender | 1PK,Detangler Spray,Not Produced,1.39,0.0,1.39
+ROO-DTS-DW-1PK,Probiotic Detangler Spray |Driftwood | 1PK,Detangler Spray,Not Produced,1.39,0.0,1.39
+ROO-DTS-UNS-1PK,Probiotic Detangler Spray |Unscented | 1PK,Detangler Spray,Not Produced,1.39,0.0,1.39
+ROO-DTS-FP-1PK-RTL,Probiotic Detangler Spray |Fresh Pup | 1PK | Retail,Detangler Spray,In Production,1.39,0.0,1.39
+ROO-DK-4PK-RTL,Pet Dental Kit | 4PK | Retail,Pet Dental Kit,In Production,1.16,0.0,1.16
+ROO-DK-6PK-RTL,Pet Dental Kit | 6PK | Retail,Pet Dental Kit,In Production,1.49,0.0,1.49
+ROO-TP-1PK,Toothpaste | 1PK,Toothpaste,Only used for UPC,0.41,0.0,0.41
+ROO-WB-UNS-120PK-RTL,Roofus | Extra-Thick waste Bags | Unscented | 120pack | Retail,Poop bags,In Production,1.05,0.14,1.19
+ROO-WB-CV-120PK-RTL,Roofus | Extra-Thick waste Bags | Coconut Vanila | 120pack | Retail,Poop bags,In Production,1.05,0.14,1.19
+ROO-WB-PB-120PK-RTL,Roofus | Extra-Thick waste Bags | Peanut Butter | 120pack | Retail,Poop bags,Not Produced,1.05,0.14,1.19
+ROO-WB-LV-120PK-RTL,Roofus | Extra-Thick waste Bags | Lavender | 120pack | Retail,Poop bags,Not Produced,1.05,0.14,1.19
+ROO-WB-UNS-240PK-RTL,Roofus | Extra-Thick waste Bags | Unscented | 240pack | Retail,Poop bags,In Production,1.91,0.29,2.2
+ROO-WB-CV-240PK-RTL,Roofus | Extra-Thick waste Bags | Coconut Vanila | 240pack | Retail,Poop bags,In Production,1.97,0.29,2.26
+ROO-WB-PB-240PK-RTL,Roofus | Extra-Thick waste Bags | Peanut Butter | 240pack | Retail,Poop bags,Not Produced,1.97,0.29,2.26
+ROO-WB-LV-240PK-RTL,Roofus | Extra-Thick waste Bags | Lavender | 240pack | Retail,Poop bags,Not Produced,1.97,0.29,2.26
+ROO-WB-PB-360PK-RTL,Roofus | Extra-Thick waste Bags | Peanut Butter | 360pack | Retail,Poop bags,Not Produced,2.87,0.0,2.87
+ROO-WB-LV-360PK-RTL,Roofus | Extra-Thick waste Bags | Lavender | 360pack | Retail,Poop bags,Not Produced,2.87,0.0,2.87
+ROO-WB-UNS-360PK-RTL,Roofus | Extra-Thick waste Bags | Unscented | 360pack | Retail,Poop bags,Not Produced,2.81,0.0,2.81
+ROO-WB-CV-360PK-RTL,Roofus | Extra-Thick waste Bags | Coconut Vanila | 360pack | Retail,Poop bags,Not Produced,2.87,0.0,2.87
+ROO-WB-K2-CV-RTL,Roofus | Waste Bag Kit with Dispenser | Coconut Vanila | Retail,Poop bags,In Production,1.77,0.42,2.19
+ROO-WB-K2-LV-RTL,Roofus | Waste Bag Kit with Dispenser | Lavender | Retail,Poop bags,Not Produced,1.77,0.42,2.19
+ROO-WB-K2-PB-RTL,Roofus | Waste Bag Kit with Dispenser | Peanut Butter | Retail,Poop bags,,1.77,0.42,2.19
+ROO-WB-K2-UNS-RTL,Roofus | Waste Bag Kit with Dispenser | Unscented | Retail,Poop bags,In Production,1.77,0.42,2.19
+ROO-LM-1PK-RTL,Roofus | Lick mat | Retail,Lick mat,Will be Produced,,,
+ROO-TB-250-RTL,Roofus | Tick & Bug Spray | 250ml | Retail,Tick & Bug Spray,Will be Produced,1.35,0.15,1.5
+ROO-FBWA-MF-250-RTL,Roofus | Fresh Breath Water Additive | Minty Fresh | 250 ml | Retail,Fresh Breath Water Additive,Will be Produced,1.31,0.15,1.46
