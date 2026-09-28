@@ -248,6 +248,12 @@ td.pos { color: var(--good); }
     </div>
     <div class="scroll"><table class="data" id="settleMonthly"></table></div>
   </section>
+
+  <section class="panel" aria-label="Ad account managers">
+    <div class="panel-head"><h2>Meta ads: previous agency vs Amar</h2><span class="muted" id="mgrNote" style="font-size:12px"></span></div>
+    <div class="payers" id="mgrCards"></div>
+    <div class="scroll"><table class="data" id="mgrTable"></table></div>
+  </section>
 </div>
 
 <script>
@@ -644,6 +650,34 @@ function renderSettlement(t, rs) {
   $("settleMonthly").innerHTML = `<thead><tr><th>Month</th><th>Combined result</th><th>Each ${pct(S.payer)}% share</th><th>${S.payer} net</th><th>${S.payee} net</th><th>${S.payer} owes</th><th>Running total owed</th></tr></thead><tbody>${body}</tbody><tfoot><tr><td>Total</td><td>${usd2(all.total)}</td><td>${usd2(all.fromShare)}</td><td>${usd2(all.from.net)}</td><td>${usd2(all.to.net)}</td><td>${usd2(all.owed)}</td><td></td></tr></tfoot>`;
 }
 
+const MANAGERS = (cfg.ad_managers || []).slice().sort((a, b) => a.from < b.from ? -1 : 1);
+function managerOf(date) { let m = null; for (const x of MANAGERS) if (date >= x.from) m = x; return m; }
+
+function renderManagers() {
+  if (!MANAGERS.length) return;
+  const groups = MANAGERS.map((m) => ({ m, rows: D.daily.filter((d) => managerOf(d.date) === m) })).filter((g) => g.rows.length);
+  const stat = (rs) => { const t = sum(rs); return { t, perDay: t.spend / t.days, cpo: t.orders ? t.spend / t.orders : 0 }; };
+  $("mgrNote").textContent = groups.map((g) => `${g.m.name}: ${fmtDay(g.rows[0].date)} – ${fmtDay(g.rows[g.rows.length - 1].date)}`).join(" · ");
+  $("mgrCards").innerHTML = groups.map((g) => {
+    const { t, perDay, cpo } = stat(g.rows);
+    return `<div><span>${g.m.name} · ${t.days} days</span><b>${usd(t.spend)}</b><span>Meta spend · ${usd(perDay)}/day<br>${usd(t.net)} net sales · MER ${t.mer.toFixed(2)}× · ${usd2(cpo)} ad spend per order<br>Contribution ${usd(t.contribution)} (${usd(t.contribution / t.days)}/day)</span></div>`;
+  }).join("");
+  const head = ["", "Days", "Meta spend", "Spend / day", "Orders", "Net sales", "MER", "Ad spend / order", "Contribution", "Contribution / day"];
+  const row = (label, rs, strong) => {
+    const { t, perDay, cpo } = stat(rs), c = t.contribution;
+    return `<tr${strong ? ' style="font-weight:600"' : ""}><td>${label}</td><td>${t.days}</td><td>${usd(t.spend)}</td><td>${usd(perDay)}</td><td>${t.orders.toLocaleString()}</td><td>${usd(t.net)}</td><td>${t.mer.toFixed(2)}×</td><td>${usd2(cpo)}</td><td class="${c < 0 ? "neg" : "pos"}">${usd(c)}</td><td class="${c < 0 ? "neg" : "pos"}">${usd(c / t.days)}</td></tr>`;
+  };
+  let body = "";
+  for (const g of groups) {
+    body += row(g.m.name, g.rows, true);
+    for (const m of [...new Set(g.rows.map((d) => d.date.slice(0, 7)))]) {
+      const rs = g.rows.filter((d) => d.date.startsWith(m));
+      body += row(`&nbsp;&nbsp;${MONTHS[+m.slice(5) - 1]}`, rs, false);
+    }
+  }
+  $("mgrTable").innerHTML = `<thead><tr>${head.map((h) => `<th>${h}</th>`).join("")}</tr></thead><tbody>${body}</tbody>`;
+}
+
 function renderNotes() {
   const s = D.order_stats, gw = Object.entries(s.gateways || {}).map(([k, v]) => `${k.replace(/_/g, " ")} ${usd(v)}`).join(", ");
   const m = D.meta_account_totals;
@@ -662,7 +696,7 @@ function render(full = true) {
   const rs = rows(), t = sum(rs);
   $("sub").textContent = `Shopify (excl. Faire wholesale) + Meta since ${fmtDay(D.start)}, ${D.start.slice(0, 4)} · synced ${D.generated}`;
   renderRanges(); renderHero(t, rs); renderTiles(t); renderPL(t, rs); renderPayers(t, rs); renderSettlement(t, rs); renderWeekly(rs); renderShipping(t, rs); renderMonthly();
-  if (full) { renderCamps(); renderShipBreakdown(); renderCogs(); renderInputs(); renderNotes(); }
+  if (full) { renderManagers(); renderCamps(); renderShipBreakdown(); renderCogs(); renderInputs(); renderNotes(); }
 }
 render();
 </script>
