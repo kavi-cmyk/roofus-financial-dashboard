@@ -52,3 +52,9 @@ Create the Shopify token under **Settings → Apps → Develop apps**. Orders ol
 Values typed into the page's "Costs you enter" panel are saved in that browser only. To change the default for everyone, edit `data/config.json` and rebuild.
 
 Contribution doesn't include product cost (COGS), 3PL or packaging.
+
+## Deploy on Vercel
+
+The repo includes `vercel.json`: no build step, and Vercel serves `dist/`. In Vercel, choose **Add New → Project**, import `kavi-cmyk/roofus-financial-dashboard`, and deploy. After each sync, commit the new `dist/index.html` and Vercel redeploys it.
+
+Without protection, the production URL is public. To limit who can open it, turn on **Settings → Deployment Protection** in Vercel.
