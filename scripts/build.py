@@ -9,11 +9,13 @@ Inputs (all under data/):
   meta_campaigns.json        Meta spend per campaign
   shopify_labels.json        Shopify Shipping label count and cost per day, by service and package
   raw/labels_by_order.json   optional; label count and cost per order, used to put label cost on the order date
+  raw/units_by_product_daily.json  units and net sales per product per day, costed with config.cogs
   config.json                start date and OPEX inputs
 
 Output: dist/index.html (dashboard/template.html with the data inlined).
 """
 import json
+import re
 import datetime as dt
 from collections import defaultdict
 from pathlib import Path
@@ -97,6 +99,35 @@ def labels_by_order_date(start, label_daily):
     return days, info
 
 
+def product_costs(start, rules):
+    """Per-day COGS from units ordered x unit cost, plus a per-product summary."""
+    data = load("raw/units_by_product_daily.json")
+    if not data:
+        return {}, []
+    compiled = [(re.compile(r["match"]), r) for r in rules]
+    days = defaultdict(lambda: {"cogs": 0.0, "uncosted_sales": 0.0})
+    products = {}
+    for row in data["rows"]:
+        if row["date"] < start:
+            continue
+        name = row["product"] or "Wholesale / no product (Faire)"
+        rule = next((r for rx, r in compiled if rx.search(row["product"])), None)
+        cost = rule["cost"] if rule else None
+        d = days[row["date"]]
+        if cost is not None:
+            d["cogs"] += row["qty"] * cost
+        else:
+            d["uncosted_sales"] += row["net_sales"]
+        p = products.setdefault(name, {"product": name, "group": rule["label"] if rule else None,
+                                       "unit_cost": cost, "qty": 0, "net_sales": 0.0})
+        p["qty"] += row["qty"]
+        p["net_sales"] += row["net_sales"]
+    summary = sorted(({**p, "net_sales": round(p["net_sales"], 2),
+                       "cogs": round(p["qty"] * p["unit_cost"], 2) if p["unit_cost"] is not None else None}
+                      for p in products.values()), key=lambda p: -p["net_sales"])
+    return days, summary
+
+
 def order_rollup(start):
     """Per-day cash movement from order transactions (by transaction date, store time)."""
     days = defaultdict(lambda: defaultdict(float))
@@ -146,6 +177,7 @@ def main():
     labels = load("shopify_labels.json", {"daily": [], "by_service": [], "by_package": []})
     label_day, label_info = labels_by_order_date(start, labels["daily"])
     cash, stats = order_rollup(start)
+    cogs_day, cogs_products = product_costs(start, cfg.get("cogs", {}).get("rules", []))
 
     spend = {r["date"]: r["spend"] for r in meta["daily"]}
     days = sorted({r["date"] for r in sales["daily"]} | set(spend) | set(cash) | set(label_day))
@@ -176,6 +208,8 @@ def main():
             "labels": label_day.get(day, {}).get("labels", 0),
             "label_cost": round(label_day.get(day, {}).get("cost", 0.0), 2),
             "label_orders": label_day.get(day, {}).get("orders", 0),
+            "cogs": round(cogs_day.get(day, {}).get("cogs", 0.0), 2),
+            "uncosted_sales": round(cogs_day.get(day, {}).get("uncosted_sales", 0.0), 2),
         })
 
     bundle = {
@@ -189,6 +223,7 @@ def main():
         "payouts": payouts["payouts"] if payouts else None,
         "label_services": labels["by_service"],
         "label_packages": labels["by_package"],
+        "cogs_products": cogs_products,
         "label_info": {**label_info,
                        "purchased_in_window": {"labels": sum(r["labels"] for r in labels["daily"]),
                                                "cost": round(sum(r["cost"] for r in labels["daily"]), 2)}},
@@ -205,7 +240,7 @@ def main():
     print("label basis:", json.dumps(bundle["label_info"]))
     print(f"Built dist/index.html  {start} → {bundle['end']}  ({len(daily)} days)")
     for k in ("orders", "gross", "discounts", "returns", "net", "shipping", "collected",
-              "collected_other", "refunds_paid", "fees", "spend", "labels", "label_cost"):
+              "collected_other", "refunds_paid", "fees", "spend", "labels", "label_cost", "cogs", "uncosted_sales"):
         print(f"  {k:16} {tot(k):>12,.2f}")
 
 

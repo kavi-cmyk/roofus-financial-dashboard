@@ -195,6 +195,11 @@ td.pos { color: var(--good); }
   </div>
 
   <section class="panel">
+    <div class="panel-head"><h2>Product cost by product</h2><span class="muted" style="font-size:12px">May 14 → latest sync · units ordered × unit cost</span></div>
+    <div class="scroll"><table class="data" id="cogsTable"></table></div>
+  </section>
+
+  <section class="panel">
     <div class="panel-head"><h2>By month</h2><span class="muted" style="font-size:12px">Partial months are pro-rated for OPEX</span></div>
     <div class="scroll"><table class="data" id="monthly"></table></div>
   </section>
@@ -257,7 +262,7 @@ function rows() {
 
 function sum(rs) {
   const t = { days: rs.length };
-  for (const k of ["orders","gross","discounts","returns","net","shipping","total","collected","collected_other","refunds_paid","refunds_other","fees","spend","labels","label_cost","label_orders"])
+  for (const k of ["orders","gross","discounts","returns","net","shipping","total","collected","collected_other","refunds_paid","refunds_other","fees","spend","labels","label_cost","label_orders","cogs","uncosted_sales"])
     t[k] = rs.reduce((a, r) => a + (r[k] || 0), 0);
   const monthsCovered = t.days / DAYS_PER_MONTH;
   t.plan = costs.plan * monthsCovered;
@@ -267,7 +272,7 @@ function sum(rs) {
   t.shipNet = t.label_cost - t.shipping;
   t.payout = t.collected - t.refunds_paid - t.fees;
   t.cashIn = t.payout + t.collected_other - t.refunds_other;
-  t.contribution = t.cashIn - t.spend - t.label_cost - t.shopifyOpex - t.other;
+  t.contribution = t.cashIn - t.cogs - t.spend - t.label_cost - t.shopifyOpex - t.other;
   t.mer = t.spend ? t.net / t.spend : 0;
   t.aov = t.orders ? t.total / t.orders : 0;
   return t;
@@ -287,11 +292,12 @@ function renderHero(t, rs) {
   const h = $("hero");
   h.textContent = usd(t.contribution);
   h.className = "hero-num " + (t.contribution < 0 ? "neg" : "pos");
-  $("heroNote").textContent = `${fmtDay(rs[0].date)} – ${fmtDay(rs[rs.length - 1].date)} · ${t.days} days · before product cost (COGS)`;
+  $("heroNote").textContent = `${fmtDay(rs[0].date)} – ${fmtDay(rs[rs.length - 1].date)} · ${t.days} days · after product cost (COGS)`;
   const line = (l, v, cls = "") => `<div class="${cls}"><span>${l}</span><span class="num">${v}</span></div>`;
   $("formula").innerHTML =
     line("Cash from Shopify (est. payouts + other gateways)", usd2(t.cashIn)) +
     line("− Meta ad spend", usd2(-t.spend)) +
+    line("− Product cost (COGS)", usd2(-t.cogs)) +
     line("− Shipping cost (labels)", usd2(-t.label_cost)) +
     line("− Shopify plan & apps", usd2(-t.shopifyOpex)) +
     (t.other ? line("− Other OPEX", usd2(-t.other)) : "") +
@@ -307,7 +313,7 @@ function renderTiles(t) {
     tile("Net payouts (est.)", usd(t.payout), `after ${usd(t.fees)} processing fees`, `<span class="pill ok">From order transactions</span>`),
     tile("Meta ad spend", usd(t.spend), `MER ${t.mer.toFixed(2)}× net sales`),
     tile("Shipping cost", usd(t.label_cost), `${t.labels.toLocaleString()} labels · ${usd2(t.labels ? t.label_cost / t.labels : 0)} per label`),
-    tile("Net shipping cost", usd(t.shipNet), `after ${usd(t.shipping)} paid by customers`),
+    tile("Product cost (COGS)", usd(t.cogs), `${(t.net ? t.cogs / t.net * 100 : 0).toFixed(1)}% of net sales`, t.uncosted_sales > 0.5 ? `<span class="pill">${usd(t.uncosted_sales)} of sales not costed</span>` : ""),
     tile("Shopify OPEX", usd(t.shopifyOpex), `${usd(costs.plan)} plan + ${usd(costs.apps)} apps / mo, pro-rated`),
   ].join("");
 }
@@ -331,6 +337,7 @@ function renderPL(t, rs) {
     (t.collected_other ? r("Other gateways, net of refunds", t.collected_other - t.refunds_other, "sub") : "") +
     r("Spend", null, "sec") +
     r("Meta ads", -t.spend, "sub") +
+    r("Product cost (COGS)", -t.cogs, "sub") +
     r("Shipping cost (labels)", -t.label_cost, "sub") +
     r("Shopify plan", -t.plan, "sub") +
     r("Shopify apps", -t.apps, "sub") +
@@ -455,10 +462,10 @@ function renderShipBreakdown() {
 }
 
 function renderMonthly() {
-  const head = ["Month","Orders","Gross sales","Refunds","Net sales","Net payouts","Meta spend","Shipping cost","Net shipping","Shopify OPEX","Contribution","MER"];
+  const head = ["Month","Orders","Gross sales","Refunds","Net sales","Net payouts","COGS","Meta spend","Shipping cost","Net shipping","Shopify OPEX","Contribution","MER"];
   const line = (name, t) => {
     const c = t.contribution;
-    return `<tr><td>${name}</td><td>${t.orders.toLocaleString()}</td><td>${usd(t.gross)}</td><td>${usd(t.returns)}</td><td>${usd(t.net)}</td><td>${usd(t.payout)}</td><td>${usd(t.spend)}</td><td>${usd(t.label_cost)}</td><td>${usd(t.shipNet)}</td><td>${usd(t.shopifyOpex + t.other)}</td><td class="${c < 0 ? "neg" : "pos"}">${usd(c)}</td><td>${t.mer.toFixed(2)}×</td></tr>`;
+    return `<tr><td>${name}</td><td>${t.orders.toLocaleString()}</td><td>${usd(t.gross)}</td><td>${usd(t.returns)}</td><td>${usd(t.net)}</td><td>${usd(t.payout)}</td><td>${usd(t.cogs)}</td><td>${usd(t.spend)}</td><td>${usd(t.label_cost)}</td><td>${usd(t.shipNet)}</td><td>${usd(t.shopifyOpex + t.other)}</td><td class="${c < 0 ? "neg" : "pos"}">${usd(c)}</td><td>${t.mer.toFixed(2)}×</td></tr>`;
   };
   let body = "";
   for (const m of months) {
@@ -499,6 +506,21 @@ function shipNote() {
   return s + " <b>Paid by customers</b> is the shipping charged at checkout.";
 }
 
+function renderCogs() {
+  const ps = D.cogs_products || [];
+  if (!ps.length) { $("cogsTable").innerHTML = `<tbody><tr><td>No product unit data yet. Run scripts/sync.py.</td></tr></tbody>`; return; }
+  const costed = ps.filter((p) => p.unit_cost !== null), open = ps.filter((p) => p.unit_cost === null);
+  const row = (p) => {
+    const m = p.cogs !== null && p.net_sales > 0 ? ((p.net_sales - p.cogs) / p.net_sales * 100).toFixed(0) + "%" : "–";
+    return `<tr><td>${p.product}</td><td>${p.qty.toLocaleString()}</td><td>${p.unit_cost === null ? '<span class="pill">No cost</span>' : usd2(p.unit_cost)}</td><td>${p.cogs === null ? "–" : usd(p.cogs)}</td><td>${usd(p.net_sales)}</td><td>${m}</td></tr>`;
+  };
+  const sumC = costed.reduce((a, p) => a + p.cogs, 0), sumS = costed.reduce((a, p) => a + p.net_sales, 0);
+  const openS = open.reduce((a, p) => a + p.net_sales, 0);
+  $("cogsTable").innerHTML = `<thead><tr><th>Product</th><th>Units</th><th>Unit cost</th><th>Product cost</th><th>Net sales</th><th>Margin</th></tr></thead>
+    <tbody>${costed.map(row).join("")}${open.length ? `<tr><td colspan="6" class="muted" style="font-family:var(--sans);padding-top:14px">No unit cost given yet (${usd(openS)} net sales)</td></tr>` + open.map(row).join("") : ""}</tbody>
+    <tfoot><tr><td>Costed products</td><td></td><td></td><td>${usd(sumC)}</td><td>${usd(sumS)}</td><td>${sumS ? ((sumS - sumC) / sumS * 100).toFixed(0) + "%" : "–"}</td></tr></tfoot>`;
+}
+
 function renderNotes() {
   const s = D.order_stats, gw = Object.entries(s.gateways || {}).map(([k, v]) => `${k.replace(/_/g, " ")} ${usd(v)}`).join(", ");
   const m = D.meta_account_totals;
@@ -507,7 +529,8 @@ function renderNotes() {
     <p><b>Net payouts:</b> ${D.payouts ? "Shopify Payments payouts API." : "estimated from each order's payment transactions: money captured through Shopify Payments, minus refunds paid, minus the processing fee Shopify recorded on each transaction. Actual bank payouts lag by a few days and can include reserves or adjustments. Give the sync token the <span class=\"num\">read_shopify_payments_payouts</span> scope to use the real payout ledger."} ${s.orders} orders read${gw ? "; captured by gateway: " + gw : ""}.</p>
     <p><b>Meta ad spend:</b> Meta Marketing API, ad account “Roofus” (act_${cfg.meta_ad_account_id}), daily spend in USD. ${m ? `Account total for the window: ${usd2(m.spend)}, ${m.impressions.toLocaleString()} impressions, ${m.clicks.toLocaleString()} clicks.` : ""}</p>
     <p><b>Shipping cost:</b> ${shipNote()}</p>
-    <p><b>Shopify OPEX:</b> your plan and app fees per month, pro-rated by day. <b>Contribution</b> doesn't subtract product cost (COGS), 3PL or packaging.</p>
+    <p><b>Shopify OPEX:</b> your plan and app fees per month, pro-rated by day. </p>
+    <p><b>Product cost (COGS):</b> units ordered per product (ShopifyQL <span class="num">quantity_ordered</span>) × your unit costs: $1.26 per canister of wipes, $1.19 for poop bags (the Mystery Gift line item) and $0.82 for the gift paw cleanser. Returned units still count, since refunded items usually aren't restocked. Products without a cost, including Faire wholesale, count as $0 and are listed in the product cost table. <b>Contribution</b> doesn't include 3PL, packaging or inventory write-offs.</p>
     <p class="muted">Data synced ${D.generated}. Taxes are $0 for this store.</p>`;
 }
 
@@ -515,7 +538,7 @@ function render(full = true) {
   const rs = rows(), t = sum(rs);
   $("sub").textContent = `Shopify + Meta since ${fmtDay(D.start)}, ${D.start.slice(0, 4)} · synced ${D.generated}`;
   renderRanges(); renderHero(t, rs); renderTiles(t); renderPL(t, rs); renderWeekly(rs); renderShipping(t, rs); renderMonthly();
-  if (full) { renderCamps(); renderShipBreakdown(); renderInputs(); renderNotes(); }
+  if (full) { renderCamps(); renderShipBreakdown(); renderCogs(); renderInputs(); renderNotes(); }
 }
 render();
 </script>

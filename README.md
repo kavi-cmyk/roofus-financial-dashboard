@@ -7,7 +7,8 @@ One page that shows Roofus's money since **May 14, 2026**:
 - Meta ad spend (daily and by campaign) for ad account `Roofus` (act_1210215467866079)
 - Shopify cost as OPEX (plan and apps, pro-rated per day)
 - Shopify Shipping label cost per day, by carrier/service and by package
-- **Contribution** = cash from Shopify − Meta spend − shipping labels − Shopify OPEX
+- Product cost (COGS): units sold × unit cost from `config.json`
+- **Contribution** = cash from Shopify − product cost − Meta spend − shipping labels − Shopify OPEX
 
 Filter by the whole period, the last 30 days, or a single month. The page also has a monthly table and MER (net sales ÷ Meta spend).
 
@@ -15,7 +16,7 @@ Filter by the whole period, the last 30 days, or a single month. The page also h
 
 ```
 data/
-  config.json               start date, Shopify plan fee, apps
+  config.json               start date, Shopify plan fee, apps, product unit costs
   shopify_sales_daily.json  ShopifyQL daily sales
   raw/orders.jsonl          every order with its payment transactions and fees
   meta_daily.json           Meta spend per day
@@ -48,11 +49,12 @@ Create the Shopify token under **Settings → Apps → Develop apps**. Orders ol
 | Net payouts | Estimated from the transactions above. If the token has `read_shopify_payments_payouts`, `sync.py` also saves the real payout ledger to `data/shopify_payouts.json` |
 | Meta ad spend | Meta Marketing API insights, `time_increment=1` |
 | Shopify plan and apps | Entered in `config.json` or on the page. Grow plan: $105/mo billed monthly, $79/mo billed annually |
-| Shipping labels | Shopify Analytics (`FROM shipping_labels`): label count and cost by the day each label was bought |
+| Shipping labels | Shopify Analytics (`FROM shipping_labels`), matched to orders and counted on the order date |
+| Product cost (COGS) | Units ordered per product per day (`FROM sales ... quantity_ordered`) × `cogs.rules` in `config.json`. Wipes $1.26/canister, poop bags $1.19 (Mystery Gift), paw cleanser $0.82 (gift) |
 
 Values typed into the page's "Costs you enter" panel are saved in that browser only. To change the default for everyone, edit `data/config.json` and rebuild.
 
-Contribution doesn't include product cost (COGS), 3PL or packaging.
+Contribution doesn't include 3PL, packaging or inventory write-offs. Products without a rule in `cogs.rules` (ear/eye wipes, shampoo, paw care, pet wipes, Faire wholesale) count as $0 cost until you add one.
 
 ## Deploy on Vercel
 

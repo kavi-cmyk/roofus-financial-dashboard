@@ -76,6 +76,27 @@ def sync_sales(start, until):
     print(f"shopify sales: {len(daily)} days")
 
 
+def sync_units(start, until):
+    """Units and net sales per product per day, one query per month."""
+    rows, month = [], dt.date.fromisoformat(start).replace(day=1)
+    end = dt.date.fromisoformat(until)
+    while month <= end:
+        nxt = (month + dt.timedelta(days=32)).replace(day=1)
+        lo, hi = max(month, dt.date.fromisoformat(start)), min(nxt - dt.timedelta(days=1), end)
+        for r in shopifyql(f"FROM sales SHOW quantity_ordered, net_items_sold, net_sales GROUP BY product_title "
+                           f"TIMESERIES day SINCE {lo} UNTIL {hi} LIMIT 5000"):
+            qty, items, sales = int(num(r["quantity_ordered"])), int(num(r["net_items_sold"])), num(r["net_sales"])
+            if qty or items or sales:
+                rows.append({"date": str(r["day"])[:10], "product": r["product_title"] or "",
+                             "qty": qty, "net_items": items, "net_sales": sales})
+        month = nxt
+    (DATA / "raw").mkdir(exist_ok=True)
+    (DATA / "raw" / "units_by_product_daily.json").write_text(json.dumps(
+        {"source": "ShopifyQL FROM sales SHOW quantity_ordered, net_items_sold, net_sales GROUP BY product_title TIMESERIES day",
+         "rows": rows}, indent=1, ensure_ascii=False))
+    print(f"units by product: {len(rows)} rows")
+
+
 def sync_labels(start, until):
     (DATA / "raw").mkdir(exist_ok=True)
     span = f"SINCE {start} UNTIL {until}"
@@ -213,6 +234,7 @@ def main():
     start = cfg["start_date"]
     sync_sales(start, args.until)
     sync_labels(start, args.until)
+    sync_units(start, args.until)
     sync_orders(start)
     sync_payouts(start)
     sync_meta(os.environ.get("META_AD_ACCOUNT_ID", cfg["meta_ad_account_id"]), start, args.until)
