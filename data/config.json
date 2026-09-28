@@ -16,7 +16,7 @@
     "shopify_plan_monthly": "Grow plan list price on monthly billing ($79/mo if billed annually). Edit to match your Shopify invoice.",
     "shopify_apps_monthly": "Recurring app charges from Settings > Billing. Not exposed by the Admin API, so enter manually.",
     "exclude_channels": "Sales, units, product cost, shipping labels and payments from these Shopify sales channels are left out of every figure.",
-    "payers": "Company that pays each cost. null means not assigned yet."
+    "payers": "Company that pays each cost, and (payouts) the company that receives Shopify revenue. null means not assigned yet."
   },
   "cogs": {
     "note": "Landed cost per unit (product + freight to USA) from the Roofus master sheet (data/product_costs.csv), matched to Shopify product titles (regex, first match wins). Bundles carry their full cost, gifts included: Buy 1 Get 1 = 2 canisters ($2.52); Buy 2 Get 2 = 4 canisters + poop bags ($5.04 + $1.19); Buy 3 Get 3 = 6 canisters + poop bags + paw cleanser ($7.56 + $1.19 + $0.82). Gift line items are $0 so they aren't counted twice.",
@@ -125,7 +125,8 @@
     "meta": "Care & Bloom",
     "cogs": "Petra Brands",
     "shipping": "Petra Brands",
-    "shopify_opex": null,
-    "other": null
+    "shopify_opex": "Care & Bloom",
+    "other": null,
+    "payouts": "Petra Brands"
   }
 }

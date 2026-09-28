@@ -182,7 +182,7 @@ td.pos { color: var(--good); }
   </div>
 
   <section class="panel">
-    <div class="panel-head"><h2>Who paid the costs</h2><span class="muted" id="payRange" style="font-size:12px"></span></div>
+    <div class="panel-head"><h2>Where each company stands</h2><span class="muted" id="payRange" style="font-size:12px"></span></div>
     <div class="payers" id="payers"></div>
     <div class="scroll"><table class="data" id="payMonthly"></table></div>
   </section>
@@ -324,7 +324,7 @@ function renderHero(t, rs) {
   $("heroNote").textContent = `${fmtDay(rs[0].date)} – ${fmtDay(rs[rs.length - 1].date)} · ${t.days} days · after product cost (COGS)`;
   const line = (l, v, cls = "") => `<div class="${cls}"><span>${l}</span><span class="num">${v}</span></div>`;
   $("formula").innerHTML =
-    line("Cash from Shopify (est. payouts + other gateways)", usd2(t.cashIn)) +
+    line("Cash from Shopify (est. payouts + other gateways)" + tag("payouts"), usd2(t.cashIn)) +
     line("− Meta ad spend" + tag("meta"), usd2(-t.spend)) +
     line("− Product cost (COGS)" + tag("cogs"), usd2(-t.cogs)) +
     line("− Shipping cost (labels)" + tag("shipping"), usd2(-t.label_cost)) +
@@ -362,7 +362,7 @@ function renderPL(t, rs) {
     r("Collected via Shopify Payments", t.collected) +
     r("Refunds paid out", -t.refunds_paid, "sub") +
     r("Processing fees", -t.fees, "sub") +
-    r("Net payouts (est.)", t.payout, "total") +
+    r("Net payouts (est.)" + tag("payouts"), t.payout, "total") +
     (t.collected_other ? r("Other gateways, net of refunds", t.collected_other - t.refunds_other, "sub") : "") +
     r("Spend", null, "sec") +
     r("Meta ads" + tag("meta"), -t.spend, "sub") +
@@ -556,19 +556,40 @@ function exclNote() {
   return `<p><b>Faire wholesale is left out.</b> Its ${x.orders} orders (${usd2(x.gross)} gross, ${usd2(x.net)} net sales, ${x.units.toLocaleString()} units) are removed from sales, orders, product cost and payouts. Faire orders ship on Faire's prepaid labels, so none of their shipping is in the label cost.</p>`;
 }
 
+function position(t) {
+  const out = {}, get = (w) => (out[w] = out[w] || { received: 0, paid: 0, items: [] });
+  const recv = payerOf("payouts") || "Not assigned";
+  get(recv).received += t.cashIn;
+  for (const [k, v] of Object.entries(byPayer(t))) { get(k).paid += v.total; get(k).items.push(...v.items); }
+  for (const x of Object.values(out)) x.net = x.received - x.paid;
+  return out;
+}
+
 function renderPayers(t, rs) {
   $("payRange").textContent = `${fmtDay(rs[0].date)} – ${fmtDay(rs[rs.length - 1].date)}`;
   const names = { meta: "Meta ads", cogs: "product cost", shipping: "shipping labels", shopify_opex: "Shopify plan & apps", other: "other OPEX" };
-  const bp = byPayer(t), all = Object.values(bp).reduce((a, x) => a + x.total, 0);
-  $("payers").innerHTML = Object.entries(bp).sort((a, b) => b[1].total - a[1].total).map(([who, x]) =>
-    `<div><span class="${who === "Not assigned" ? "pill" : ""}" style="width:fit-content">${who}</span><b>${usd(x.total)}</b><span>${(all ? x.total / all * 100 : 0).toFixed(0)}% of costs · ${x.items.map(([k, v]) => `${names[k]} ${usd(v)}`).join(" + ")}</span></div>`).join("");
-  const whos = [...new Set(COSTS.map(([k]) => payerOf(k) || "Not assigned"))];
-  let body = "", tot = {};
+  const pos = position(t);
+  const order = Object.keys(pos).sort((a, b) => (a === "Not assigned") - (b === "Not assigned") || pos[b].received - pos[a].received || pos[b].paid - pos[a].paid);
+  $("payers").innerHTML = order.map((who) => {
+    const x = pos[who];
+    const lines = [];
+    if (x.received) lines.push(`Received ${usd(x.received)} in Shopify payouts`);
+    if (x.paid) lines.push(`Paid ${usd(x.paid)}: ${x.items.map(([k, v]) => `${names[k]} ${usd(v)}`).join(" + ")}`);
+    return `<div><span class="${who === "Not assigned" ? "pill" : ""}" style="width:fit-content">${who}</span><b class="${x.net < 0 ? "neg" : "pos"}" style="color:var(${x.net < 0 ? "--bad" : "--good"})">${x.net < 0 ? "" : "+"}${usd(x.net)}</b><span>${lines.join("<br>")}</span></div>`;
+  }).join("");
+  let body = "";
+  const tot = {};
   for (const m of months) {
-    const mt = sum(D.daily.filter((d) => d.date.startsWith(m))), b = byPayer(mt);
-    body += `<tr><td>${MONTHS[+m.slice(5) - 1]}</td>${whos.map((w) => { const v = (b[w] || { total: 0 }).total; tot[w] = (tot[w] || 0) + v; return `<td>${usd(v)}</td>`; }).join("")}</tr>`;
+    const p = position(sum(D.daily.filter((d) => d.date.startsWith(m))));
+    body += `<tr><td>${MONTHS[+m.slice(5) - 1]}</td>` + order.map((w) => {
+      const x = p[w] || { received: 0, paid: 0, net: 0 }, T = (tot[w] = tot[w] || { received: 0, paid: 0, net: 0 });
+      T.received += x.received; T.paid += x.paid; T.net += x.net;
+      return `<td>${usd(x.received)}</td><td>${usd(-x.paid)}</td><td class="${x.net < 0 ? "neg" : "pos"}">${usd(x.net)}</td>`;
+    }).join("") + `</tr>`;
   }
-  $("payMonthly").innerHTML = `<thead><tr><th>Month</th>${whos.map((w) => `<th>${w}</th>`).join("")}</tr></thead><tbody>${body}</tbody><tfoot><tr><td>Total</td>${whos.map((w) => `<td>${usd(tot[w] || 0)}</td>`).join("")}</tr></tfoot>`;
+  const head1 = order.map((w) => `<th colspan="3" style="text-align:center">${w}</th>`).join("");
+  const head2 = order.map(() => `<th>Received</th><th>Paid</th><th>Net</th>`).join("");
+  $("payMonthly").innerHTML = `<thead><tr><th></th>${head1}</tr><tr><th>Month</th>${head2}</tr></thead><tbody>${body}</tbody><tfoot><tr><td>Total</td>${order.map((w) => { const T = tot[w]; return `<td>${usd(T.received)}</td><td>${usd(-T.paid)}</td><td class="${T.net < 0 ? "neg" : "pos"}">${usd(T.net)}</td>`; }).join("")}</tr></tfoot>`;
 }
 
 function renderNotes() {
