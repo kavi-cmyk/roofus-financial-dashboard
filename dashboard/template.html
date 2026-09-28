@@ -308,6 +308,14 @@ function sum(rs) {
   t.cashIn = t.payout + t.collected_other - t.refunds_other;
   t.contribution = t.cashIn - t.cogs - t.spend - t.label_cost - t.shopifyOpex - t.other;
   t.mer = t.spend ? t.net / t.spend : 0;
+  t.byPayerCost = {};
+  const DAILY_KEY = { meta: "spend", cogs: "cogs", shipping: "label_cost" };
+  for (const [k, key] of Object.entries(DAILY_KEY)) {
+    if (!Array.isArray((cfg.payers || {})[k])) continue;
+    const m = {};
+    for (const r of rs) { const w = payerOn(k, r.date) || "Not assigned"; m[w] = (m[w] || 0) + (r[key] || 0); }
+    t.byPayerCost[k] = m;
+  }
   t.aov = t.orders ? t.total / t.orders : 0;
   return t;
 }
@@ -323,18 +331,40 @@ $("ranges").addEventListener("click", (e) => {
 });
 
 const PAYERS = cfg.payers || {};
-const payerOf = (k) => PAYERS[k] || null;
-const tag = (k) => payerOf(k) ? `<span class="payer">${payerOf(k)}</span>` : `<span class="payer none">Not assigned</span>`;
+// A payer is either a name or a list of {from, payer}, each running until the next one starts.
+function payerOn(k, date) {
+  const p = PAYERS[k];
+  if (!Array.isArray(p)) return p || null;
+  let who = null;
+  for (const x of p.slice().sort((a, b) => a.from < b.from ? -1 : 1)) if (date >= x.from) who = x.payer;
+  return who;
+}
+const payerOf = (k) => { const p = PAYERS[k]; return Array.isArray(p) ? null : (p || null); };
+// Tag for the currently selected range: one name, or "A → B (from date)" when the payer changed inside it.
+let TAG_ROWS = [];
+function tag(k) {
+  const p = PAYERS[k];
+  if (Array.isArray(p) && TAG_ROWS.length) {
+    const seen = [];
+    for (const d of TAG_ROWS) { const w = payerOn(k, d.date); if (w && seen[seen.length - 1]?.w !== w) seen.push({ w, from: d.date }); }
+    if (seen.length > 1) return `<span class="payer">${seen.map((x, i) => i ? `${x.w} from ${fmtDay(x.from)}` : x.w).join(" → ")}</span>`;
+    if (seen.length === 1) return `<span class="payer">${seen[0].w}</span>`;
+  }
+  const w = Array.isArray(p) ? null : p;
+  return w ? `<span class="payer">${w}</span>` : `<span class="payer none">Not assigned</span>`;
+}
 const COSTS = [["meta", "Meta ad spend", (t) => t.spend], ["cogs", "Product cost (COGS)", (t) => t.cogs],
   ["shipping", "Shipping cost (labels)", (t) => t.label_cost], ["shopify_opex", "Shopify plan & apps", (t) => t.shopifyOpex],
   ["other", "Other OPEX", (t) => t.other]];
 function byPayer(t) {
   const out = {};
   for (const [k, , f] of COSTS) {
-    const v = f(t); if (!v) continue;
-    const who = payerOf(k) || "Not assigned";
-    (out[who] = out[who] || { total: 0, items: [] }).total += v;
-    out[who].items.push([k, v]);
+    const split = Array.isArray(PAYERS[k]) && t.byPayerCost ? t.byPayerCost[k] : { [payerOf(k) || "Not assigned"]: f(t) };
+    for (const [who, v] of Object.entries(split)) {
+      if (!v) continue;
+      (out[who] = out[who] || { total: 0, items: [] }).total += v;
+      out[who].items.push([k, v]);
+    }
   }
   return out;
 }
@@ -694,6 +724,7 @@ function renderNotes() {
 
 function render(full = true) {
   const rs = rows(), t = sum(rs);
+  TAG_ROWS = rs;
   $("sub").textContent = `Shopify (excl. Faire wholesale) + Meta since ${fmtDay(D.start)}, ${D.start.slice(0, 4)} · synced ${D.generated}`;
   renderRanges(); renderHero(t, rs); renderTiles(t); renderPL(t, rs); renderPayers(t, rs); renderSettlement(t, rs); renderWeekly(rs); renderShipping(t, rs); renderMonthly();
   if (full) { renderManagers(); renderCamps(); renderShipBreakdown(); renderCogs(); renderInputs(); renderNotes(); }

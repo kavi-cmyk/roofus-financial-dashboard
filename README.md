@@ -10,7 +10,7 @@ One page that shows Roofus's money since **May 14, 2026**, leaving out Faire who
 - Product cost (COGS): units sold × landed cost per unit from the Roofus master sheet
 - **Contribution** = cash from Shopify − product cost − Meta spend − shipping labels − Shopify OPEX
 
-Each cost is tagged with the company that pays it, and payouts with the company that receives them (`payers` in `config.json`): Care & Bloom pays Meta ads and the Shopify plan & apps; Petra Brands pays product cost and shipping and receives the Shopify payouts. The "Where each company stands" panel shows received, paid and net per company, by period and by month.
+Each cost is tagged with the company that pays it, and payouts with the company that receives them (`payers` in `config.json`): Meta ads were paid by Petra Brands until July 1 and by Care & Bloom from July 2 (a payer can be a list of `{from, payer}`); Care & Bloom pays the Shopify plan & apps; Petra Brands pays product cost and shipping and receives the Shopify payouts. The "Where each company stands" panel shows received, paid and net per company, by period and by month.
 
 The bottom of the page shows the settlement for the 50/50 split of profit and loss (`settlement` in `config.json`): what Petra Brands owes Care & Bloom for the selected period, by month, and as a running total. Below it, Meta ads are split between the previous agency (May 14 – Jun 30) and Amar (from Jul 1), set in `ad_managers` in `config.json`.
 

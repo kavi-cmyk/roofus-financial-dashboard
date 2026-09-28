@@ -16,7 +16,7 @@
     "shopify_plan_monthly": "Grow plan list price on monthly billing ($79/mo if billed annually). Edit to match your Shopify invoice.",
     "shopify_apps_monthly": "Recurring app charges from Settings > Billing. Not exposed by the Admin API, so enter manually.",
     "exclude_channels": "Sales, units, product cost, shipping labels and payments from these Shopify sales channels are left out of every figure.",
-    "payers": "Company that pays each cost, and (payouts) the company that receives Shopify revenue. null means not assigned yet.",
+    "payers": "Company that pays each cost, and (payouts) the company that receives Shopify revenue. A list of {from, payer} changes the payer by date (each entry runs until the next starts). null means not assigned yet.",
     "ad_managers": "Who ran the Meta ad account, by start date. Each period runs until the next one starts."
   },
   "cogs": {
@@ -123,7 +123,16 @@
     "Faire: Sell Wholesale"
   ],
   "payers": {
-    "meta": "Care & Bloom",
+    "meta": [
+      {
+        "from": "2026-05-14",
+        "payer": "Petra Brands"
+      },
+      {
+        "from": "2026-07-02",
+        "payer": "Care & Bloom"
+      }
+    ],
     "cogs": "Petra Brands",
     "shipping": "Petra Brands",
     "shopify_opex": "Care & Bloom",
