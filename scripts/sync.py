@@ -77,6 +77,7 @@ def sync_sales(start, until):
 
 
 def sync_labels(start, until):
+    (DATA / "raw").mkdir(exist_ok=True)
     span = f"SINCE {start} UNTIL {until}"
     daily = [{"date": str(r["day"])[:10], "labels": int(num(r["shipping_labels"])), "cost": num(r["shipping_label_costs"])}
              for r in shopifyql(f"FROM shipping_labels SHOW shipping_labels, shipping_label_costs TIMESERIES day {span}")]
@@ -91,6 +92,22 @@ def sync_labels(start, until):
         {"source": "ShopifyQL: FROM shipping_labels", "pulled_at": str(dt.date.today()),
          "daily": daily, "by_service": services, "by_package": packages}, indent=1))
     print(f"shipping labels: {sum(r['labels'] for r in daily)} labels, ${sum(r['cost'] for r in daily):,.2f}")
+
+    # Per order, one query per label-purchase month to stay under the row limit.
+    rows, month = [], dt.date.fromisoformat(start).replace(day=1)
+    end = dt.date.fromisoformat(until)
+    while month <= end:
+        nxt = (month + dt.timedelta(days=32)).replace(day=1)
+        lo, hi = max(month, dt.date.fromisoformat(start)), min(nxt - dt.timedelta(days=1), end)
+        for r in shopifyql(f"FROM shipping_labels SHOW shipping_labels, shipping_label_costs GROUP BY order_name "
+                           f"SINCE {lo} UNTIL {hi} ORDER BY order_name ASC LIMIT 5000"):
+            rows.append({"order_name": r["order_name"], "label_month": str(month)[:7],
+                         "labels": int(num(r["shipping_labels"])), "cost": num(r["shipping_label_costs"])})
+        month = nxt
+    (DATA / "raw" / "labels_by_order.json").write_text(json.dumps(
+        {"source": "ShopifyQL FROM shipping_labels GROUP BY order_name, one query per label-purchase month",
+         "rows": rows}, indent=1))
+    print(f"shipping labels by order: {len(rows)} rows")
 
 
 ORDERS_Q = """query($after:String,$q:String!){ orders(first:100, after:$after, query:$q, sortKey:CREATED_AT) {

@@ -8,6 +8,7 @@ Inputs (all under data/):
   meta_daily.json            Meta ad spend per day
   meta_campaigns.json        Meta spend per campaign
   shopify_labels.json        Shopify Shipping label count and cost per day, by service and package
+  raw/labels_by_order.json   optional; label count and cost per order, used to put label cost on the order date
   config.json                start date and OPEX inputs
 
 Output: dist/index.html (dashboard/template.html with the data inlined).
@@ -35,6 +36,65 @@ def load(name, default=None):
 def local_date(iso):
     ts = dt.datetime.fromisoformat(iso.replace("Z", "+00:00"))
     return ts.astimezone(STORE_TZ).date().isoformat()
+
+
+def order_dates():
+    """order name -> (created date in store time, shipping charged)."""
+    path = DATA / "raw" / "orders.jsonl"
+    out = {}
+    if path.exists():
+        for line in path.read_text().splitlines():
+            if line.strip():
+                o = json.loads(line)
+                out[o["name"]] = (local_date(o["createdAt"]), float(o.get("shipping") or 0))
+    return out
+
+
+def labels_by_order_date(start, label_daily):
+    """Label cost per day, keyed by the date the order was placed.
+
+    Falls back to the label purchase date when there is no per-order export.
+    Returns (per-day {labels, cost, orders}, info dict)."""
+    per_order = load("raw/labels_by_order.json")
+    if not per_order:
+        return ({r["date"]: {"labels": r["labels"], "cost": r["cost"], "orders": 0} for r in label_daily},
+                {"basis": "purchase_date"})
+    dates = order_dates()
+    orders = defaultdict(lambda: [0, 0.0])
+    for r in per_order["rows"]:
+        orders[r["order_name"]][0] += int(r["labels"])
+        orders[r["order_name"]][1] += float(r["cost"])
+    days = defaultdict(lambda: {"labels": 0, "cost": 0.0, "orders": 0})
+    earlier = [0, 0, 0.0]      # orders placed before start: orders, labels, cost
+    unmatched = [0, 0, 0.0]    # label rows whose order isn't in the export
+    multi = 0
+    for name, (n, cost) in orders.items():
+        if n > 1:
+            multi += 1
+        if name not in dates:
+            bucket = unmatched
+        elif dates[name][0] < start:
+            bucket = earlier
+        else:
+            d = days[dates[name][0]]
+            d["labels"] += n
+            d["cost"] += cost
+            d["orders"] += 1
+            continue
+        bucket[0] += 1
+        bucket[1] += n
+        bucket[2] += cost
+    shipped = set(orders)
+    no_label = [k for k, (day, _) in dates.items() if day >= start and k not in shipped]
+    info = {
+        "basis": "order_date",
+        "orders_with_labels": len(orders) - earlier[0] - unmatched[0],
+        "orders_multi_label": multi,
+        "earlier_orders": {"orders": earlier[0], "labels": earlier[1], "cost": round(earlier[2], 2)},
+        "unmatched": {"orders": unmatched[0], "labels": unmatched[1], "cost": round(unmatched[2], 2)},
+        "orders_without_label": len(no_label),
+    }
+    return days, info
 
 
 def order_rollup(start):
@@ -84,7 +144,7 @@ def main():
     camps = load("meta_campaigns.json", {"campaigns": []})
     payouts = load("shopify_payouts.json")
     labels = load("shopify_labels.json", {"daily": [], "by_service": [], "by_package": []})
-    label_day = {r["date"]: r for r in labels["daily"]}
+    label_day, label_info = labels_by_order_date(start, labels["daily"])
     cash, stats = order_rollup(start)
 
     spend = {r["date"]: r["spend"] for r in meta["daily"]}
@@ -114,7 +174,8 @@ def main():
             "fees": round(c.get("fees", 0.0), 2),
             "spend": spend.get(day, 0.0),
             "labels": label_day.get(day, {}).get("labels", 0),
-            "label_cost": label_day.get(day, {}).get("cost", 0.0),
+            "label_cost": round(label_day.get(day, {}).get("cost", 0.0), 2),
+            "label_orders": label_day.get(day, {}).get("orders", 0),
         })
 
     bundle = {
@@ -128,6 +189,9 @@ def main():
         "payouts": payouts["payouts"] if payouts else None,
         "label_services": labels["by_service"],
         "label_packages": labels["by_package"],
+        "label_info": {**label_info,
+                       "purchased_in_window": {"labels": sum(r["labels"] for r in labels["daily"]),
+                                               "cost": round(sum(r["cost"] for r in labels["daily"]), 2)}},
         "order_stats": stats,
         "meta_account_totals": meta.get("account_totals"),
     }
@@ -138,6 +202,7 @@ def main():
     (ROOT / "dist" / "index.html").write_text(out)
 
     tot = lambda k: round(sum(d[k] for d in daily), 2)
+    print("label basis:", json.dumps(bundle["label_info"]))
     print(f"Built dist/index.html  {start} → {bundle['end']}  ({len(daily)} days)")
     for k in ("orders", "gross", "discounts", "returns", "net", "shipping", "collected",
               "collected_other", "refunds_paid", "fees", "spend", "labels", "label_cost"):
