@@ -12,6 +12,8 @@ One page that shows Roofus's money since **May 14, 2026**, leaving out Faire who
 
 Each cost is tagged with the company that pays it, and payouts with the company that receives them (`payers` in `config.json`): Care & Bloom pays Meta ads and the Shopify plan & apps; Petra Brands pays product cost and shipping and receives the Shopify payouts. The "Where each company stands" panel shows received, paid and net per company, by period and by month.
 
+The bottom of the page shows the settlement for the 50/50 split of profit and loss (`settlement` in `config.json`): what Petra Brands owes Care & Bloom for the selected period, by month, and as a running total.
+
 Filter by the whole period, the last 30 days, or a single month. The page also has a monthly table and MER (net sales ÷ Meta spend).
 
 ## Layout

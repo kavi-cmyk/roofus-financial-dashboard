@@ -128,5 +128,14 @@
     "shopify_opex": "Care & Bloom",
     "other": null,
     "payouts": "Petra Brands"
+  },
+  "settlement": {
+    "split": {
+      "Petra Brands": 0.5,
+      "Care & Bloom": 0.5
+    },
+    "payer": "Petra Brands",
+    "payee": "Care & Bloom",
+    "note": "Profit and loss is shared 50/50. The amount owed brings each company's net (received minus paid) to its share of the combined result."
   }
 }

@@ -98,6 +98,9 @@ header .sub { color: var(--ink-2); font-size: 13px; }
 .payer.none { background: var(--warn-bg); color: var(--warn-ink); }
 .payers { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 14px; margin-bottom: 14px; }
 .payers div { display: grid; gap: 2px; padding: 12px 14px; border: 1px solid var(--line); border-radius: 8px; }
+.settle-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 22px; margin-bottom: 16px; }
+.settle-num { font-size: 44px; font-weight: 600; letter-spacing: -.02em; line-height: 1.1; margin: 4px 0 6px; font-variant-numeric: tabular-nums; }
+@media (max-width: 900px) { .settle-top { grid-template-columns: minmax(0, 1fr); } }
 .payers b { font-size: 20px; font-weight: 600; font-variant-numeric: tabular-nums; }
 .payers span { font-size: 12px; color: var(--ink-2); }
 
@@ -231,6 +234,19 @@ td.pos { color: var(--good); }
   <section class="panel">
     <h2 style="margin-bottom:8px">Where the numbers come from</h2>
     <div class="notes" id="notes"></div>
+  </section>
+
+  <section class="panel settle" aria-label="Settlement">
+    <div class="panel-head"><h2 id="settleTitle">Settlement</h2><span class="muted" id="settleRange" style="font-size:12px"></span></div>
+    <div class="settle-top">
+      <div>
+        <div class="eyebrow" id="settleEyebrow"></div>
+        <div class="settle-num" id="settleNum"></div>
+        <div class="muted" id="settleSub" style="font-size:13px"></div>
+      </div>
+      <div class="formula" id="settleCalc"></div>
+    </div>
+    <div class="scroll"><table class="data" id="settleMonthly"></table></div>
   </section>
 </div>
 
@@ -592,6 +608,42 @@ function renderPayers(t, rs) {
   $("payMonthly").innerHTML = `<thead><tr><th></th>${head1}</tr><tr><th>Month</th>${head2}</tr></thead><tbody>${body}</tbody><tfoot><tr><td>Total</td>${order.map((w) => { const T = tot[w]; return `<td>${usd(T.received)}</td><td>${usd(-T.paid)}</td><td class="${T.net < 0 ? "neg" : "pos"}">${usd(T.net)}</td>`; }).join("")}</tr></tfoot>`;
 }
 
+const SETTLE = cfg.settlement || null;
+function settlement(t) {
+  const pos = position(t), S = SETTLE;
+  const total = Object.values(pos).reduce((a, x) => a + x.net, 0);
+  const from = pos[S.payer] || { net: 0, received: 0, paid: 0 }, to = pos[S.payee] || { net: 0, received: 0, paid: 0 };
+  const owed = from.net - S.split[S.payer] * total;
+  return { total, from, to, owed, fromShare: S.split[S.payer] * total, toShare: S.split[S.payee] * total };
+}
+
+function renderSettlement(t, rs) {
+  if (!SETTLE) return;
+  const S = SETTLE, pct = (w) => Math.round(S.split[w] * 100);
+  const x = settlement(t);
+  const payer = x.owed >= 0 ? S.payer : S.payee, payee = x.owed >= 0 ? S.payee : S.payer;
+  $("settleTitle").textContent = `Settlement: ${pct(S.payer)}/${pct(S.payee)} split of profit and loss`;
+  $("settleRange").textContent = `${fmtDay(rs[0].date)} – ${fmtDay(rs[rs.length - 1].date)}`;
+  $("settleEyebrow").textContent = `${payer} owes ${payee}`;
+  $("settleNum").textContent = usd2(Math.abs(x.owed));
+  $("settleSub").textContent = `After paying, each company is at ${usd2(x.fromShare)}, its ${pct(S.payer)}% share of the combined ${x.total < 0 ? "loss" : "profit"}.`;
+  const line = (l, v, cls = "") => `<div class="${cls}"><span>${l}</span><span class="num">${v}</span></div>`;
+  $("settleCalc").innerHTML =
+    line(`${S.payer}: received ${usd(x.from.received)} − paid ${usd(x.from.paid)}`, usd2(x.from.net)) +
+    line(`${S.payee}: received ${usd(x.to.received)} − paid ${usd(x.to.paid)}`, usd2(x.to.net)) +
+    line("Combined result", usd2(x.total), "rule") +
+    line(`${S.payer}'s ${pct(S.payer)}% share`, usd2(x.fromShare)) +
+    line(`${S.payer} net − its share`, usd2(x.owed), "rule");
+  let body = "", cum = 0;
+  for (const m of months) {
+    const r = settlement(sum(D.daily.filter((d) => d.date.startsWith(m))));
+    cum += r.owed;
+    body += `<tr><td>${MONTHS[+m.slice(5) - 1]}</td><td class="${r.total < 0 ? "neg" : "pos"}">${usd2(r.total)}</td><td>${usd2(r.fromShare)}</td><td>${usd2(r.from.net)}</td><td>${usd2(r.to.net)}</td><td>${usd2(r.owed)}</td><td>${usd2(cum)}</td></tr>`;
+  }
+  const all = settlement(sum(D.daily));
+  $("settleMonthly").innerHTML = `<thead><tr><th>Month</th><th>Combined result</th><th>Each ${pct(S.payer)}% share</th><th>${S.payer} net</th><th>${S.payee} net</th><th>${S.payer} owes</th><th>Running total owed</th></tr></thead><tbody>${body}</tbody><tfoot><tr><td>Total</td><td>${usd2(all.total)}</td><td>${usd2(all.fromShare)}</td><td>${usd2(all.from.net)}</td><td>${usd2(all.to.net)}</td><td>${usd2(all.owed)}</td><td></td></tr></tfoot>`;
+}
+
 function renderNotes() {
   const s = D.order_stats, gw = Object.entries(s.gateways || {}).map(([k, v]) => `${k.replace(/_/g, " ")} ${usd(v)}`).join(", ");
   const m = D.meta_account_totals;
@@ -609,7 +661,7 @@ function renderNotes() {
 function render(full = true) {
   const rs = rows(), t = sum(rs);
   $("sub").textContent = `Shopify (excl. Faire wholesale) + Meta since ${fmtDay(D.start)}, ${D.start.slice(0, 4)} · synced ${D.generated}`;
-  renderRanges(); renderHero(t, rs); renderTiles(t); renderPL(t, rs); renderPayers(t, rs); renderWeekly(rs); renderShipping(t, rs); renderMonthly();
+  renderRanges(); renderHero(t, rs); renderTiles(t); renderPL(t, rs); renderPayers(t, rs); renderSettlement(t, rs); renderWeekly(rs); renderShipping(t, rs); renderMonthly();
   if (full) { renderCamps(); renderShipBreakdown(); renderCogs(); renderInputs(); renderNotes(); }
 }
 render();
