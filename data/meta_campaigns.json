@@ -1,0 +1,137 @@
+{
+ "source": "Meta Marketing API, campaign level, 2026-05-14..2026-09-28",
+ "campaigns": [
+  {
+   "name": "Roofus_Dental Finger Wipes_Scale PDP_get.roofuspet.com_CBO_07Jul26",
+   "spend": 8351.67,
+   "impressions": 223484,
+   "clicks": 6151
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_LP Testing_ABO_23Jun26",
+   "spend": 8046.4,
+   "impressions": 173902,
+   "clicks": 11525
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_TikTok Videos_get.roofuspet.com_ABO_30Jun26",
+   "spend": 5854.55,
+   "impressions": 89319,
+   "clicks": 4352
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_ABO_05Jun26",
+   "spend": 3566.42,
+   "impressions": 89035,
+   "clicks": 2134
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_ASC Consolidation_get.roofuspet.com_CBO_04Sep26",
+   "spend": 3238.5,
+   "impressions": 43306,
+   "clicks": 3024
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_Testing_get.roofuspet.com_CBO_20Jun26",
+   "spend": 3065.27,
+   "impressions": 59408,
+   "clicks": 1504
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_Direct_CBO_14May26",
+   "spend": 2464.65,
+   "impressions": 91300,
+   "clicks": 1802
+  },
+  {
+   "name": "Roofus | Sales | Static Batch 01 \u2014 Mechanism Test | 2026-05-16",
+   "spend": 1653.33,
+   "impressions": 42173,
+   "clicks": 1158
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_Assets Testing_get.roofuspet.com_ABO_07Aug26",
+   "spend": 1562.01,
+   "impressions": 31671,
+   "clicks": 997
+  },
+  {
+   "name": "Roofus_Assets_CBO_14May2026",
+   "spend": 1030.66,
+   "impressions": 17347,
+   "clicks": 1133
+  },
+  {
+   "name": "Roofus_LP Direct_CBO_15May2026",
+   "spend": 979.39,
+   "impressions": 10715,
+   "clicks": 574
+  },
+  {
+   "name": "Roofus_Ear Wipes_Assets Testing_get.roofuspet.com_ABO_09Aug26",
+   "spend": 513.93,
+   "impressions": 8403,
+   "clicks": 171
+  },
+  {
+   "name": "Roofus_LP Vet Cost_CBO_16May2026",
+   "spend": 412.69,
+   "impressions": 11259,
+   "clicks": 397
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_ROAS Consolidation_get.roofuspet.com_CBO_04Sep26",
+   "spend": 376.48,
+   "impressions": 4458,
+   "clicks": 287
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_Zombie_Cost Cap_get.roofuspet.com_CBO_16Sep26",
+   "spend": 314.04,
+   "impressions": 5786,
+   "clicks": 299
+  },
+  {
+   "name": "Roofus_Direct_CBO_7reasons-brushing_21May2026 - copy",
+   "spend": 298.99,
+   "impressions": 10158,
+   "clicks": 302
+  },
+  {
+   "name": "Roofus_Direct_CBO_food-stuck-in-teeth_21May2026",
+   "spend": 290.72,
+   "impressions": 6039,
+   "clicks": 185
+  },
+  {
+   "name": "Roofus_Direct_CBO_ATCIC_20May2026",
+   "spend": 266.19,
+   "impressions": 5229,
+   "clicks": 130
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_Vercel_CBO_20Jun26",
+   "spend": 182.25,
+   "impressions": 2909,
+   "clicks": 63
+  },
+  {
+   "name": "Roofus_LP Mystery Direct_CBO_15May2026",
+   "spend": 135.94,
+   "impressions": 1850,
+   "clicks": 50
+  },
+  {
+   "name": "Roofus_Dental Finger Wipes_Scale 5-reasons-test_get.roofuspet.com/5-reasons-test_CBO_25Aug26",
+   "spend": 84.9,
+   "impressions": 2171,
+   "clicks": 140
+  },
+  {
+   "name": "Roofus_Tick & Bug Spray_LP Testing_get.roofuspet.com_ABO_14Aug26",
+   "spend": 11.22,
+   "impressions": 172,
+   "clicks": 18
+  }
+ ]
+}

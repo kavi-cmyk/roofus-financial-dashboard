@@ -1,0 +1,21 @@
+{
+  "store": "Roofus (roofuspet.com)",
+  "start_date": "2026-05-14",
+  "currency": "USD",
+  "meta_ad_account_id": "1210215467866079",
+  "opex": {
+    "shopify_plan_name": "Grow",
+    "shopify_plan_monthly": 105.0,
+    "shopify_apps_monthly": 0.0,
+    "other_monthly": 0.0
+  },
+  "shipping": {
+    "label_cost_per_order": 0.0,
+    "label_cost_total_override": null
+  },
+  "notes": {
+    "shopify_plan_monthly": "Grow plan list price on monthly billing ($79/mo if billed annually). Edit to match your Shopify invoice.",
+    "shopify_apps_monthly": "Recurring app charges from Settings > Billing. Not exposed by the Admin API, so enter manually.",
+    "label_cost_per_order": "Shopify Shipping label spend is billed on the Shopify invoice and is not exposed by the Admin API. Enter an average per shipped order, or set label_cost_total_override."
+  }
+}
