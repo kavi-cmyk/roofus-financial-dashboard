@@ -10,12 +10,10 @@
     "other_monthly": 0.0
   },
   "shipping": {
-    "label_cost_per_order": 0.0,
-    "label_cost_total_override": null
+    "source": "Shopify Shipping label costs from ShopifyQL (FROM shipping_labels)"
   },
   "notes": {
     "shopify_plan_monthly": "Grow plan list price on monthly billing ($79/mo if billed annually). Edit to match your Shopify invoice.",
-    "shopify_apps_monthly": "Recurring app charges from Settings > Billing. Not exposed by the Admin API, so enter manually.",
-    "label_cost_per_order": "Shopify Shipping label spend is billed on the Shopify invoice and is not exposed by the Admin API. Enter an average per shipped order, or set label_cost_total_override."
+    "shopify_apps_monthly": "Recurring app charges from Settings > Billing. Not exposed by the Admin API, so enter manually."
   }
 }

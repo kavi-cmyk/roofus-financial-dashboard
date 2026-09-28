@@ -7,7 +7,8 @@ Inputs (all under data/):
   shopify_payouts.json       optional; real Shopify Payments payouts (needs read_shopify_payments)
   meta_daily.json            Meta ad spend per day
   meta_campaigns.json        Meta spend per campaign
-  config.json                start date, OPEX and shipping-label inputs
+  shopify_labels.json        Shopify Shipping label count and cost per day, by service and package
+  config.json                start date and OPEX inputs
 
 Output: dist/index.html (dashboard/template.html with the data inlined).
 """
@@ -82,10 +83,12 @@ def main():
     meta = load("meta_daily.json")
     camps = load("meta_campaigns.json", {"campaigns": []})
     payouts = load("shopify_payouts.json")
+    labels = load("shopify_labels.json", {"daily": [], "by_service": [], "by_package": []})
+    label_day = {r["date"]: r for r in labels["daily"]}
     cash, stats = order_rollup(start)
 
     spend = {r["date"]: r["spend"] for r in meta["daily"]}
-    days = sorted({r["date"] for r in sales["daily"]} | set(spend) | set(cash))
+    days = sorted({r["date"] for r in sales["daily"]} | set(spend) | set(cash) | set(label_day))
     by_sales = {r["date"]: r for r in sales["daily"]}
 
     daily = []
@@ -110,6 +113,8 @@ def main():
             "refunds_other": round(c.get("refunds_other", 0.0), 2),
             "fees": round(c.get("fees", 0.0), 2),
             "spend": spend.get(day, 0.0),
+            "labels": label_day.get(day, {}).get("labels", 0),
+            "label_cost": label_day.get(day, {}).get("cost", 0.0),
         })
 
     bundle = {
@@ -121,6 +126,8 @@ def main():
         "daily": daily,
         "campaigns": camps["campaigns"],
         "payouts": payouts["payouts"] if payouts else None,
+        "label_services": labels["by_service"],
+        "label_packages": labels["by_package"],
         "order_stats": stats,
         "meta_account_totals": meta.get("account_totals"),
     }
@@ -133,7 +140,7 @@ def main():
     tot = lambda k: round(sum(d[k] for d in daily), 2)
     print(f"Built dist/index.html  {start} → {bundle['end']}  ({len(daily)} days)")
     for k in ("orders", "gross", "discounts", "returns", "net", "shipping", "collected",
-              "collected_other", "refunds_paid", "fees", "spend"):
+              "collected_other", "refunds_paid", "fees", "spend", "labels", "label_cost"):
         print(f"  {k:16} {tot(k):>12,.2f}")
 
 

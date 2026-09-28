@@ -14,6 +14,7 @@
   --rev: #2a78d6;
   --rev-wash: rgba(42,120,214,.10);
   --ads: #eb6834;
+  --ship: #4a3aa7;
   --good: #0f7a3d;
   --bad: #c2372f;
   --warn-bg: #fff4dc;
@@ -28,7 +29,7 @@
     color-scheme: dark;
     --bg: #131514; --surface: #1a1c1b; --line: #2c302e; --grid: #242826;
     --ink: #f3f5f4; --ink-2: #c1c7c3; --ink-3: #8b928e;
-    --rev: #3987e5; --rev-wash: rgba(57,135,229,.14); --ads: #d95926;
+    --rev: #3987e5; --rev-wash: rgba(57,135,229,.14); --ads: #d95926; --ship: #9085e9;
     --good: #4cc27d; --bad: #ef6b63; --warn-bg: #3a2e12; --warn-ink: #f2cf7c; --chip: #242826; --focus: #6da7ec;
   }
 }
@@ -36,7 +37,7 @@
   color-scheme: dark;
   --bg: #131514; --surface: #1a1c1b; --line: #2c302e; --grid: #242826;
   --ink: #f3f5f4; --ink-2: #c1c7c3; --ink-3: #8b928e;
-  --rev: #3987e5; --rev-wash: rgba(57,135,229,.14); --ads: #d95926;
+  --rev: #3987e5; --rev-wash: rgba(57,135,229,.14); --ads: #d95926; --ship: #9085e9;
   --good: #4cc27d; --bad: #ef6b63; --warn-bg: #3a2e12; --warn-ink: #f2cf7c; --chip: #242826; --focus: #6da7ec;
 }
 * { box-sizing: border-box; }
@@ -109,6 +110,13 @@ td.pos { color: var(--good); }
 .camp .v { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 .camp .bar { grid-column: 1 / -1; height: 6px; background: var(--grid); border-radius: 3px; overflow: hidden; }
 .camp .bar i { display: block; height: 100%; background: var(--ads); border-radius: 0 3px 3px 0; }
+.camps.ship .bar i { background: var(--ship); }
+.ship-stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; margin-bottom: 14px; }
+.ship-stats div { display: grid; gap: 1px; }
+.ship-stats b { font-size: 18px; font-weight: 600; font-variant-numeric: tabular-nums; }
+.ship-stats span { font-size: 12px; color: var(--ink-2); }
+.sub-h { font-size: 12px; font-weight: 500; color: var(--ink-3); letter-spacing: .06em; text-transform: uppercase; margin: 16px 0 8px; }
+@media (max-width: 600px) { .ship-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 
 .inputs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .field { display: grid; gap: 4px; }
@@ -167,6 +175,24 @@ td.pos { color: var(--good); }
     </section>
   </div>
 
+  <div class="grid2">
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Weekly shipping label cost</h2>
+        <div class="legend"><span><i class="sw" style="background:var(--ship)"></i>Label cost</span><span><i class="sw" style="background:var(--rev)"></i>Shipping charged</span></div>
+      </div>
+      <div class="ship-stats" id="shipStats"></div>
+      <div class="chart" id="shipChart"><div class="tip" id="tip2"></div></div>
+    </section>
+    <section class="panel">
+      <div class="panel-head"><h2>Where label money goes</h2><span class="muted" style="font-size:12px">May 14 → latest sync</span></div>
+      <div class="sub-h" style="margin-top:0">By carrier &amp; service</div>
+      <div class="camps ship" id="shipSvc"></div>
+      <div class="sub-h">By package</div>
+      <div class="camps ship" id="shipPkg"></div>
+    </section>
+  </div>
+
   <section class="panel">
     <div class="panel-head"><h2>By month</h2><span class="muted" style="font-size:12px">Partial months are pro-rated for OPEX</span></div>
     <div class="scroll"><table class="data" id="monthly"></table></div>
@@ -179,7 +205,7 @@ td.pos { color: var(--good); }
     </section>
     <section class="panel">
       <div class="panel-head"><h2>Costs you enter</h2><button class="chip" id="reset" type="button">Reset</button></div>
-      <p class="muted" style="margin:0 0 12px;font-size:12px">Shopify doesn't expose its own bill or shipping-label spend through the API. Enter them here. They're saved in this browser only.</p>
+      <p class="muted" style="margin:0 0 12px;font-size:12px">Shopify doesn't expose its own plan and app charges through the API. Enter them here. They're saved in this browser only. Shipping labels come straight from Shopify.</p>
       <div class="inputs" id="inputs" style="grid-template-columns:repeat(2,minmax(0,1fr))"></div>
     </section>
   </div>
@@ -204,17 +230,15 @@ const cfg = D.config;
 const DEFAULTS = {
   plan: cfg.opex.shopify_plan_monthly,
   apps: cfg.opex.shopify_apps_monthly,
-  label: cfg.shipping.label_cost_per_order,
   other: cfg.opex.other_monthly,
 };
 let costs = { ...DEFAULTS };
-try { Object.assign(costs, JSON.parse(localStorage.getItem("roofus-costs") || "{}")); } catch (e) {}
+try { const saved = JSON.parse(localStorage.getItem("roofus-costs") || "{}"); for (const k in DEFAULTS) if (k in saved) costs[k] = saved[k]; } catch (e) {}
 const saveCosts = () => { try { localStorage.setItem("roofus-costs", JSON.stringify(costs)); } catch (e) {} };
 
 const FIELDS = [
   ["plan", "Shopify plan / month", `${cfg.opex.shopify_plan_name} plan. $105 monthly billing, $79 if paid annually.`],
   ["apps", "Shopify apps / month", "Recurring app charges on your Shopify bill."],
-  ["label", "Shipping label / order", "Average label cost per order shipped."],
   ["other", "Other OPEX / month", "Anything else you want counted."],
 ];
 
@@ -232,17 +256,17 @@ function rows() {
 
 function sum(rs) {
   const t = { days: rs.length };
-  for (const k of ["orders","gross","discounts","returns","net","shipping","total","collected","collected_other","refunds_paid","refunds_other","fees","spend"])
+  for (const k of ["orders","gross","discounts","returns","net","shipping","total","collected","collected_other","refunds_paid","refunds_other","fees","spend","labels","label_cost"])
     t[k] = rs.reduce((a, r) => a + (r[k] || 0), 0);
   const monthsCovered = t.days / DAYS_PER_MONTH;
   t.plan = costs.plan * monthsCovered;
   t.apps = costs.apps * monthsCovered;
   t.other = costs.other * monthsCovered;
   t.shopifyOpex = t.plan + t.apps;
-  t.labels = costs.label * t.orders;
+  t.shipNet = t.label_cost - t.shipping;
   t.payout = t.collected - t.refunds_paid - t.fees;
   t.cashIn = t.payout + t.collected_other - t.refunds_other;
-  t.contribution = t.cashIn - t.spend - t.labels - t.shopifyOpex - t.other;
+  t.contribution = t.cashIn - t.spend - t.label_cost - t.shopifyOpex - t.other;
   t.mer = t.spend ? t.net / t.spend : 0;
   t.aov = t.orders ? t.total / t.orders : 0;
   return t;
@@ -267,14 +291,13 @@ function renderHero(t, rs) {
   $("formula").innerHTML =
     line("Cash from Shopify (est. payouts + other gateways)", usd2(t.cashIn)) +
     line("− Meta ad spend", usd2(-t.spend)) +
-    line("− Shipping labels", usd2(-t.labels)) +
+    line("− Shipping labels", usd2(-t.label_cost)) +
     line("− Shopify plan & apps", usd2(-t.shopifyOpex)) +
     (t.other ? line("− Other OPEX", usd2(-t.other)) : "") +
     line("Contribution", usd2(t.contribution), "rule");
 }
 
 function renderTiles(t) {
-  const labelsSet = costs.label > 0;
   const tile = (label, value, foot, pill = "") => `<div class="tile"><div class="label">${label}</div><div class="value">${value}</div><div class="foot">${foot}</div>${pill}</div>`;
   $("tiles").innerHTML = [
     tile("Orders", t.orders.toLocaleString(), `AOV ${usd2(t.aov)}`),
@@ -282,8 +305,8 @@ function renderTiles(t) {
     tile("Refunds", usd(t.returns), `${t.gross ? (t.returns / t.gross * 100).toFixed(1) : 0}% of gross sales`),
     tile("Net payouts (est.)", usd(t.payout), `after ${usd(t.fees)} processing fees`, `<span class="pill ok">From order transactions</span>`),
     tile("Meta ad spend", usd(t.spend), `MER ${t.mer.toFixed(2)}× net sales`),
-    tile("Shipping charged", usd(t.shipping), "Paid by customers"),
-    tile("Shipping labels", usd(t.labels), labelsSet ? `${usd2(costs.label)} × ${t.orders} orders` : "No label cost entered", labelsSet ? "" : `<span class="pill">Enter below</span>`),
+    tile("Shipping labels", usd(t.label_cost), `${t.labels.toLocaleString()} labels · ${usd2(t.labels ? t.label_cost / t.labels : 0)} avg`),
+    tile("Shipping charged", usd(t.shipping), `Customers covered ${t.label_cost ? (t.shipping / t.label_cost * 100).toFixed(0) : 0}% of label cost`),
     tile("Shopify OPEX", usd(t.shopifyOpex), `${usd(costs.plan)} plan + ${usd(costs.apps)} apps / mo, pro-rated`),
   ].join("");
 }
@@ -307,7 +330,7 @@ function renderPL(t, rs) {
     (t.collected_other ? r("Other gateways, net of refunds", t.collected_other - t.refunds_other, "sub") : "") +
     r("Spend", null, "sec") +
     r("Meta ads", -t.spend, "sub") +
-    r("Shipping labels", -t.labels, "sub") +
+    r("Shipping labels (Shopify Shipping)", -t.label_cost, "sub") +
     r("Shopify plan", -t.plan, "sub") +
     r("Shopify apps", -t.apps, "sub") +
     (t.other ? r("Other OPEX", -t.other, "sub") : "") +
@@ -329,18 +352,34 @@ function niceMax(v) {
   return 10 * p;
 }
 
-function renderWeekly(rs) {
-  const el = $("weekly"), tip = $("tip");
-  const use = rs.length > 14 ? weeks(rs) : rs.map((r) => ({ start: r.date, end: r.date, net: r.net, spend: r.spend, days: 1 }));
-  const W = 640, H = 260, L = 48, R = 8, T = 10, B = 28;
-  const max = niceMax(Math.max(1, ...use.map((w) => Math.max(w.net, w.spend))));
-  const min = Math.min(0, ...use.map((w) => w.net));
+function periods(rs) {
+  if (rs.length <= 14) return rs.map((r) => ({ ...r, start: r.date, end: r.date, days: 1 }));
+  const out = [];
+  for (let i = 0; i < rs.length; i += 7) {
+    const w = rs.slice(i, i + 7), p = { start: w[0].date, end: w[w.length - 1].date, days: w.length };
+    for (const k of ["net", "spend", "label_cost", "labels", "shipping"]) p[k] = w.reduce((a, r) => a + r[k], 0);
+    out.push(p);
+  }
+  return out;
+}
+
+function niceMax(v) {
+  const p = Math.pow(10, Math.floor(Math.log10(v)));
+  for (const m of [1, 1.5, 2, 2.5, 3, 4, 5, 6, 8, 10]) if (m * p >= v) return m * p;
+  return 10 * p;
+}
+
+// Grouped columns, one scale. series: [{key, color, label}]; tipRows(p) -> [[label, value]]
+function barChart(el, tip, use, series, aria, tipRows) {
+  const W = 640, H = 240, L = 48, R = 8, T = 10, B = 28;
+  const vals = use.flatMap((w) => series.map((s) => w[s.key]));
+  const max = niceMax(Math.max(1, ...vals));
+  const min = Math.min(0, ...vals);
   const lo = min < 0 ? -niceMax(-min) : 0;
   const y = (v) => T + (H - T - B) * (1 - (v - lo) / (max - lo));
   const band = (W - L - R) / use.length;
-  const bw = Math.min(14, (band - 6) / 2);
-  const ticks = [];
-  for (let i = 0; i <= 4; i++) ticks.push(lo + (max - lo) * i / 4);
+  const n = series.length;
+  const bw = Math.max(2, Math.min(14, (band - 6 - 2 * (n - 1)) / n));
   const bar = (x, v, fill) => {
     const y0 = y(0), y1 = y(v), h = Math.abs(y0 - y1);
     if (h < .5) return "";
@@ -349,11 +388,14 @@ function renderWeekly(rs) {
     return `<path fill="${fill}" d="M${x},${y0}V${y1 - r}q0,${r} ${r},${r}h${bw - 2 * r}q${r},0 ${r},-${r}V${y0}Z"/>`;
   };
   const labelEvery = Math.ceil(use.length / 7);
-  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Weekly net sales and Meta spend">`;
-  for (const t of ticks) svg += `<line x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)" stroke-width="1"/><text x="${L - 8}" y="${y(t) + 4}" text-anchor="end" font-size="11" fill="var(--ink-3)" font-family="var(--mono)">${usd(t)}</text>`;
+  let svg = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${aria}">`;
+  for (let i = 0; i <= 4; i++) {
+    const t = lo + (max - lo) * i / 4;
+    svg += `<line x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}" stroke="var(--grid)" stroke-width="1"/><text x="${L - 8}" y="${y(t) + 4}" text-anchor="end" font-size="11" fill="var(--ink-3)" font-family="var(--mono)">${usd(t)}</text>`;
+  }
   use.forEach((w, i) => {
-    const x0 = L + i * band + (band - (2 * bw + 2)) / 2;
-    svg += bar(x0, w.net, "var(--rev)") + bar(x0 + bw + 2, w.spend, "var(--ads)");
+    const x0 = L + i * band + (band - (n * bw + 2 * (n - 1))) / 2;
+    series.forEach((s, j) => { svg += bar(x0 + j * (bw + 2), w[s.key], s.color); });
     if (i % labelEvery === 0) svg += `<text x="${L + i * band + band / 2}" y="${H - 8}" text-anchor="middle" font-size="11" fill="var(--ink-3)">${fmtDay(w.start)}</text>`;
     svg += `<rect data-i="${i}" x="${L + i * band}" y="${T}" width="${band}" height="${H - T - B}" fill="transparent"/>`;
   });
@@ -364,21 +406,54 @@ function renderWeekly(rs) {
     const r = e.target.closest("rect[data-i]"); if (!r) { tip.style.display = "none"; return; }
     const w = use[+r.dataset.i];
     const box = el.getBoundingClientRect(), rb = r.getBoundingClientRect();
-    const roas = w.spend ? (w.net / w.spend).toFixed(2) + "×" : "–";
-    tip.innerHTML = `<b>${w.days > 1 ? fmtDay(w.start) + " – " + fmtDay(w.end) : fmtDay(w.start)}</b><div class="r"><span>Net sales</span><span class="num">${usd2(w.net)}</span></div><div class="r"><span>Meta spend</span><span class="num">${usd2(w.spend)}</span></div><div class="r"><span>MER</span><span class="num">${roas}</span></div>`;
+    tip.innerHTML = `<b>${w.days > 1 ? fmtDay(w.start) + " – " + fmtDay(w.end) : fmtDay(w.start)}</b>` +
+      tipRows(w).map(([l, v]) => `<div class="r"><span>${l}</span><span class="num">${v}</span></div>`).join("");
     tip.style.display = "block";
-    const cx = rb.left - box.left + rb.width / 2;
-    tip.style.left = Math.max(80, Math.min(box.width - 80, cx)) + "px";
+    tip.style.left = Math.max(90, Math.min(box.width - 90, rb.left - box.left + rb.width / 2)) + "px";
     tip.style.top = (rb.top - box.top + 20) + "px";
   });
   s.addEventListener("pointerleave", () => (tip.style.display = "none"));
+}
+
+function renderWeekly(rs) {
+  barChart($("weekly"), $("tip"), periods(rs),
+    [{ key: "net", color: "var(--rev)" }, { key: "spend", color: "var(--ads)" }],
+    "Net sales and Meta spend by week",
+    (w) => [["Net sales", usd2(w.net)], ["Meta spend", usd2(w.spend)], ["MER", w.spend ? (w.net / w.spend).toFixed(2) + "×" : "–"]]);
+}
+
+function renderShipping(t, rs) {
+  const shipped = t.labels;
+  $("shipStats").innerHTML = [
+    [usd(t.label_cost), `${shipped.toLocaleString()} labels bought`],
+    [usd2(shipped ? t.label_cost / shipped : 0), "Average per label"],
+    [(t.net ? t.label_cost / t.net * 100 : 0).toFixed(1) + "%", "Of net sales"],
+    [usd(t.shipNet), "Net cost after shipping charged"],
+  ].map(([v, l]) => `<div><b>${v}</b><span>${l}</span></div>`).join("");
+  barChart($("shipChart"), $("tip2"), periods(rs),
+    [{ key: "label_cost", color: "var(--ship)" }, { key: "shipping", color: "var(--rev)" }],
+    "Shipping label cost and shipping charged by week",
+    (w) => [["Labels", `${w.labels}`], ["Label cost", usd2(w.label_cost)], ["Avg per label", usd2(w.labels ? w.label_cost / w.labels : 0)], ["Shipping charged", usd2(w.shipping)]]);
+}
+
+function renderShipBreakdown() {
+  const list = (el, items, name) => {
+    const max = Math.max(...items.map((x) => x.cost));
+    const top = items.slice(0, 6), rest = items.slice(6);
+    const row = (n, x) => `<div class="camp"><span class="n" title="${n.replace(/"/g, "&quot;")}">${n} <span class="muted">· ${x.labels} label${x.labels === 1 ? "" : "s"} · ${usd2(x.labels ? x.cost / x.labels : 0)} avg</span></span><span class="v">${usd(x.cost)}</span><div class="bar"><i style="width:${(x.cost / max * 100).toFixed(1)}%"></i></div></div>`;
+    let html = top.map((x) => row(name(x), x)).join("");
+    if (rest.length) html += row(`${rest.length} other packages`, { labels: rest.reduce((a, x) => a + x.labels, 0), cost: rest.reduce((a, x) => a + x.cost, 0) });
+    el.innerHTML = html;
+  };
+  list($("shipSvc"), D.label_services || [], (x) => `${x.carrier} ${x.service.replace(/^UPS®?\s*/, "")}`);
+  list($("shipPkg"), D.label_packages || [], (x) => x.package);
 }
 
 function renderMonthly() {
   const head = ["Month","Orders","Gross sales","Refunds","Net sales","Shipping chg.","Net payouts","Meta spend","Labels","Shopify OPEX","Contribution","MER"];
   const line = (name, t) => {
     const c = t.contribution;
-    return `<tr><td>${name}</td><td>${t.orders.toLocaleString()}</td><td>${usd(t.gross)}</td><td>${usd(t.returns)}</td><td>${usd(t.net)}</td><td>${usd(t.shipping)}</td><td>${usd(t.payout)}</td><td>${usd(t.spend)}</td><td>${usd(t.labels)}</td><td>${usd(t.shopifyOpex + t.other)}</td><td class="${c < 0 ? "neg" : "pos"}">${usd(c)}</td><td>${t.mer.toFixed(2)}×</td></tr>`;
+    return `<tr><td>${name}</td><td>${t.orders.toLocaleString()}</td><td>${usd(t.gross)}</td><td>${usd(t.returns)}</td><td>${usd(t.net)}</td><td>${usd(t.shipping)}</td><td>${usd(t.payout)}</td><td>${usd(t.spend)}</td><td>${usd(t.label_cost)}</td><td>${usd(t.shopifyOpex + t.other)}</td><td class="${c < 0 ? "neg" : "pos"}">${usd(c)}</td><td>${t.mer.toFixed(2)}×</td></tr>`;
   };
   let body = "";
   for (const m of months) {
@@ -415,6 +490,7 @@ function renderNotes() {
     <p><b>Orders, sales, discounts, refunds, shipping charged:</b> Shopify Analytics (ShopifyQL <span class="num">FROM sales</span>), by day in store time (Pacific).</p>
     <p><b>Net payouts:</b> ${D.payouts ? "Shopify Payments payouts API." : "estimated from each order's payment transactions: money captured through Shopify Payments, minus refunds paid, minus the processing fee Shopify recorded on each transaction. Actual bank payouts lag by a few days and can include reserves or adjustments. Give the sync token the <span class=\"num\">read_shopify_payments_payouts</span> scope to use the real payout ledger."} ${s.orders} orders read${gw ? "; captured by gateway: " + gw : ""}.</p>
     <p><b>Meta ad spend:</b> Meta Marketing API, ad account “Roofus” (act_${cfg.meta_ad_account_id}), daily spend in USD. ${m ? `Account total for the window: ${usd2(m.spend)}, ${m.impressions.toLocaleString()} impressions, ${m.clicks.toLocaleString()} clicks.` : ""}</p>
+    <p><b>Shipping labels:</b> Shopify Shipping label purchases from Shopify Analytics (ShopifyQL <span class="num">FROM shipping_labels</span>), by the day each label was bought. <b>Shipping charged</b> is what customers paid at checkout.</p>
     <p><b>Shopify OPEX:</b> your plan and app fees per month, pro-rated by day. <b>Contribution</b> doesn't subtract product cost (COGS), 3PL or packaging.</p>
     <p class="muted">Data synced ${D.generated}. Taxes are $0 for this store.</p>`;
 }
@@ -422,8 +498,8 @@ function renderNotes() {
 function render(full = true) {
   const rs = rows(), t = sum(rs);
   $("sub").textContent = `Shopify + Meta since ${fmtDay(D.start)}, ${D.start.slice(0, 4)} · synced ${D.generated}`;
-  renderRanges(); renderHero(t, rs); renderTiles(t); renderPL(t, rs); renderWeekly(rs); renderMonthly();
-  if (full) { renderCamps(); renderInputs(); renderNotes(); }
+  renderRanges(); renderHero(t, rs); renderTiles(t); renderPL(t, rs); renderWeekly(rs); renderShipping(t, rs); renderMonthly();
+  if (full) { renderCamps(); renderShipBreakdown(); renderInputs(); renderNotes(); }
 }
 render();
 </script>

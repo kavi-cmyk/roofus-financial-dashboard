@@ -52,22 +52,45 @@ def shopify(query, variables=None):
     return res["data"]
 
 
-def sync_sales(start, until):
+def shopifyql(ql):
     q = """query($q:String!){ shopifyqlQuery(query:$q){ tableData{ columns{name} rows } parseErrors } }"""
-    ql = (f"FROM sales SHOW orders, gross_sales, discounts, returns, net_sales, shipping_charges, "
-          f"taxes, total_sales TIMESERIES day SINCE {start} UNTIL {until}")
     res = shopify(q, {"q": ql})["shopifyqlQuery"]
     if res.get("parseErrors"):
         raise RuntimeError(res["parseErrors"])
     cols = [c["name"] for c in res["tableData"]["columns"]]
-    daily = []
-    for row in res["tableData"]["rows"]:
-        r = dict(zip(cols, row if isinstance(row, list) else [row[c] for c in cols]))
-        daily.append({"date": str(r["day"])[:10], "orders": int(float(r["orders"] or 0)),
-                      **{k: float(r[k] or 0) for k in cols if k not in ("day", "orders")}})
+    return [dict(zip(cols, row if isinstance(row, list) else [row[c] for c in cols]))
+            for row in res["tableData"]["rows"]]
+
+
+def num(v):
+    return float(v) if v not in (None, "") else 0.0
+
+
+def sync_sales(start, until):
+    ql = (f"FROM sales SHOW orders, gross_sales, discounts, returns, net_sales, shipping_charges, "
+          f"taxes, total_sales TIMESERIES day SINCE {start} UNTIL {until}")
+    daily = [{"date": str(r["day"])[:10], "orders": int(num(r["orders"])),
+              **{k: num(v) for k, v in r.items() if k not in ("day", "orders")}} for r in shopifyql(ql)]
     (DATA / "shopify_sales_daily.json").write_text(json.dumps(
         {"source": "ShopifyQL: " + ql, "pulled_at": str(dt.date.today()), "daily": daily}, indent=1))
     print(f"shopify sales: {len(daily)} days")
+
+
+def sync_labels(start, until):
+    span = f"SINCE {start} UNTIL {until}"
+    daily = [{"date": str(r["day"])[:10], "labels": int(num(r["shipping_labels"])), "cost": num(r["shipping_label_costs"])}
+             for r in shopifyql(f"FROM shipping_labels SHOW shipping_labels, shipping_label_costs TIMESERIES day {span}")]
+    services = [{"carrier": r["shipping_carrier"], "service": r["shipping_service"],
+                 "labels": int(num(r["shipping_labels"])), "cost": num(r["shipping_label_costs"])}
+                for r in shopifyql(f"FROM shipping_labels SHOW shipping_labels, shipping_label_costs "
+                                   f"GROUP BY shipping_carrier, shipping_service {span} ORDER BY shipping_label_costs DESC")]
+    packages = [{"package": r["package_name"], "labels": int(num(r["shipping_labels"])), "cost": num(r["shipping_label_costs"])}
+                for r in shopifyql(f"FROM shipping_labels SHOW shipping_labels, shipping_label_costs "
+                                   f"GROUP BY package_name {span} ORDER BY shipping_label_costs DESC")]
+    (DATA / "shopify_labels.json").write_text(json.dumps(
+        {"source": "ShopifyQL: FROM shipping_labels", "pulled_at": str(dt.date.today()),
+         "daily": daily, "by_service": services, "by_package": packages}, indent=1))
+    print(f"shipping labels: {sum(r['labels'] for r in daily)} labels, ${sum(r['cost'] for r in daily):,.2f}")
 
 
 ORDERS_Q = """query($after:String,$q:String!){ orders(first:100, after:$after, query:$q, sortKey:CREATED_AT) {
@@ -172,6 +195,7 @@ def main():
     args = ap.parse_args()
     start = cfg["start_date"]
     sync_sales(start, args.until)
+    sync_labels(start, args.until)
     sync_orders(start)
     sync_payouts(start)
     sync_meta(os.environ.get("META_AD_ACCOUNT_ID", cfg["meta_ad_account_id"]), start, args.until)

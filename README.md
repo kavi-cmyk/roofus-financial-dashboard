@@ -6,7 +6,7 @@ One page that shows Roofus's money since **May 14, 2026**:
 - Net payouts: cash captured through Shopify Payments, minus refunds paid, minus processing fees
 - Meta ad spend (daily and by campaign) for ad account `Roofus` (act_1210215467866079)
 - Shopify cost as OPEX (plan and apps, pro-rated per day)
-- Shipping label cost (entered, see below)
+- Shopify Shipping label cost per day, by carrier/service and by package
 - **Contribution** = cash from Shopify − Meta spend − shipping labels − Shopify OPEX
 
 Filter by the whole period, the last 30 days, or a single month. The page also has a monthly table and MER (net sales ÷ Meta spend).
@@ -15,11 +15,12 @@ Filter by the whole period, the last 30 days, or a single month. The page also h
 
 ```
 data/
-  config.json               start date, Shopify plan fee, apps, shipping label cost
+  config.json               start date, Shopify plan fee, apps
   shopify_sales_daily.json  ShopifyQL daily sales
   raw/orders.jsonl          every order with its payment transactions and fees
   meta_daily.json           Meta spend per day
   meta_campaigns.json       Meta spend per campaign
+  shopify_labels.json       Shopify Shipping labels: count and cost per day, by service, by package
 dashboard/template.html     the dashboard (data is inlined at build time)
 scripts/sync.py             pulls fresh data from the Shopify Admin API and the Meta Marketing API
 scripts/build.py            combines data/ into dist/index.html
@@ -47,7 +48,7 @@ Create the Shopify token under **Settings → Apps → Develop apps**. Orders ol
 | Net payouts | Estimated from the transactions above. If the token has `read_shopify_payments_payouts`, `sync.py` also saves the real payout ledger to `data/shopify_payouts.json` |
 | Meta ad spend | Meta Marketing API insights, `time_increment=1` |
 | Shopify plan and apps | Entered in `config.json` or on the page. Grow plan: $105/mo billed monthly, $79/mo billed annually |
-| Shipping labels | Entered as an average per order. Shopify Shipping label charges appear on the Shopify bill, and the Admin API doesn't expose them |
+| Shipping labels | Shopify Analytics (`FROM shipping_labels`): label count and cost by the day each label was bought |
 
 Values typed into the page's "Costs you enter" panel are saved in that browser only. To change the default for everyone, edit `data/config.json` and rebuild.
 

@@ -1,0 +1,794 @@
+{
+ "source": "ShopifyQL: FROM shipping_labels SHOW shipping_labels, shipping_label_costs (Shopify Shipping labels, by label creation day)",
+ "pulled_at": "2026-09-28",
+ "daily": [
+  {
+   "date": "2026-05-14",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-15",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-16",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-17",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-18",
+   "labels": 21,
+   "cost": 151.21
+  },
+  {
+   "date": "2026-05-19",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-20",
+   "labels": 13,
+   "cost": 112.91
+  },
+  {
+   "date": "2026-05-21",
+   "labels": 12,
+   "cost": 88.83
+  },
+  {
+   "date": "2026-05-22",
+   "labels": 9,
+   "cost": 81.46
+  },
+  {
+   "date": "2026-05-23",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-24",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-25",
+   "labels": 32,
+   "cost": 279.62
+  },
+  {
+   "date": "2026-05-26",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-27",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-28",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-29",
+   "labels": 35,
+   "cost": 444.34
+  },
+  {
+   "date": "2026-05-30",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-05-31",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-01",
+   "labels": 9,
+   "cost": 77.2
+  },
+  {
+   "date": "2026-06-02",
+   "labels": 2,
+   "cost": 15.82
+  },
+  {
+   "date": "2026-06-03",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-04",
+   "labels": 1,
+   "cost": 10.01
+  },
+  {
+   "date": "2026-06-05",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-06",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-07",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-08",
+   "labels": 5,
+   "cost": 47.51
+  },
+  {
+   "date": "2026-06-09",
+   "labels": 1,
+   "cost": 6.57
+  },
+  {
+   "date": "2026-06-10",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-11",
+   "labels": 1,
+   "cost": 8.22
+  },
+  {
+   "date": "2026-06-12",
+   "labels": 2,
+   "cost": 20.91
+  },
+  {
+   "date": "2026-06-13",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-14",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-15",
+   "labels": 6,
+   "cost": 47.7
+  },
+  {
+   "date": "2026-06-16",
+   "labels": 4,
+   "cost": 33.01
+  },
+  {
+   "date": "2026-06-17",
+   "labels": 3,
+   "cost": 20.02
+  },
+  {
+   "date": "2026-06-18",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-19",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-20",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-21",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-22",
+   "labels": 19,
+   "cost": 121
+  },
+  {
+   "date": "2026-06-23",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-24",
+   "labels": 11,
+   "cost": 80.51
+  },
+  {
+   "date": "2026-06-25",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-26",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-27",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-28",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-06-29",
+   "labels": 16,
+   "cost": 144.84
+  },
+  {
+   "date": "2026-06-30",
+   "labels": 4,
+   "cost": 32.75
+  },
+  {
+   "date": "2026-07-01",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-02",
+   "labels": 8,
+   "cost": 60.65
+  },
+  {
+   "date": "2026-07-03",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-04",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-05",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-06",
+   "labels": 11,
+   "cost": 100.15
+  },
+  {
+   "date": "2026-07-07",
+   "labels": 2,
+   "cost": 18.19
+  },
+  {
+   "date": "2026-07-08",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-09",
+   "labels": 7,
+   "cost": 55.91
+  },
+  {
+   "date": "2026-07-10",
+   "labels": 3,
+   "cost": 26.68
+  },
+  {
+   "date": "2026-07-11",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-12",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-13",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-14",
+   "labels": 29,
+   "cost": 274.83
+  },
+  {
+   "date": "2026-07-15",
+   "labels": 5,
+   "cost": 40.19
+  },
+  {
+   "date": "2026-07-16",
+   "labels": 6,
+   "cost": 48.5
+  },
+  {
+   "date": "2026-07-17",
+   "labels": 4,
+   "cost": 34.94
+  },
+  {
+   "date": "2026-07-18",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-19",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-20",
+   "labels": 16,
+   "cost": 141.19
+  },
+  {
+   "date": "2026-07-21",
+   "labels": 10,
+   "cost": 97.14
+  },
+  {
+   "date": "2026-07-22",
+   "labels": 7,
+   "cost": 73.41
+  },
+  {
+   "date": "2026-07-23",
+   "labels": 4,
+   "cost": 28.43
+  },
+  {
+   "date": "2026-07-24",
+   "labels": 7,
+   "cost": 53.13
+  },
+  {
+   "date": "2026-07-25",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-26",
+   "labels": 13,
+   "cost": 113.66
+  },
+  {
+   "date": "2026-07-27",
+   "labels": 6,
+   "cost": 54.71
+  },
+  {
+   "date": "2026-07-28",
+   "labels": 4,
+   "cost": 34
+  },
+  {
+   "date": "2026-07-29",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-07-30",
+   "labels": 9,
+   "cost": 69.45
+  },
+  {
+   "date": "2026-07-31",
+   "labels": 8,
+   "cost": 81.25
+  },
+  {
+   "date": "2026-08-01",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-02",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-03",
+   "labels": 10,
+   "cost": 82.65
+  },
+  {
+   "date": "2026-08-04",
+   "labels": 6,
+   "cost": 52.33
+  },
+  {
+   "date": "2026-08-05",
+   "labels": 5,
+   "cost": 36.99
+  },
+  {
+   "date": "2026-08-06",
+   "labels": 5,
+   "cost": 62.62
+  },
+  {
+   "date": "2026-08-07",
+   "labels": 2,
+   "cost": 17.12
+  },
+  {
+   "date": "2026-08-08",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-09",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-10",
+   "labels": 21,
+   "cost": 200.47
+  },
+  {
+   "date": "2026-08-11",
+   "labels": 9,
+   "cost": 76.57
+  },
+  {
+   "date": "2026-08-12",
+   "labels": 13,
+   "cost": 115.77
+  },
+  {
+   "date": "2026-08-13",
+   "labels": 6,
+   "cost": 55.96
+  },
+  {
+   "date": "2026-08-14",
+   "labels": 14,
+   "cost": 119.76
+  },
+  {
+   "date": "2026-08-15",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-16",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-17",
+   "labels": 37,
+   "cost": 333.79
+  },
+  {
+   "date": "2026-08-18",
+   "labels": 16,
+   "cost": 147.57
+  },
+  {
+   "date": "2026-08-19",
+   "labels": 7,
+   "cost": 72.13
+  },
+  {
+   "date": "2026-08-20",
+   "labels": 14,
+   "cost": 122.33
+  },
+  {
+   "date": "2026-08-21",
+   "labels": 12,
+   "cost": 109.75
+  },
+  {
+   "date": "2026-08-22",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-23",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-24",
+   "labels": 45,
+   "cost": 405.76
+  },
+  {
+   "date": "2026-08-25",
+   "labels": 12,
+   "cost": 105.39
+  },
+  {
+   "date": "2026-08-26",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-27",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-28",
+   "labels": 37,
+   "cost": 325.12
+  },
+  {
+   "date": "2026-08-29",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-30",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-08-31",
+   "labels": 36,
+   "cost": 304.37
+  },
+  {
+   "date": "2026-09-01",
+   "labels": 24,
+   "cost": 217.31
+  },
+  {
+   "date": "2026-09-02",
+   "labels": 24,
+   "cost": 200.99
+  },
+  {
+   "date": "2026-09-03",
+   "labels": 10,
+   "cost": 92.05
+  },
+  {
+   "date": "2026-09-04",
+   "labels": 18,
+   "cost": 155.02
+  },
+  {
+   "date": "2026-09-05",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-09-06",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-09-07",
+   "labels": 8,
+   "cost": 97.85
+  },
+  {
+   "date": "2026-09-08",
+   "labels": 3,
+   "cost": 29.05
+  },
+  {
+   "date": "2026-09-09",
+   "labels": 3,
+   "cost": 24.51
+  },
+  {
+   "date": "2026-09-10",
+   "labels": 3,
+   "cost": 31.36
+  },
+  {
+   "date": "2026-09-11",
+   "labels": 8,
+   "cost": 69.59
+  },
+  {
+   "date": "2026-09-12",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-09-13",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-09-14",
+   "labels": 44,
+   "cost": 366.19
+  },
+  {
+   "date": "2026-09-15",
+   "labels": 49,
+   "cost": 404.95
+  },
+  {
+   "date": "2026-09-16",
+   "labels": 18,
+   "cost": 148.65
+  },
+  {
+   "date": "2026-09-17",
+   "labels": 19,
+   "cost": 168.42
+  },
+  {
+   "date": "2026-09-18",
+   "labels": 14,
+   "cost": 112.45
+  },
+  {
+   "date": "2026-09-19",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-09-20",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-09-21",
+   "labels": 47,
+   "cost": 397.63
+  },
+  {
+   "date": "2026-09-22",
+   "labels": 24,
+   "cost": 206.47
+  },
+  {
+   "date": "2026-09-23",
+   "labels": 15,
+   "cost": 123.31
+  },
+  {
+   "date": "2026-09-24",
+   "labels": 10,
+   "cost": 85.42
+  },
+  {
+   "date": "2026-09-25",
+   "labels": 9,
+   "cost": 73.49
+  },
+  {
+   "date": "2026-09-26",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-09-27",
+   "labels": 0,
+   "cost": 0.0
+  },
+  {
+   "date": "2026-09-28",
+   "labels": 0,
+   "cost": 0.0
+  }
+ ],
+ "by_service": [
+  {
+   "carrier": "USPS",
+   "service": "Ground Advantage",
+   "labels": 742,
+   "cost": 6554.09
+  },
+  {
+   "carrier": "UPS",
+   "service": "UPS\u00ae Ground Saver",
+   "labels": 205,
+   "cost": 1716.24
+  },
+  {
+   "carrier": "FedEx",
+   "service": "FedEx Ground\u00ae Economy",
+   "labels": 63,
+   "cost": 593.73
+  },
+  {
+   "carrier": "UPS",
+   "service": "UPS\u00ae Ground",
+   "labels": 12,
+   "cost": 117.95
+  }
+ ],
+ "by_package": [
+  {
+   "package": "Dental Wipes 2 Units",
+   "labels": 575,
+   "cost": 4912.33
+  },
+  {
+   "package": "Dental Wipes - 4 Pack",
+   "labels": 223,
+   "cost": 1930.87
+  },
+  {
+   "package": "Custom - 04",
+   "labels": 66,
+   "cost": 710.33
+  },
+  {
+   "package": "Dental Wipes",
+   "labels": 87,
+   "cost": 621.69
+  },
+  {
+   "package": "Dental Wipes 3 Units",
+   "labels": 35,
+   "cost": 287.6
+  },
+  {
+   "package": "Custom - 03",
+   "labels": 1,
+   "cost": 134.94
+  },
+  {
+   "package": "Custom - 02",
+   "labels": 12,
+   "cost": 110.96
+  },
+  {
+   "package": "Custom - 05",
+   "labels": 3,
+   "cost": 94.19
+  },
+  {
+   "package": "Custom - 01",
+   "labels": 8,
+   "cost": 75.95
+  },
+  {
+   "package": "Pet Wipes - 200 Pack",
+   "labels": 6,
+   "cost": 36.48
+  },
+  {
+   "package": "Pet Wipes - 200PK - 2 Pack",
+   "labels": 2,
+   "cost": 21.98
+  },
+  {
+   "package": "Custom Box - 05",
+   "labels": 1,
+   "cost": 20.64
+  },
+  {
+   "package": "Dental Wipes - 6 Units",
+   "labels": 2,
+   "cost": 14.51
+  },
+  {
+   "package": "Shampoo - 1 Pack",
+   "labels": 1,
+   "cost": 9.54
+  }
+ ]
+}
