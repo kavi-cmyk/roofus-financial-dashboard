@@ -1,0 +1,4968 @@
+{
+ "source": "ShopifyQL FROM sales SHOW quantity_ordered, net_items_sold, net_sales GROUP BY product_title TIMESERIES day",
+ "rows": [
+  {
+   "date": "2026-05-14",
+   "product": "",
+   "qty": 18,
+   "net_items": 18,
+   "net_sales": 135.0
+  },
+  {
+   "date": "2026-05-14",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-05-14",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-05-15",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-05-16",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 65.5
+  },
+  {
+   "date": "2026-05-17",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 57.0
+  },
+  {
+   "date": "2026-05-17",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 20,
+   "net_items": 20,
+   "net_sales": 242.5
+  },
+  {
+   "date": "2026-05-17",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 32.0
+  },
+  {
+   "date": "2026-05-17",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.75
+  },
+  {
+   "date": "2026-05-17",
+   "product": "Pet Wipes - Unscented - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-05-18",
+   "product": "",
+   "qty": 11,
+   "net_items": 11,
+   "net_sales": 149.56
+  },
+  {
+   "date": "2026-05-18",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 16,
+   "net_items": 16,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-05-18",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-05-18",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 19.2
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 45.0
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 46.25
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 96.0
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 17.0
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-05-20",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-05-20",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 45.0
+  },
+  {
+   "date": "2026-05-20",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 75.0
+  },
+  {
+   "date": "2026-05-20",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 150.4
+  },
+  {
+   "date": "2026-05-20",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 13,
+   "net_items": 13,
+   "net_sales": 107.0
+  },
+  {
+   "date": "2026-05-21",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 111.0
+  },
+  {
+   "date": "2026-05-21",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 140.8
+  },
+  {
+   "date": "2026-05-22",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 27.0
+  },
+  {
+   "date": "2026-05-22",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 3,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-05-22",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-05-22",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 85.0
+  },
+  {
+   "date": "2026-05-22",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 83.2
+  },
+  {
+   "date": "2026-05-22",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.6
+  },
+  {
+   "date": "2026-05-23",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-05-23",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 40.0
+  },
+  {
+   "date": "2026-05-23",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 147.2
+  },
+  {
+   "date": "2026-05-24",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 87.0
+  },
+  {
+   "date": "2026-05-24",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 45.0
+  },
+  {
+   "date": "2026-05-24",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 83.2
+  },
+  {
+   "date": "2026-05-24",
+   "product": "Pet Wipes - Coconut Kisses - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-05-25",
+   "product": "",
+   "qty": 66,
+   "net_items": 66,
+   "net_sales": 495.0
+  },
+  {
+   "date": "2026-05-25",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 27.0
+  },
+  {
+   "date": "2026-05-25",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 24.0
+  },
+  {
+   "date": "2026-05-25",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-05-25",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 57.6
+  },
+  {
+   "date": "2026-05-25",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 40.02
+  },
+  {
+   "date": "2026-05-25",
+   "product": "Pet Shampoo - Odor Guard - With Built-in Nozzle",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-05-25",
+   "product": "Pet Shampoo - Probiotic - With Built-in Nozzle",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-05-25",
+   "product": "Pet Wipes - Snuggle Sesh - 200 XL Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-05-26",
+   "product": "",
+   "qty": 0,
+   "net_items": -66,
+   "net_sales": -495.0
+  },
+  {
+   "date": "2026-05-26",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 30,
+   "net_items": 30,
+   "net_sales": 105.0
+  },
+  {
+   "date": "2026-05-26",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 18,
+   "net_items": 18,
+   "net_sales": 63.0
+  },
+  {
+   "date": "2026-05-26",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 70.0
+  },
+  {
+   "date": "2026-05-26",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 18,
+   "net_items": 18,
+   "net_sales": 94.5
+  },
+  {
+   "date": "2026-05-26",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 18,
+   "net_items": 18,
+   "net_sales": 94.5
+  },
+  {
+   "date": "2026-05-27",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 110.0
+  },
+  {
+   "date": "2026-05-27",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 84.0
+  },
+  {
+   "date": "2026-05-28",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-05-28",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 150.0
+  },
+  {
+   "date": "2026-05-28",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 42.0
+  },
+  {
+   "date": "2026-05-29",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 280.0
+  },
+  {
+   "date": "2026-05-29",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 17.0
+  },
+  {
+   "date": "2026-05-29",
+   "product": "Pet Wipes - Coconut Kisses - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-05-30",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 45.0
+  },
+  {
+   "date": "2026-05-30",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 75.6
+  },
+  {
+   "date": "2026-05-31",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 50.0
+  },
+  {
+   "date": "2026-05-31",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 75.6
+  },
+  {
+   "date": "2026-05-31",
+   "product": "Pet Wipes - Unscented - 200 XL Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-01",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-06-02",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 2,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-06-02",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 2,
+   "net_items": 1,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-06-02",
+   "product": "Dental Finger Wipes — 4-Pack (BUY 2 GET 2 FREE)",
+   "qty": 1,
+   "net_items": 0,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-06-03",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 3,
+   "net_items": 0,
+   "net_sales": 3.0
+  },
+  {
+   "date": "2026-06-03",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 1,
+   "net_items": 0,
+   "net_sales": 5.0
+  },
+  {
+   "date": "2026-06-04",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-06-04",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 0,
+   "net_items": -2,
+   "net_sales": -30.0
+  },
+  {
+   "date": "2026-06-04",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-04",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 3,
+   "net_items": 2,
+   "net_sales": 50.0
+  },
+  {
+   "date": "2026-06-06",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 45.0
+  },
+  {
+   "date": "2026-06-06",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-06-06",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 18.0
+  },
+  {
+   "date": "2026-06-06",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 17.0
+  },
+  {
+   "date": "2026-06-06",
+   "product": "Pet Wipes - Coconut Kisses - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-06-07",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-06-08",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-06-08",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 0,
+   "net_items": -1,
+   "net_sales": -15.0
+  },
+  {
+   "date": "2026-06-08",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 0,
+   "net_items": -1,
+   "net_sales": -25.0
+  },
+  {
+   "date": "2026-06-08",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 18.0
+  },
+  {
+   "date": "2026-06-09",
+   "product": "",
+   "qty": 18,
+   "net_items": 18,
+   "net_sales": 108.0
+  },
+  {
+   "date": "2026-06-09",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 18,
+   "net_items": 18,
+   "net_sales": 84.0
+  },
+  {
+   "date": "2026-06-09",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 48.0
+  },
+  {
+   "date": "2026-06-09",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 36,
+   "net_items": 36,
+   "net_sales": 156.0
+  },
+  {
+   "date": "2026-06-10",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-06-11",
+   "product": "",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-06-11",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-11",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 2,
+   "net_items": 1,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-11",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 24.0
+  },
+  {
+   "date": "2026-06-11",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-11",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-12",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-06-12",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 0,
+   "net_items": -1,
+   "net_sales": -25.0
+  },
+  {
+   "date": "2026-06-12",
+   "product": "Pet Wipes - Coconut Kisses - 200 XL Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-14",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 20,
+   "net_items": 20,
+   "net_sales": 171.0
+  },
+  {
+   "date": "2026-06-14",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-14",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 27.0
+  },
+  {
+   "date": "2026-06-15",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-15",
+   "product": "Pet Shampoo - Probiotic - With Built-in Nozzle",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-06-15",
+   "product": "Pet Wipes - Snuggle Sesh - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-06-16",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 45.0
+  },
+  {
+   "date": "2026-06-17",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-06-18",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 42.0
+  },
+  {
+   "date": "2026-06-19",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 105.0
+  },
+  {
+   "date": "2026-06-19",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 36.0
+  },
+  {
+   "date": "2026-06-20",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-06-20",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 129.0
+  },
+  {
+   "date": "2026-06-21",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 258.0
+  },
+  {
+   "date": "2026-06-21",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 104.0
+  },
+  {
+   "date": "2026-06-21",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-06-21",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-06-22",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-06-22",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 0,
+   "net_items": -1,
+   "net_sales": -12.0
+  },
+  {
+   "date": "2026-06-22",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 43.0
+  },
+  {
+   "date": "2026-06-22",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 1,
+   "net_sales": 70.0
+  },
+  {
+   "date": "2026-06-22",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 17.0
+  },
+  {
+   "date": "2026-06-22",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-06-23",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-06-23",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 86.0
+  },
+  {
+   "date": "2026-06-23",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 140.0
+  },
+  {
+   "date": "2026-06-23",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-06-24",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-06-24",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 24.0
+  },
+  {
+   "date": "2026-06-24",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 43.0
+  },
+  {
+   "date": "2026-06-24",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 70.0
+  },
+  {
+   "date": "2026-06-24",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-06-25",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-26",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-06-26",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-06-26",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 147.0
+  },
+  {
+   "date": "2026-06-26",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-06-27",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-06-28",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-06-28",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 147.0
+  },
+  {
+   "date": "2026-06-28",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-06-29",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 0,
+   "net_items": -3,
+   "net_sales": -45.0
+  },
+  {
+   "date": "2026-06-29",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-06-29",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-06-29",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-06-30",
+   "product": "",
+   "qty": 15,
+   "net_items": 15,
+   "net_sales": 68.64
+  },
+  {
+   "date": "2026-06-30",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 14,
+   "net_items": 14,
+   "net_sales": 49.89
+  },
+  {
+   "date": "2026-06-30",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 150.0
+  },
+  {
+   "date": "2026-06-30",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 16,
+   "net_items": 16,
+   "net_sales": 57.03
+  },
+  {
+   "date": "2026-07-01",
+   "product": "",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 75.0
+  },
+  {
+   "date": "2026-07-01",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 25.0
+  },
+  {
+   "date": "2026-07-01",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 150.0
+  },
+  {
+   "date": "2026-07-01",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 25.0
+  },
+  {
+   "date": "2026-07-01",
+   "product": "Pet Wipes - Coconut Kisses - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-01",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 22.5
+  },
+  {
+   "date": "2026-07-03",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-07-03",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 196.0
+  },
+  {
+   "date": "2026-07-03",
+   "product": "Roofus Mystery Gift",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-04",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-07-04",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-07-04",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-05",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-07-05",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-07-05",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-05",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-06",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-07-07",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-07-07",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-07-07",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-07",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-07-07",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-07-07",
+   "product": "Pet Wipes - Zesty Zoomies - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-07",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-08",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-07-08",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-07-08",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-07-08",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-08",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-09",
+   "product": "",
+   "qty": 42,
+   "net_items": 42,
+   "net_sales": 101.66
+  },
+  {
+   "date": "2026-07-09",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-07-10",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-07-10",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-07-10",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 128.0
+  },
+  {
+   "date": "2026-07-10",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-10",
+   "product": "Pet Shampoo - Odor Guard - With Built-in Nozzle",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-10",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-11",
+   "product": "",
+   "qty": 42,
+   "net_items": 42,
+   "net_sales": 156.39
+  },
+  {
+   "date": "2026-07-11",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-07-11",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-07-11",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 18.0
+  },
+  {
+   "date": "2026-07-11",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-07-11",
+   "product": "Pet Shampoo - Odor Guard - With Built-in Nozzle",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-11",
+   "product": "Pet Shampoo - Sensitive - With Built-in Nozzle",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 35.0
+  },
+  {
+   "date": "2026-07-11",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-12",
+   "product": "",
+   "qty": 25,
+   "net_items": 25,
+   "net_sales": 151.5
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 196.0
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Mystery Paw-Care Pack — FREE Subscription Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 11,
+   "net_items": 11,
+   "net_sales": 55.0
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 40.0
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 39.98
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Roofus Mystery Gift",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 22.5
+  },
+  {
+   "date": "2026-07-13",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 150.0
+  },
+  {
+   "date": "2026-07-13",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-07-13",
+   "product": "Mystery Paw-Care Pack — FREE Subscription Gift",
+   "qty": 0,
+   "net_items": -1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-13",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-14",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-14",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 180.0
+  },
+  {
+   "date": "2026-07-14",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 196.0
+  },
+  {
+   "date": "2026-07-14",
+   "product": "Roofus Mystery Gift",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-15",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-07-15",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-07-16",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-16",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-07-16",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 147.0
+  },
+  {
+   "date": "2026-07-16",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-07-16",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-16",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-17",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 150.0
+  },
+  {
+   "date": "2026-07-17",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-07-17",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-18",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 27.0
+  },
+  {
+   "date": "2026-07-18",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-07-18",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-07-18",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-07-18",
+   "product": "Pet Wipes - Coconut Kisses - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-18",
+   "product": "Pet Wipes - Snuggle Sesh - 200 XL Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-07-18",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-18",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-19",
+   "product": "",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 72.0
+  },
+  {
+   "date": "2026-07-19",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 36.0
+  },
+  {
+   "date": "2026-07-19",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 36.0
+  },
+  {
+   "date": "2026-07-19",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-07-19",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-07-19",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-19",
+   "product": "Pet Wipes - Snuggle Sesh - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-19",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-20",
+   "product": "",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 40.0
+  },
+  {
+   "date": "2026-07-20",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 50.0
+  },
+  {
+   "date": "2026-07-20",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 37.0
+  },
+  {
+   "date": "2026-07-20",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-07-20",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-07-20",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 25.0
+  },
+  {
+   "date": "2026-07-20",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-21",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-07-21",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-07-21",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 196.0
+  },
+  {
+   "date": "2026-07-21",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-07-21",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-21",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-07-21",
+   "product": "Roofus Mystery Gift",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-22",
+   "product": "",
+   "qty": 80,
+   "net_items": 80,
+   "net_sales": 215.28
+  },
+  {
+   "date": "2026-07-22",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 120.0
+  },
+  {
+   "date": "2026-07-22",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 40.0
+  },
+  {
+   "date": "2026-07-22",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 128.0
+  },
+  {
+   "date": "2026-07-22",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-22",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-23",
+   "product": "",
+   "qty": 26,
+   "net_items": 26,
+   "net_sales": 172.8
+  },
+  {
+   "date": "2026-07-23",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 20,
+   "net_items": 20,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-07-23",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-23",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 120.0
+  },
+  {
+   "date": "2026-07-23",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-07-23",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 18.0
+  },
+  {
+   "date": "2026-07-23",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 24,
+   "net_items": 24,
+   "net_sales": 86.4
+  },
+  {
+   "date": "2026-07-23",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-24",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-07-24",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-07-24",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-07-24",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 0,
+   "net_items": -1,
+   "net_sales": -64.0
+  },
+  {
+   "date": "2026-07-24",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 0,
+   "net_items": -1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-24",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 0,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-25",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 180.0
+  },
+  {
+   "date": "2026-07-25",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-07-25",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-26",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-26",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-07-26",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-07-26",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-07-26",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-27",
+   "product": "",
+   "qty": 0,
+   "net_items": 0,
+   "net_sales": -23.9
+  },
+  {
+   "date": "2026-07-27",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 150.0
+  },
+  {
+   "date": "2026-07-27",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-07-28",
+   "product": "",
+   "qty": 36,
+   "net_items": 36,
+   "net_sales": 218.4
+  },
+  {
+   "date": "2026-07-28",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 42.0
+  },
+  {
+   "date": "2026-07-28",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 42.0
+  },
+  {
+   "date": "2026-07-28",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 42.0
+  },
+  {
+   "date": "2026-07-28",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-07-28",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-07-29",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-29",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-07-29",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-07-30",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-07-30",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-07-30",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-07-30",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-07-30",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-30",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-31",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-07-31",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-07-31",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-07-31",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-07-31",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-07-31",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-07-31",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-01",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-08-01",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-08-01",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-08-01",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-08-01",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-08-01",
+   "product": "Pet Shampoo - Odor Guard - With Built-in Nozzle",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-01",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-02",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-08-02",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-08-02",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-03",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 120.0
+  },
+  {
+   "date": "2026-08-04",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 120.0
+  },
+  {
+   "date": "2026-08-04",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-08-04",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-05",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 119.04
+  },
+  {
+   "date": "2026-08-05",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 60.0
+  },
+  {
+   "date": "2026-08-05",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-08-05",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-08-05",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-05",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-08-05",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-06",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-08-06",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-08-06",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-07",
+   "product": "",
+   "qty": 0,
+   "net_items": 0,
+   "net_sales": -30.0
+  },
+  {
+   "date": "2026-08-07",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 120.0
+  },
+  {
+   "date": "2026-08-07",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-08-07",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-07",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-08",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 120.0
+  },
+  {
+   "date": "2026-08-08",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-08-09",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-08-09",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 192.0
+  },
+  {
+   "date": "2026-08-09",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-09",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-10",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 240.0
+  },
+  {
+   "date": "2026-08-10",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 196.0
+  },
+  {
+   "date": "2026-08-10",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-08-10",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-10",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-08-10",
+   "product": "Roofus Mystery Gift",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-10",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-10",
+   "product": "Soothing Ear Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-08-11",
+   "product": "",
+   "qty": 30,
+   "net_items": 30,
+   "net_sales": 157.5
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 17.5
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 17.5
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 120.0
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 35.0
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 18.9
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Soothing Ear Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-08-12",
+   "product": "",
+   "qty": 35,
+   "net_items": 35,
+   "net_sales": 170.43
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 27.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 27.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 17.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 210.0
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 17.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 14.0
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 32.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Pet Shampoo - Odor Guard - With Built-in Nozzle",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 24.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Pet Shampoo - Probiotic - With Built-in Nozzle",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 24.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Pet Shampoo - Sensitive - With Built-in Nozzle",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 24.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 9,
+   "net_items": 9,
+   "net_sales": 44.26
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Soothing Ear Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-08-13",
+   "product": "",
+   "qty": 9,
+   "net_items": 9,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 25.0
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 120.0
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 245.0
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Roofus Mystery Gift",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 13.5
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Soothing Ear Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 49.0
+  },
+  {
+   "date": "2026-08-14",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-08-14",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 150.0
+  },
+  {
+   "date": "2026-08-14",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-08-14",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-08-14",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-14",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-15",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-15",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 210.0
+  },
+  {
+   "date": "2026-08-15",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-08-15",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-16",
+   "product": "",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 37.5
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 35.0
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 210.0
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 392.0
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Roofus Mystery Gift",
+   "qty": 9,
+   "net_items": 9,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 42.0
+  },
+  {
+   "date": "2026-08-17",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-08-17",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-08-17",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 180.0
+  },
+  {
+   "date": "2026-08-17",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 245.0
+  },
+  {
+   "date": "2026-08-17",
+   "product": "Roofus Mystery Gift",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-18",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 180.0
+  },
+  {
+   "date": "2026-08-18",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 147.0
+  },
+  {
+   "date": "2026-08-18",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 27.2
+  },
+  {
+   "date": "2026-08-18",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 128.0
+  },
+  {
+   "date": "2026-08-18",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-18",
+   "product": "Roofus Mystery Gift",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-19",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 150.0
+  },
+  {
+   "date": "2026-08-19",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 147.0
+  },
+  {
+   "date": "2026-08-19",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 51.2
+  },
+  {
+   "date": "2026-08-19",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 18.0
+  },
+  {
+   "date": "2026-08-19",
+   "product": "Pet Wipes - Zesty Zoomies - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-19",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-19",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-08-20",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-20",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-20",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-20",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 177.0
+  },
+  {
+   "date": "2026-08-20",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 98.0
+  },
+  {
+   "date": "2026-08-20",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 128.0
+  },
+  {
+   "date": "2026-08-20",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-20",
+   "product": "Roofus Mystery Gift",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-20",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-21",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-21",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-21",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 231.0
+  },
+  {
+   "date": "2026-08-21",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 186.2
+  },
+  {
+   "date": "2026-08-21",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 115.21
+  },
+  {
+   "date": "2026-08-21",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-21",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 8.99
+  },
+  {
+   "date": "2026-08-21",
+   "product": "Roofus Mystery Gift",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-21",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 13.5
+  },
+  {
+   "date": "2026-08-22",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 187.5
+  },
+  {
+   "date": "2026-08-22",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 178.85
+  },
+  {
+   "date": "2026-08-22",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 25.6
+  },
+  {
+   "date": "2026-08-22",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 57.6
+  },
+  {
+   "date": "2026-08-22",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-22",
+   "product": "Roofus Mystery Gift",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-23",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 14,
+   "net_items": 14,
+   "net_sales": 466.2
+  },
+  {
+   "date": "2026-08-23",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 50.15
+  },
+  {
+   "date": "2026-08-23",
+   "product": "Dental Finger Wipes — 4-Pack",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 25.6
+  },
+  {
+   "date": "2026-08-23",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 138.25
+  },
+  {
+   "date": "2026-08-23",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-23",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-24",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-24",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 231.25
+  },
+  {
+   "date": "2026-08-24",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 215.35
+  },
+  {
+   "date": "2026-08-24",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 16.2
+  },
+  {
+   "date": "2026-08-24",
+   "product": "Roofus Mystery Gift",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-24",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 13.5
+  },
+  {
+   "date": "2026-08-25",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-25",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-25",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 11,
+   "net_items": 11,
+   "net_sales": 373.7
+  },
+  {
+   "date": "2026-08-25",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 315.65
+  },
+  {
+   "date": "2026-08-25",
+   "product": "Mystery Paw-Care Pack — FREE Subscription Gift",
+   "qty": 1,
+   "net_items": 0,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-25",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-08-25",
+   "product": "Roofus Mystery Gift",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-25",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-26",
+   "product": "",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 90.0
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 13,
+   "net_items": 13,
+   "net_sales": 65.0
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 13.5
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 135.05
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Pet Shampoo - Odor Guard - With Built-in Nozzle",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 35.0
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Pet Shampoo - Probiotic - With Built-in Nozzle",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 35.0
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 31.5
+  },
+  {
+   "date": "2026-08-27",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-27",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-08-27",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 344.1
+  },
+  {
+   "date": "2026-08-27",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 150.45
+  },
+  {
+   "date": "2026-08-27",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.3
+  },
+  {
+   "date": "2026-08-27",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-28",
+   "product": "",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 72.0
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 172.05
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 59.0
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 10.0
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Pet Shampoo - Odor Guard - With Built-in Nozzle",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 35.0
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Pet Shampoo - Probiotic - With Built-in Nozzle",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 35.0
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Pet Shampoo - Sensitive - With Built-in Nozzle",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 35.0
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Roofus Mystery Gift",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 24.0
+  },
+  {
+   "date": "2026-08-29",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-08-29",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 140.6
+  },
+  {
+   "date": "2026-08-29",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 103.25
+  },
+  {
+   "date": "2026-08-29",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 36.0
+  },
+  {
+   "date": "2026-08-29",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-30",
+   "product": "",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 115.96
+  },
+  {
+   "date": "2026-08-30",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-08-30",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 399.6
+  },
+  {
+   "date": "2026-08-30",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 156.35
+  },
+  {
+   "date": "2026-08-30",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 16.2
+  },
+  {
+   "date": "2026-08-30",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-08-31",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-08-31",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-08-31",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 13,
+   "net_items": 13,
+   "net_sales": 360.0
+  },
+  {
+   "date": "2026-08-31",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 534.1
+  },
+  {
+   "date": "2026-08-31",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 8.1
+  },
+  {
+   "date": "2026-08-31",
+   "product": "Roofus Mystery Gift",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-01",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-01",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 13,
+   "net_items": 13,
+   "net_sales": 354.0
+  },
+  {
+   "date": "2026-09-01",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 306.25
+  },
+  {
+   "date": "2026-09-01",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 60.8
+  },
+  {
+   "date": "2026-09-01",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-01",
+   "product": "Roofus Mystery Gift",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-02",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 217.5
+  },
+  {
+   "date": "2026-09-02",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 129.85
+  },
+  {
+   "date": "2026-09-02",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-09-02",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-02",
+   "product": "Pet Wipes - Coconut Kisses - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-02",
+   "product": "Roofus Mystery Gift",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-03",
+   "product": "",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 72.0
+  },
+  {
+   "date": "2026-09-03",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 334.5
+  },
+  {
+   "date": "2026-09-03",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 132.3
+  },
+  {
+   "date": "2026-09-03",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 57.6
+  },
+  {
+   "date": "2026-09-03",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-03",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 18.99
+  },
+  {
+   "date": "2026-09-03",
+   "product": "Roofus Mystery Gift",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-03",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 21.6
+  },
+  {
+   "date": "2026-09-04",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 270.0
+  },
+  {
+   "date": "2026-09-04",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 132.3
+  },
+  {
+   "date": "2026-09-04",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 54.4
+  },
+  {
+   "date": "2026-09-04",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 21,
+   "net_items": 21,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-04",
+   "product": "Mystery Paw-Care Pack — FREE Subscription Gift",
+   "qty": 20,
+   "net_items": 20,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-04",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-09-04",
+   "product": "Pet Wipes - Snuggle Sesh - 200 XL Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-09-04",
+   "product": "Roofus Mystery Gift",
+   "qty": 24,
+   "net_items": 24,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-04",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 25.8
+  },
+  {
+   "date": "2026-09-05",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 13.5
+  },
+  {
+   "date": "2026-09-05",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 138.0
+  },
+  {
+   "date": "2026-09-05",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 269.5
+  },
+  {
+   "date": "2026-09-05",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 118.4
+  },
+  {
+   "date": "2026-09-05",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-05",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.0
+  },
+  {
+   "date": "2026-09-05",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-09-05",
+   "product": "Roofus Mystery Gift",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-06",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 322.5
+  },
+  {
+   "date": "2026-09-06",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 521.85
+  },
+  {
+   "date": "2026-09-06",
+   "product": "Roofus Mystery Gift",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-07",
+   "product": "",
+   "qty": 18,
+   "net_items": 18,
+   "net_sales": 279.9
+  },
+  {
+   "date": "2026-09-07",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 9,
+   "net_items": 9,
+   "net_sales": 247.5
+  },
+  {
+   "date": "2026-09-07",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 455.7
+  },
+  {
+   "date": "2026-09-07",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 57.6
+  },
+  {
+   "date": "2026-09-07",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-07",
+   "product": "Roofus Mystery Gift",
+   "qty": 11,
+   "net_items": 11,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-07",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 27.0
+  },
+  {
+   "date": "2026-09-08",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 327.0
+  },
+  {
+   "date": "2026-09-08",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 178.85
+  },
+  {
+   "date": "2026-09-08",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 118.4
+  },
+  {
+   "date": "2026-09-08",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-08",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.2
+  },
+  {
+   "date": "2026-09-08",
+   "product": "Roofus Mystery Gift",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-09",
+   "product": "",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 82.0
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 40.0
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 112.5
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 271.95
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 57.6
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 20.0
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Roofus Mystery Gift",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 45.0
+  },
+  {
+   "date": "2026-09-10",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 270.0
+  },
+  {
+   "date": "2026-09-10",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 176.4
+  },
+  {
+   "date": "2026-09-10",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-11",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 11,
+   "net_items": 11,
+   "net_sales": 297.0
+  },
+  {
+   "date": "2026-09-11",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 134.75
+  },
+  {
+   "date": "2026-09-11",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-12",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 171.0
+  },
+  {
+   "date": "2026-09-12",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 144.55
+  },
+  {
+   "date": "2026-09-12",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-13",
+   "product": "",
+   "qty": 0,
+   "net_items": 0,
+   "net_sales": -1.5
+  },
+  {
+   "date": "2026-09-13",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 13,
+   "net_items": 12,
+   "net_sales": 333.0
+  },
+  {
+   "date": "2026-09-13",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 284.2
+  },
+  {
+   "date": "2026-09-13",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 57.6
+  },
+  {
+   "date": "2026-09-13",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-13",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 8.1
+  },
+  {
+   "date": "2026-09-13",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.8
+  },
+  {
+   "date": "2026-09-13",
+   "product": "Roofus Mystery Gift",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-13",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.8
+  },
+  {
+   "date": "2026-09-14",
+   "product": "",
+   "qty": 12,
+   "net_items": 12,
+   "net_sales": 78.0
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 11,
+   "net_items": 11,
+   "net_sales": 297.0
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 215.6
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 112.0
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Roofus Mystery Gift",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.8
+  },
+  {
+   "date": "2026-09-15",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-15",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 13,
+   "net_items": 13,
+   "net_sales": 346.5
+  },
+  {
+   "date": "2026-09-15",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 356.55
+  },
+  {
+   "date": "2026-09-15",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 169.6
+  },
+  {
+   "date": "2026-09-15",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-15",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 2,
+   "net_items": 1,
+   "net_sales": 9.0
+  },
+  {
+   "date": "2026-09-15",
+   "product": "Roofus Mystery Gift",
+   "qty": 11,
+   "net_items": 11,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-15",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.8
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 30.0
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 274.5
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 173.95
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 115.2
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 18.0
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.99
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Pet Wipes - Zesty Zoomies - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Roofus Mystery Gift",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-16",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.2
+  },
+  {
+   "date": "2026-09-17",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-17",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 8,
+   "net_items": 7,
+   "net_sales": 195.0
+  },
+  {
+   "date": "2026-09-17",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 178.85
+  },
+  {
+   "date": "2026-09-17",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 54.4
+  },
+  {
+   "date": "2026-09-17",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-17",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 18.0
+  },
+  {
+   "date": "2026-09-17",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.8
+  },
+  {
+   "date": "2026-09-17",
+   "product": "Pet Wipes - Coconut Kisses - 200 XL Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-17",
+   "product": "Roofus Mystery Gift",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-18",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-18",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 190.5
+  },
+  {
+   "date": "2026-09-18",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 2,
+   "net_sales": 85.75
+  },
+  {
+   "date": "2026-09-18",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 121.6
+  },
+  {
+   "date": "2026-09-18",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-18",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 11.4
+  },
+  {
+   "date": "2026-09-18",
+   "product": "Roofus Mystery Gift",
+   "qty": 5,
+   "net_items": 5,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-19",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 274.5
+  },
+  {
+   "date": "2026-09-19",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 9,
+   "net_items": 9,
+   "net_sales": 396.9
+  },
+  {
+   "date": "2026-09-19",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 230.4
+  },
+  {
+   "date": "2026-09-19",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-19",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.8
+  },
+  {
+   "date": "2026-09-19",
+   "product": "Roofus Mystery Gift",
+   "qty": 13,
+   "net_items": 13,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-19",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.8
+  },
+  {
+   "date": "2026-09-20",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-09-20",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 106.5
+  },
+  {
+   "date": "2026-09-20",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 267.05
+  },
+  {
+   "date": "2026-09-20",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 115.2
+  },
+  {
+   "date": "2026-09-20",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-20",
+   "product": "Roofus Mystery Gift",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-20",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.8
+  },
+  {
+   "date": "2026-09-21",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 193.5
+  },
+  {
+   "date": "2026-09-21",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 9,
+   "net_items": 9,
+   "net_sales": 399.35
+  },
+  {
+   "date": "2026-09-21",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-09-21",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-21",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 9.0
+  },
+  {
+   "date": "2026-09-21",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 50.15
+  },
+  {
+   "date": "2026-09-21",
+   "product": "Roofus Mystery Gift",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-21",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.8
+  },
+  {
+   "date": "2026-09-22",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 282.0
+  },
+  {
+   "date": "2026-09-22",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 6,
+   "net_items": 6,
+   "net_sales": 267.05
+  },
+  {
+   "date": "2026-09-22",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 54.4
+  },
+  {
+   "date": "2026-09-22",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-22",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 17.1
+  },
+  {
+   "date": "2026-09-22",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 2,
+   "net_items": 0,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-22",
+   "product": "Roofus Mystery Gift",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-23",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-23",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 190.5
+  },
+  {
+   "date": "2026-09-23",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 134.75
+  },
+  {
+   "date": "2026-09-23",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-24",
+   "product": "",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 19.9
+  },
+  {
+   "date": "2026-09-24",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.75
+  },
+  {
+   "date": "2026-09-24",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 3,
+   "net_items": 2,
+   "net_sales": 54.0
+  },
+  {
+   "date": "2026-09-24",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 2,
+   "net_sales": 85.75
+  },
+  {
+   "date": "2026-09-24",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 64.0
+  },
+  {
+   "date": "2026-09-24",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-24",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.8
+  },
+  {
+   "date": "2026-09-24",
+   "product": "Roofus Mystery Gift",
+   "qty": 4,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-24",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-09-25",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 8,
+   "net_items": 8,
+   "net_sales": 223.5
+  },
+  {
+   "date": "2026-09-25",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 93.1
+  },
+  {
+   "date": "2026-09-25",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 8.1
+  },
+  {
+   "date": "2026-09-25",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 12.0
+  },
+  {
+   "date": "2026-09-25",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-26",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-26",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-26",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 10,
+   "net_items": 10,
+   "net_sales": 277.5
+  },
+  {
+   "date": "2026-09-26",
+   "product": "Dental Finger Wipes — 2-Pack",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 40.0
+  },
+  {
+   "date": "2026-09-26",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 127.4
+  },
+  {
+   "date": "2026-09-26",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 57.6
+  },
+  {
+   "date": "2026-09-26",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-26",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 32.4
+  },
+  {
+   "date": "2026-09-26",
+   "product": "Pet Shampoo - Probiotic - With Built-in Nozzle",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 45.0
+  },
+  {
+   "date": "2026-09-26",
+   "product": "Roofus Mystery Gift",
+   "qty": 4,
+   "net_items": 4,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-27",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 7,
+   "net_items": 7,
+   "net_sales": 196.5
+  },
+  {
+   "date": "2026-09-27",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": 2,
+   "net_sales": 85.75
+  },
+  {
+   "date": "2026-09-27",
+   "product": "Dental Finger Wipes — 6 Canisters (Buy 3 Get 3 FREE)",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 60.8
+  },
+  {
+   "date": "2026-09-27",
+   "product": "Free Paw Cleanser 200ml",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-27",
+   "product": "Roofus Mystery Gift",
+   "qty": 3,
+   "net_items": 3,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-27",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 10.2
+  },
+  {
+   "date": "2026-09-28",
+   "product": "",
+   "qty": 0,
+   "net_items": 0,
+   "net_sales": 198.7
+  },
+  {
+   "date": "2026-09-28",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  },
+  {
+   "date": "2026-09-28",
+   "product": "Dental Finger Wipes — 2 Canisters (Buy 1 Get 1 FREE)",
+   "qty": 1,
+   "net_items": -1,
+   "net_sales": -27.0
+  },
+  {
+   "date": "2026-09-28",
+   "product": "Dental Finger Wipes — 4 Canisters (Buy 2 Get 2 FREE)",
+   "qty": 2,
+   "net_items": -1,
+   "net_sales": -53.1
+  },
+  {
+   "date": "2026-09-28",
+   "product": "Roofus Mystery Gift",
+   "qty": 2,
+   "net_items": 1,
+   "net_sales": 0.0
+  },
+  {
+   "date": "2026-09-28",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 1,
+   "net_items": 1,
+   "net_sales": 15.0
+  }
+ ]
+}

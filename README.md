@@ -50,7 +50,7 @@ Create the Shopify token under **Settings → Apps → Develop apps**. Orders ol
 | Meta ad spend | Meta Marketing API insights, `time_increment=1` |
 | Shopify plan and apps | Entered in `config.json` or on the page. Grow plan: $105/mo billed monthly, $79/mo billed annually |
 | Shipping labels | Shopify Analytics (`FROM shipping_labels`), matched to orders and counted on the order date |
-| Product cost (COGS) | Units ordered per product per day (`FROM sales ... quantity_ordered`) × `cogs.rules` in `config.json`. Wipes $1.26/canister, poop bags $1.19 (Mystery Gift), paw cleanser $0.82 (gift) |
+| Product cost (COGS) | Units ordered per product per day (`FROM sales ... quantity_ordered`) × `cogs.rules` in `config.json`. Bundles carry their full cost: Buy 1 Get 1 $2.52, Buy 2 Get 2 $6.23 (4 canisters + poop bags), Buy 3 Get 3 $9.57 (6 canisters + poop bags + paw cleanser). Gift line items count $0 |
 
 Values typed into the page's "Costs you enter" panel are saved in that browser only. To change the default for everyone, edit `data/config.json` and rebuild.
 

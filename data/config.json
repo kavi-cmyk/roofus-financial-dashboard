@@ -17,37 +17,52 @@
     "shopify_apps_monthly": "Recurring app charges from Settings > Billing. Not exposed by the Admin API, so enter manually."
   },
   "cogs": {
-    "note": "Cost per unit sold, matched to Shopify product titles (regex, first match wins). Wipes cost $1.26 per canister ($2.52 for 2 units). Gifts are their own line items: Roofus Mystery Gift = poop bags, Free Paw Cleanser = paw cleanser. So a 4-unit order costs $5.04 + $1.19 and a 6-unit order $7.56 + $1.19 + $0.82.",
+    "note": "Cost per unit sold, matched to Shopify product titles (regex, first match wins). Bundles carry their full cost, gifts included: Buy 1 Get 1 = 2 canisters ($2.52); Buy 2 Get 2 = 4 canisters + poop bags ($5.04 + $1.19); Buy 3 Get 3 = 6 canisters + poop bags + paw cleanser ($7.56 + $1.19 + $0.82). The gift line items (Mystery Gift, Free Paw Cleanser) are $0 so they aren't counted twice.",
     "rules": [
       {
         "match": "^Dental Finger Wipes.*6 Canisters",
-        "cost": 7.56,
-        "label": "Dental wipes, 6 canisters"
+        "cost": 9.57,
+        "label": "Buy 3 Get 3: 6 canisters + poop bags + paw cleanser"
       },
       {
-        "match": "^Dental Finger Wipes.*(4 Canisters|4-Pack)",
-        "cost": 5.04,
-        "label": "Dental wipes, 4 canisters"
+        "match": "^Dental Finger Wipes.*(4 Canisters|4-Pack \\(BUY 2 GET 2)",
+        "cost": 6.23,
+        "label": "Buy 2 Get 2: 4 canisters + poop bags"
       },
       {
-        "match": "^Dental Finger Wipes.*(2 Canisters|2-Pack)",
+        "match": "^Dental Finger Wipes.*2 Canisters",
         "cost": 2.52,
-        "label": "Dental wipes, 2 canisters"
+        "label": "Buy 1 Get 1: 2 canisters"
+      },
+      {
+        "match": "^Dental Finger Wipes.*4-Pack",
+        "cost": 5.04,
+        "label": "Subscription 4-pack: 4 canisters"
+      },
+      {
+        "match": "^Dental Finger Wipes.*2-Pack",
+        "cost": 2.52,
+        "label": "Subscription 2-pack: 2 canisters"
       },
       {
         "match": "^Dental Finger Wipes.*60 Dual Sided Wipes",
         "cost": 1.26,
-        "label": "Dental wipes, 1 canister"
+        "label": "Single canister"
       },
       {
         "match": "^Roofus Mystery Gift",
-        "cost": 1.19,
-        "label": "Poop bags (Mystery Gift)"
+        "cost": 0.0,
+        "label": "Gift, cost included in bundle"
       },
       {
         "match": "^Free Paw Cleanser",
+        "cost": 0.0,
+        "label": "Gift, cost included in bundle"
+      },
+      {
+        "match": "^Paw Cleanser",
         "cost": 0.82,
-        "label": "Paw cleanser (gift)"
+        "label": "Paw Cleanser 150ml add-on"
       }
     ]
   }
