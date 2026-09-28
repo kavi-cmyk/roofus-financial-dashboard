@@ -1,6 +1,6 @@
 # Roofus financial dashboard
 
-One page that shows Roofus's money since **May 14, 2026**:
+One page that shows Roofus's money since **May 14, 2026**, leaving out Faire wholesale:
 
 - Shopify orders, gross sales, discounts, refunds, net sales, and shipping charged to customers
 - Net payouts: cash captured through Shopify Payments, minus refunds paid, minus processing fees
@@ -18,7 +18,8 @@ Filter by the whole period, the last 30 days, or a single month. The page also h
 data/
   config.json               start date, Shopify plan fee, apps, product cost rules
   product_costs.csv         landed COGS per SKU, from the Roofus master sheet
-  raw/faire_orders.json     Faire orders with SKUs (for items not linked to a Shopify product)
+  raw/faire_sales.json      Faire wholesale daily sales and units, subtracted from every figure
+  raw/faire_orders.json     Faire order names, used to leave Faire out of payouts
   shopify_sales_daily.json  ShopifyQL daily sales
   raw/orders.jsonl          every order with its payment transactions and fees
   meta_daily.json           Meta spend per day
@@ -52,9 +53,11 @@ Create the Shopify token under **Settings → Apps → Develop apps**. Orders ol
 | Meta ad spend | Meta Marketing API insights, `time_increment=1` |
 | Shopify plan and apps | Entered in `config.json` or on the page. Grow plan: $105/mo billed monthly, $79/mo billed annually |
 | Shipping labels | Shopify Analytics (`FROM shipping_labels`), matched to orders and counted on the order date |
-| Product cost (COGS) | Units ordered per product per day (`FROM sales ... quantity_ordered`) × `cogs.rules` in `config.json`, which use landed cost from `product_costs.csv`. Dental bundles: Buy 1 Get 1 $2.52, Buy 2 Get 2 $6.23, Buy 3 Get 3 $9.57, gifts included (gift line items count $0). Faire items without a Shopify product are costed by SKU from `raw/faire_orders.json` |
+| Product cost (COGS) | Units ordered per product per day (`FROM sales ... quantity_ordered`) × `cogs.rules` in `config.json`, which use landed cost from `product_costs.csv`. Dental bundles: Buy 1 Get 1 $2.52, Buy 2 Get 2 $6.23, Buy 3 Get 3 $9.57, gifts included (gift line items count $0). |
 
 Values typed into the page's "Costs you enter" panel are saved in that browser only. To change the default for everyone, edit `data/config.json` and rebuild.
+
+Faire wholesale (`exclude_channels` in `config.json`) is left out of sales, orders, product cost, shipping and payouts. Faire orders ship on Faire's own prepaid labels.
 
 Contribution doesn't include 3PL, packaging or inventory write-offs. When a new product starts selling, add a rule to `cogs.rules`; until then it shows as "No cost" on the page.
 

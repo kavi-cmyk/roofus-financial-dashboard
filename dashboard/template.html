@@ -522,31 +522,28 @@ function renderCogs() {
     <tfoot><tr><td>Costed products</td><td></td><td></td><td>${usd(sumC)}</td><td>${usd(sumS)}</td><td>${sumS ? ((sumS - sumC) / sumS * 100).toFixed(0) + "%" : "–"}</td></tr></tfoot>`;
 }
 
-function fairNote() {
-  const f = D.faire_cogs; if (!f) return "";
-  let t = `: ${f.units} units, ${usd2(f.cogs)}`;
-  if (f.cancelled_units) t += `; ${f.cancelled_units} units on a cancelled order left out`;
-  const un = Object.entries(f.uncosted_skus || {});
-  if (un.length) t += `; no cost for ${un.map(([k, v]) => `${k} (${v} units)`).join(", ")}`;
-  return t;
+function exclNote() {
+  const x = D.excluded; if (!x) return "";
+  return `<p><b>Faire wholesale is left out.</b> Its ${x.orders} orders (${usd2(x.gross)} gross, ${usd2(x.net)} net sales, ${x.units.toLocaleString()} units) are removed from sales, orders, product cost and payouts. Faire orders ship on Faire's prepaid labels, so none of their shipping is in the label cost.</p>`;
 }
 
 function renderNotes() {
   const s = D.order_stats, gw = Object.entries(s.gateways || {}).map(([k, v]) => `${k.replace(/_/g, " ")} ${usd(v)}`).join(", ");
   const m = D.meta_account_totals;
   $("notes").innerHTML = `
+    ${exclNote()}
     <p><b>Orders, sales, discounts, refunds, shipping charged:</b> Shopify Analytics (ShopifyQL <span class="num">FROM sales</span>), by day in store time (Pacific).</p>
     <p><b>Net payouts:</b> ${D.payouts ? "Shopify Payments payouts API." : "estimated from each order's payment transactions: money captured through Shopify Payments, minus refunds paid, minus the processing fee Shopify recorded on each transaction. Actual bank payouts lag by a few days and can include reserves or adjustments. Give the sync token the <span class=\"num\">read_shopify_payments_payouts</span> scope to use the real payout ledger."} ${s.orders} orders read${gw ? "; captured by gateway: " + gw : ""}.</p>
     <p><b>Meta ad spend:</b> Meta Marketing API, ad account “Roofus” (act_${cfg.meta_ad_account_id}), daily spend in USD. ${m ? `Account total for the window: ${usd2(m.spend)}, ${m.impressions.toLocaleString()} impressions, ${m.clicks.toLocaleString()} clicks.` : ""}</p>
     <p><b>Shipping cost:</b> ${shipNote()}</p>
     <p><b>Shopify OPEX:</b> your plan and app fees per month, pro-rated by day. </p>
-    <p><b>Product cost (COGS):</b> landed cost per unit (product + freight) from the Roofus master sheet, times units ordered per product (ShopifyQL <span class="num">quantity_ordered</span>). Dental bundles carry their full cost: Buy 1 Get 1 $2.52, Buy 2 Get 2 $6.23 (4 canisters + poop bags), Buy 3 Get 3 $9.57 (6 canisters + poop bags + paw cleanser). Gift line items count $0 because the bundle already includes them. Faire items that aren't linked to a Shopify product are costed by SKU from the Faire orders${fairNote()}. Returned units still count, since refunded items usually aren't restocked. <b>Contribution</b> doesn't include 3PL, packaging or inventory write-offs.</p>
+    <p><b>Product cost (COGS):</b> landed cost per unit (product + freight) from the Roofus master sheet, times units ordered per product (ShopifyQL <span class="num">quantity_ordered</span>). Dental bundles carry their full cost: Buy 1 Get 1 $2.52, Buy 2 Get 2 $6.23 (4 canisters + poop bags), Buy 3 Get 3 $9.57 (6 canisters + poop bags + paw cleanser). Gift line items count $0 because the bundle already includes them. Returned units still count, since refunded items usually aren't restocked. <b>Contribution</b> doesn't include 3PL, packaging or inventory write-offs.</p>
     <p class="muted">Data synced ${D.generated}. Taxes are $0 for this store.</p>`;
 }
 
 function render(full = true) {
   const rs = rows(), t = sum(rs);
-  $("sub").textContent = `Shopify + Meta since ${fmtDay(D.start)}, ${D.start.slice(0, 4)} · synced ${D.generated}`;
+  $("sub").textContent = `Shopify (excl. Faire wholesale) + Meta since ${fmtDay(D.start)}, ${D.start.slice(0, 4)} · synced ${D.generated}`;
   renderRanges(); renderHero(t, rs); renderTiles(t); renderPL(t, rs); renderWeekly(rs); renderShipping(t, rs); renderMonthly();
   if (full) { renderCamps(); renderShipBreakdown(); renderCogs(); renderInputs(); renderNotes(); }
 }

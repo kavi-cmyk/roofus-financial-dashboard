@@ -14,10 +14,11 @@
   },
   "notes": {
     "shopify_plan_monthly": "Grow plan list price on monthly billing ($79/mo if billed annually). Edit to match your Shopify invoice.",
-    "shopify_apps_monthly": "Recurring app charges from Settings > Billing. Not exposed by the Admin API, so enter manually."
+    "shopify_apps_monthly": "Recurring app charges from Settings > Billing. Not exposed by the Admin API, so enter manually.",
+    "exclude_channels": "Sales, units, product cost, shipping labels and payments from these Shopify sales channels are left out of every figure."
   },
   "cogs": {
-    "note": "Landed cost per unit (product + freight to USA) from the Roofus master sheet (data/product_costs.csv), matched to Shopify product titles (regex, first match wins). Bundles carry their full cost, gifts included: Buy 1 Get 1 = 2 canisters ($2.52); Buy 2 Get 2 = 4 canisters + poop bags ($5.04 + $1.19); Buy 3 Get 3 = 6 canisters + poop bags + paw cleanser ($7.56 + $1.19 + $0.82). Gift line items are $0 so they aren't counted twice. Faire wholesale items that aren't linked to a Shopify product are costed by SKU from data/raw/faire_orders.json.",
+    "note": "Landed cost per unit (product + freight to USA) from the Roofus master sheet (data/product_costs.csv), matched to Shopify product titles (regex, first match wins). Bundles carry their full cost, gifts included: Buy 1 Get 1 = 2 canisters ($2.52); Buy 2 Get 2 = 4 canisters + poop bags ($5.04 + $1.19); Buy 3 Get 3 = 6 canisters + poop bags + paw cleanser ($7.56 + $1.19 + $0.82). Gift line items are $0 so they aren't counted twice.",
     "rules": [
       {
         "match": "^Dental Finger Wipes.*6 Canisters",
@@ -114,17 +115,9 @@
         "cost": 0.82,
         "label": "ROO-PC-FF-1PK"
       }
-    ],
-    "faire": {
-      "orders_file": "raw/faire_orders.json",
-      "sku_costs_file": "product_costs.csv",
-      "extra_sku_costs": {
-        "ROO-BUN-BSB-02": 4.03
-      },
-      "notes": {
-        "ROO-BUN-BSB-02": "Variety Pack (Dental, Ear & Eye): assumed 1 each of ROO-DW-60 ($1.25), ROO-EAR-FF-100 ($1.67), ROO-EYE-FF-100 ($1.11). Not in the master sheet.",
-        "ROO-BUN-UNS-01": "Fragrance-Free Essentials Set: contents unknown, not in the master sheet, left uncosted."
-      }
-    }
-  }
+    ]
+  },
+  "exclude_channels": [
+    "Faire: Sell Wholesale"
+  ]
 }

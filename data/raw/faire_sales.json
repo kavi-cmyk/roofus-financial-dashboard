@@ -1,0 +1,1039 @@
+{
+ "channel": "Faire: Sell Wholesale",
+ "source": "ShopifyQL FROM sales WHERE sales_channel = 'Faire: Sell Wholesale' GROUP BY day (and day, product_title)",
+ "daily": [
+  {
+   "date": "2026-05-14",
+   "orders": 1,
+   "gross_sales": 195.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 195.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 195.0
+  },
+  {
+   "date": "2026-05-18",
+   "orders": 1,
+   "gross_sales": 270.95,
+   "discounts": -54.19,
+   "returns": 0.0,
+   "net_sales": 216.76,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 216.76
+  },
+  {
+   "date": "2026-05-19",
+   "orders": 2,
+   "gross_sales": 210.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 210.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 210.0
+  },
+  {
+   "date": "2026-05-20",
+   "orders": 1,
+   "gross_sales": 150.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 150.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 150.0
+  },
+  {
+   "date": "2026-05-25",
+   "orders": 1,
+   "gross_sales": 495.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 495.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 495.0
+  },
+  {
+   "date": "2026-05-26",
+   "orders": 1,
+   "gross_sales": 510.0,
+   "discounts": -153.0,
+   "returns": -495.0,
+   "net_sales": -138.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": -138.0
+  },
+  {
+   "date": "2026-06-04",
+   "orders": 1,
+   "gross_sales": 90.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 90.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 90.0
+  },
+  {
+   "date": "2026-06-09",
+   "orders": 2,
+   "gross_sales": 465.0,
+   "discounts": -69.0,
+   "returns": 0.0,
+   "net_sales": 396.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 396.0
+  },
+  {
+   "date": "2026-06-11",
+   "orders": 1,
+   "gross_sales": 204.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 204.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 204.0
+  },
+  {
+   "date": "2026-06-14",
+   "orders": 1,
+   "gross_sales": 117.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 117.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 117.0
+  },
+  {
+   "date": "2026-06-30",
+   "orders": 1,
+   "gross_sales": 250.8,
+   "discounts": -75.24,
+   "returns": 0.0,
+   "net_sales": 175.56,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 175.56
+  },
+  {
+   "date": "2026-07-01",
+   "orders": 1,
+   "gross_sales": 147.5,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 147.5,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 147.5
+  },
+  {
+   "date": "2026-07-09",
+   "orders": 1,
+   "gross_sales": 101.66,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 101.66,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 101.66
+  },
+  {
+   "date": "2026-07-11",
+   "orders": 1,
+   "gross_sales": 206.39,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 206.39,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 206.39
+  },
+  {
+   "date": "2026-07-12",
+   "orders": 1,
+   "gross_sales": 319.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 319.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 319.0
+  },
+  {
+   "date": "2026-07-19",
+   "orders": 1,
+   "gross_sales": 160.0,
+   "discounts": -16.0,
+   "returns": 0.0,
+   "net_sales": 144.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 144.0
+  },
+  {
+   "date": "2026-07-20",
+   "orders": 1,
+   "gross_sales": 140.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 140.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 140.0
+  },
+  {
+   "date": "2026-07-22",
+   "orders": 1,
+   "gross_sales": 239.2,
+   "discounts": -23.92,
+   "returns": 0.0,
+   "net_sales": 215.28,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 215.28
+  },
+  {
+   "date": "2026-07-23",
+   "orders": 2,
+   "gross_sales": 408.0,
+   "discounts": -40.8,
+   "returns": 0.0,
+   "net_sales": 367.2,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 367.2
+  },
+  {
+   "date": "2026-07-28",
+   "orders": 1,
+   "gross_sales": 492.0,
+   "discounts": -147.6,
+   "returns": 0.0,
+   "net_sales": 344.4,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 344.4
+  },
+  {
+   "date": "2026-08-11",
+   "orders": 1,
+   "gross_sales": 352.0,
+   "discounts": -105.6,
+   "returns": 0.0,
+   "net_sales": 246.4,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 246.4
+  },
+  {
+   "date": "2026-08-12",
+   "orders": 2,
+   "gross_sales": 541.35,
+   "discounts": -131.66,
+   "returns": 0.0,
+   "net_sales": 409.69,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 409.69
+  },
+  {
+   "date": "2026-08-13",
+   "orders": 1,
+   "gross_sales": 117.5,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 117.5,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 117.5
+  },
+  {
+   "date": "2026-08-16",
+   "orders": 1,
+   "gross_sales": 104.5,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 104.5,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 104.5
+  },
+  {
+   "date": "2026-08-26",
+   "orders": 2,
+   "gross_sales": 286.5,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 286.5,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 286.5
+  },
+  {
+   "date": "2026-08-28",
+   "orders": 1,
+   "gross_sales": 226.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 226.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 226.0
+  },
+  {
+   "date": "2026-08-30",
+   "orders": 1,
+   "gross_sales": 115.96,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 115.96,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 115.96
+  },
+  {
+   "date": "2026-09-07",
+   "orders": 1,
+   "gross_sales": 306.9,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 306.9,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 306.9
+  },
+  {
+   "date": "2026-09-09",
+   "orders": 2,
+   "gross_sales": 187.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 187.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 187.0
+  },
+  {
+   "date": "2026-09-14",
+   "orders": 1,
+   "gross_sales": 138.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 138.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 138.0
+  },
+  {
+   "date": "2026-09-24",
+   "orders": 1,
+   "gross_sales": 64.0,
+   "discounts": 0.0,
+   "returns": 0.0,
+   "net_sales": 64.0,
+   "shipping_charges": 0.0,
+   "taxes": 0.0,
+   "total_sales": 64.0
+  }
+ ],
+ "units": [
+  {
+   "date": "2026-05-14",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-05-14",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-05-14",
+   "product": "",
+   "qty": 18,
+   "net_sales": 135
+  },
+  {
+   "date": "2026-05-18",
+   "product": "",
+   "qty": 11,
+   "net_sales": 149.56
+  },
+  {
+   "date": "2026-05-18",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 12,
+   "net_sales": 48
+  },
+  {
+   "date": "2026-05-18",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 6,
+   "net_sales": 19.2
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 12,
+   "net_sales": 60
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 12,
+   "net_sales": 90
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-05-19",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-05-20",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-05-20",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-05-20",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 12,
+   "net_sales": 90
+  },
+  {
+   "date": "2026-05-25",
+   "product": "",
+   "qty": 66,
+   "net_sales": 495
+  },
+  {
+   "date": "2026-05-26",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 18,
+   "net_sales": 94.5
+  },
+  {
+   "date": "2026-05-26",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 18,
+   "net_sales": 63
+  },
+  {
+   "date": "2026-05-26",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 18,
+   "net_sales": 94.5
+  },
+  {
+   "date": "2026-05-26",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 30,
+   "net_sales": 105
+  },
+  {
+   "date": "2026-05-26",
+   "product": "",
+   "qty": 0,
+   "net_sales": -495
+  },
+  {
+   "date": "2026-06-04",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 12,
+   "net_sales": 60
+  },
+  {
+   "date": "2026-06-04",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-06-09",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 36,
+   "net_sales": 156
+  },
+  {
+   "date": "2026-06-09",
+   "product": "",
+   "qty": 18,
+   "net_sales": 108
+  },
+  {
+   "date": "2026-06-09",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 12,
+   "net_sales": 48
+  },
+  {
+   "date": "2026-06-09",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 18,
+   "net_sales": 84
+  },
+  {
+   "date": "2026-06-11",
+   "product": "",
+   "qty": 12,
+   "net_sales": 90
+  },
+  {
+   "date": "2026-06-11",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-06-11",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-06-11",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-06-11",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 6,
+   "net_sales": 24
+  },
+  {
+   "date": "2026-06-14",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 6,
+   "net_sales": 27
+  },
+  {
+   "date": "2026-06-14",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-06-14",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 12,
+   "net_sales": 60
+  },
+  {
+   "date": "2026-06-30",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 14,
+   "net_sales": 49.89
+  },
+  {
+   "date": "2026-06-30",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 16,
+   "net_sales": 57.03
+  },
+  {
+   "date": "2026-06-30",
+   "product": "",
+   "qty": 15,
+   "net_sales": 68.64
+  },
+  {
+   "date": "2026-07-01",
+   "product": "",
+   "qty": 10,
+   "net_sales": 75
+  },
+  {
+   "date": "2026-07-01",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 5,
+   "net_sales": 22.5
+  },
+  {
+   "date": "2026-07-01",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 5,
+   "net_sales": 25
+  },
+  {
+   "date": "2026-07-01",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 5,
+   "net_sales": 25
+  },
+  {
+   "date": "2026-07-09",
+   "product": "",
+   "qty": 42,
+   "net_sales": 101.66
+  },
+  {
+   "date": "2026-07-11",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 3,
+   "net_sales": 15
+  },
+  {
+   "date": "2026-07-11",
+   "product": "Pet Shampoo - Sensitive - With Built-in Nozzle",
+   "qty": 5,
+   "net_sales": 35
+  },
+  {
+   "date": "2026-07-11",
+   "product": "",
+   "qty": 42,
+   "net_sales": 156.39
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 11,
+   "net_sales": 55
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 5,
+   "net_sales": 22.5
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 10,
+   "net_sales": 40
+  },
+  {
+   "date": "2026-07-12",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 4,
+   "net_sales": 20
+  },
+  {
+   "date": "2026-07-12",
+   "product": "",
+   "qty": 25,
+   "net_sales": 151.5
+  },
+  {
+   "date": "2026-07-19",
+   "product": "",
+   "qty": 8,
+   "net_sales": 72
+  },
+  {
+   "date": "2026-07-19",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 8,
+   "net_sales": 36
+  },
+  {
+   "date": "2026-07-19",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 8,
+   "net_sales": 36
+  },
+  {
+   "date": "2026-07-20",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 5,
+   "net_sales": 25
+  },
+  {
+   "date": "2026-07-20",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 5,
+   "net_sales": 25
+  },
+  {
+   "date": "2026-07-20",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 10,
+   "net_sales": 50
+  },
+  {
+   "date": "2026-07-20",
+   "product": "",
+   "qty": 5,
+   "net_sales": 40
+  },
+  {
+   "date": "2026-07-22",
+   "product": "",
+   "qty": 80,
+   "net_sales": 215.28
+  },
+  {
+   "date": "2026-07-23",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 24,
+   "net_sales": 86.4
+  },
+  {
+   "date": "2026-07-23",
+   "product": "",
+   "qty": 26,
+   "net_sales": 172.8
+  },
+  {
+   "date": "2026-07-23",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 4,
+   "net_sales": 18
+  },
+  {
+   "date": "2026-07-23",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 20,
+   "net_sales": 90
+  },
+  {
+   "date": "2026-07-28",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 12,
+   "net_sales": 42
+  },
+  {
+   "date": "2026-07-28",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 12,
+   "net_sales": 42
+  },
+  {
+   "date": "2026-07-28",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 12,
+   "net_sales": 42
+  },
+  {
+   "date": "2026-07-28",
+   "product": "",
+   "qty": 36,
+   "net_sales": 218.4
+  },
+  {
+   "date": "2026-08-11",
+   "product": "",
+   "qty": 30,
+   "net_sales": 157.5
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 6,
+   "net_sales": 18.9
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 5,
+   "net_sales": 17.5
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 5,
+   "net_sales": 17.5
+  },
+  {
+   "date": "2026-08-11",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 10,
+   "net_sales": 35
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Pet Shampoo - Odor Guard - With Built-in Nozzle",
+   "qty": 5,
+   "net_sales": 24.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 8,
+   "net_sales": 32.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "",
+   "qty": 35,
+   "net_sales": 170.43
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 7,
+   "net_sales": 27.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 7,
+   "net_sales": 27.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Paw Cleanser - Unscented - With Built-in Brush",
+   "qty": 5,
+   "net_sales": 14
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 5,
+   "net_sales": 17.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Pet Shampoo - Sensitive - With Built-in Nozzle",
+   "qty": 5,
+   "net_sales": 24.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Pet Shampoo - Probiotic - With Built-in Nozzle",
+   "qty": 5,
+   "net_sales": 24.5
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 8,
+   "net_sales": 29.26
+  },
+  {
+   "date": "2026-08-12",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 5,
+   "net_sales": 17.5
+  },
+  {
+   "date": "2026-08-13",
+   "product": "",
+   "qty": 9,
+   "net_sales": 64
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 3,
+   "net_sales": 13.5
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 2,
+   "net_sales": 10
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 3,
+   "net_sales": 15
+  },
+  {
+   "date": "2026-08-13",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 3,
+   "net_sales": 15
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 6,
+   "net_sales": 27
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Dental Finger Wipes - Peanut Butter - 60 Dual Sided Wipes.",
+   "qty": 4,
+   "net_sales": 20
+  },
+  {
+   "date": "2026-08-16",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 4,
+   "net_sales": 20
+  },
+  {
+   "date": "2026-08-16",
+   "product": "",
+   "qty": 5,
+   "net_sales": 37.5
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 3,
+   "net_sales": 15
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 3,
+   "net_sales": 15
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 13,
+   "net_sales": 65
+  },
+  {
+   "date": "2026-08-26",
+   "product": "",
+   "qty": 10,
+   "net_sales": 90
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Pet Shampoo - Odor Guard - With Built-in Nozzle",
+   "qty": 5,
+   "net_sales": 35
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Pet Shampoo - Probiotic - With Built-in Nozzle",
+   "qty": 5,
+   "net_sales": 35
+  },
+  {
+   "date": "2026-08-26",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 7,
+   "net_sales": 31.5
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Pet Shampoo - Odor Guard - With Built-in Nozzle",
+   "qty": 5,
+   "net_sales": 35
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 2,
+   "net_sales": 9
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Pet Eye Wipes - Witch Hazel & Aloe - 100 Circular Wipes",
+   "qty": 2,
+   "net_sales": 10
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Pet Shampoo - Sensitive - With Built-in Nozzle",
+   "qty": 5,
+   "net_sales": 35
+  },
+  {
+   "date": "2026-08-28",
+   "product": "",
+   "qty": 12,
+   "net_sales": 102
+  },
+  {
+   "date": "2026-08-28",
+   "product": "Pet Shampoo - Probiotic - With Built-in Nozzle",
+   "qty": 5,
+   "net_sales": 35
+  },
+  {
+   "date": "2026-08-30",
+   "product": "",
+   "qty": 4,
+   "net_sales": 115.96
+  },
+  {
+   "date": "2026-09-07",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 6,
+   "net_sales": 27
+  },
+  {
+   "date": "2026-09-07",
+   "product": "",
+   "qty": 18,
+   "net_sales": 279.9
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Dental Finger Wipes - Unscented - 60 Dual Sided Wipes",
+   "qty": 8,
+   "net_sales": 40
+  },
+  {
+   "date": "2026-09-09",
+   "product": "",
+   "qty": 10,
+   "net_sales": 82
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 4,
+   "net_sales": 20
+  },
+  {
+   "date": "2026-09-09",
+   "product": "Soothing Ear Wipes - Eucalyptus & Aloe - 100 Dual-Sided Finger Wipes",
+   "qty": 10,
+   "net_sales": 45
+  },
+  {
+   "date": "2026-09-14",
+   "product": "",
+   "qty": 12,
+   "net_sales": 78
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Dental Finger Wipes - Minty Fresh -  60 Dual Sided Wipes",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-09-14",
+   "product": "Paw Care Cream - Unscented - With Built-in Brush",
+   "qty": 6,
+   "net_sales": 30
+  },
+  {
+   "date": "2026-09-24",
+   "product": "",
+   "qty": 8,
+   "net_sales": 64
+  }
+ ]
+}

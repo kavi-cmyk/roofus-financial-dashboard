@@ -87,8 +87,21 @@ FAIRE_Q = """query($after:String,$q:String!){ orders(first:100, after:$after, qu
   pageInfo{ hasNextPage endCursor } } }"""
 
 
-def sync_faire(start):
-    """Faire wholesale orders with SKUs, used to cost line items not linked to a Shopify product."""
+def sync_faire(start, until, channel="Faire: Sell Wholesale"):
+    """Faire wholesale: its daily sales and units (subtracted from every figure) and its order names."""
+    where = f"WHERE sales_channel = '{channel}'"
+    span = f"SINCE {start} UNTIL {until}"
+    daily = [{"date": str(r["day"])[:10], "orders": int(num(r["orders"])),
+              **{k: num(r[k]) for k in ("gross_sales", "discounts", "returns", "net_sales", "shipping_charges", "taxes", "total_sales")}}
+             for r in shopifyql(f"FROM sales SHOW orders, gross_sales, discounts, returns, net_sales, shipping_charges, taxes, "
+                                f"total_sales {where} GROUP BY day {span} HAVING orders != 0 OR net_sales != 0 OR returns != 0 "
+                                f"ORDER BY day ASC")]
+    units = [{"date": str(r["day"])[:10], "product": r["product_title"] or "", "qty": int(num(r["quantity_ordered"])),
+              "net_sales": num(r["net_sales"])}
+             for r in shopifyql(f"FROM sales SHOW quantity_ordered, net_sales {where} GROUP BY day, product_title {span} "
+                                f"HAVING quantity_ordered != 0 OR net_sales != 0 ORDER BY day ASC LIMIT 5000")]
+    (DATA / "raw" / "faire_sales.json").write_text(json.dumps(
+        {"channel": channel, "source": f"ShopifyQL FROM sales {where}", "daily": daily, "units": units}, indent=1, ensure_ascii=False))
     orders, after = [], None
     while True:
         page = shopify(FAIRE_Q, {"after": after, "q": f"created_at:>={start} source_name:faire"})["orders"]
@@ -262,7 +275,7 @@ def main():
     sync_sales(start, args.until)
     sync_labels(start, args.until)
     sync_units(start, args.until)
-    sync_faire(start)
+    sync_faire(start, args.until)
     sync_orders(start)
     sync_payouts(start)
     sync_meta(os.environ.get("META_AD_ACCOUNT_ID", cfg["meta_ad_account_id"]), start, args.until)
